@@ -1,0 +1,215 @@
+:root {
+  --font-plain: Helvetica Neue, Helvetica, Arial, sans-serif;
+  --font-special: Barlow Condensed, Helvetica, sans-serif;
+  --font-mono: Menlo, Courier, Courier New, Andale Mono, monospace;
+  --color-dark: #050505;
+  --color-darkish: #404040;
+  --color-lightish: #e6e6e6;
+  --color-light: #fafafa;
+  --color-mid: grey;
+  --ratio: 1.4;
+  --s-5: calc(
+    var(--s0) / var(--ratio) / var(--ratio) / var(--ratio) / var(--ratio) /
+      var(--ratio)
+  );
+  --s-4: calc(
+    var(--s0) / var(--ratio) / var(--ratio) / var(--ratio) / var(--ratio)
+  );
+  --s-3: calc(var(--s0) / var(--ratio) / var(--ratio) / var(--ratio));
+  --s-2: calc(var(--s0) / var(--ratio) / var(--ratio));
+  --s-1: calc(var(--s0) / var(--ratio));
+  --s0: 1rem;
+  --s1: calc(var(--s0) * var(--ratio));
+  --s2: calc(var(--s0) * var(--ratio) * var(--ratio));
+  --s3: calc(var(--s0) * var(--ratio) * var(--ratio) * var(--ratio));
+  --s4: calc(
+    var(--s0) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio)
+  );
+  --s5: calc(
+    var(--s0) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio) *
+      var(--ratio)
+  );
+  --measure: 65ch;
+  --line-height: var(--ratio);
+  --line-height-small: calc(0.8 * var(--ratio));
+  --border-thin: var(--s-5);
+  --border-thick: var(--s-2);
+  line-height: var(--ratio);
+  font-size: calc(0.333vw + 1em);
+  font-family: var(--font-plain);
+  background-color: var(--color-light);
+  color: var(--color-dark);
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  background-color: inherit;
+  font-family: inherit;
+  color: inherit;
+  overflow-wrap: break-word;
+  margin: 0;
+  padding: 0;
+  border: 0 solid;
+}
+
+mark {
+  background-color: yellow;
+  color: black;
+}
+
+hr {
+  display: block;
+  unicode-bidi: isolate;
+  overflow: hidden;
+  border-top: var(--border-thin) solid;
+}
+
+footer,
+header,
+main,
+nav {
+  display: block;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
+:focus {
+  outline: var(--border-thin) solid var(--color-mid);
+  outline-offset: var(--border-thin);
+}
+[tabindex="-1"]:focus {
+  outline: none;
+}
+
+[href="#main"] {
+  display: inline-block;
+  padding: var(--s-1);
+  color: var(--color-light);
+  background-color: var(--color-dark);
+  position: absolute;
+  top: -10rem;
+}
+
+[href="#main"]:focus {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  outline: none;
+}
+
+.with-sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: var(--s1); */
+}
+
+.sidebar,
+.not-sidebar {
+  padding: var(--s2);
+}
+
+.sidebar {
+  flex-grow: 1;
+  flex-basis: 15rem;
+  position: relative;
+  text-align: center;
+  outline: var(--border-thin) solid;
+}
+
+.not-sidebar {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: 66%;
+}
+
+.sidebar * + * {
+  margin-top: var(--s-3);
+}
+
+.sidebar h2 {
+  font-size: var(--s2);
+  text-transform: uppercase;
+  line-height: var(--line-height);
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li + li {
+  margin-top: var(--s-2);
+}
+
+.sidebar a {
+  display: inline-block;
+  line-height: var(--line-height-small);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.sidebar a:not([aria-current="true"]):hover {
+  text-decoration: underline;
+}
+.sidebar [aria-current="true"] {
+  position: relative;
+  text-indent: -1em;
+}
+
+main > * + * {
+  margin-top: var(--s3);
+}
+
+p + p,
+main p + p {
+  margin-top: var(--s-1);
+}
+
+h1 {
+  font-size: var(--s4);
+}
+
+.aside-toc {
+  position: relative;
+  border: var(--border-thin) solid currentColor;
+  font-weight: 700;
+}
+
+.aside-toc > [aria-hidden] {
+  position: absolute;
+  right: 1rem;
+  top: -0.75em;
+  text-transform: uppercase;
+  font-family: var(--font-special);
+  padding: 0 0.5rem;
+  font-size: var(--s1);
+  line-height: var(--line-height-small);
+  z-index: 1;
+}
+
+.aside-toc ol {
+  padding: var(--s1) var(--s3);
+  margin: 0;
+}
+.aside-toc li {
+  line-height: var(--line-height-small);
+}
+.aside-toc li + li {
+  margin-top: var(--s-2);
+}
+.aside-toc a {
+  text-decoration: none;
+}
+
+footer,
+main > * {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 35rem;
+}

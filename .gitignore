@@ -5,3 +5,6 @@ yarn.lock
 
 # Eleventy
 public/
+
+.prettierignore
+.gitignore
