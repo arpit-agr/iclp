@@ -45,25 +45,14 @@
 :after,
 :before {
   box-sizing: border-box;
-  background-color: inherit;
+  /* background-color: inherit; */
   font-family: inherit;
   color: inherit;
   overflow-wrap: break-word;
   margin: 0;
   padding: 0;
   border: 0 solid;
-}
-
-mark {
-  background-color: yellow;
-  color: black;
-}
-
-hr {
-  display: block;
-  unicode-bidi: isolate;
-  overflow: hidden;
-  border-top: var(--border-thin) solid;
+  scroll-padding-top: var(--s3);
 }
 
 footer,
@@ -170,6 +159,29 @@ main p + p {
   margin-top: var(--s-1);
 }
 
+mark {
+  background-color: yellow;
+  color: black;
+}
+
+blockquote {
+  margin-top: var(--s1);
+  padding: var(--s0);
+  border-left: var(--border-thin) solid currentColor;
+  background-color: var(--color-lightish);
+}
+
+blockquote + * {
+  margin-top: var(--s1);
+}
+
+hr {
+  display: block;
+  unicode-bidi: isolate;
+  overflow: hidden;
+  border-top: var(--border-thin) solid;
+}
+
 h1 {
   font-size: var(--s4);
 }
@@ -192,6 +204,10 @@ h1 {
   z-index: 1;
 }
 
+.aside-toc > span {
+  background-color: var(--color-light);
+}
+
 .aside-toc ol {
   padding: var(--s1) var(--s3);
   margin: 0;
@@ -204,6 +220,10 @@ h1 {
 }
 .aside-toc a {
   text-decoration: none;
+}
+
+.footnotes-list {
+  margin-inline-start: 20.688px;
 }
 
 footer,

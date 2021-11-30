@@ -1,3 +1,4 @@
+const embedTwitter = require("eleventy-plugin-embed-twitter");
 const emphasisOverrides = require('eleventy-plugin-emphasis');
 const pluginTOC = require('eleventy-plugin-toc')
 
@@ -48,6 +49,11 @@ module.exports = function (eleventyConfig) {
   
 	  //PLUGIN
 	  eleventyConfig.addPlugin(pluginTOC);
+	//   eleventyConfig.addPlugin(embedTwitter);
+
+	eleventyConfig.addPlugin(embedTwitter, {
+		cacheDuration: "60m"
+	});
 
 	return {
 		dir: {
