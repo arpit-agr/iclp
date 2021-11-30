@@ -1,9 +1,7 @@
 const embedTwitter = require("eleventy-plugin-embed-twitter");
-const emphasisOverrides = require('eleventy-plugin-emphasis');
 const pluginTOC = require('eleventy-plugin-toc')
 
 module.exports = function (eleventyConfig) {
-
 
 	//PASSTHROUGH COPY
 	eleventyConfig.addPassthroughCopy("./src/css/");
@@ -18,6 +16,8 @@ module.exports = function (eleventyConfig) {
 	let markdownIt = require("markdown-it");
 	let markdownItAnchor = require("markdown-it-anchor");
 	let markdownItFootnote = require("markdown-it-footnote");
+	let markdownItMark = require("markdown-it-mark");
+
 	let options = {
 	  html: true,
 	  breaks: true,
@@ -32,21 +32,10 @@ module.exports = function (eleventyConfig) {
 		  permalinkSymbol: "#",
 		  level: [2,3,4] 
 	  };
-	let markdownLib = markdownIt(options).use(markdownItFootnote).use(markdownItAnchor, opts);
+	let markdownLib = markdownIt(options).use(markdownItMark).use(markdownItFootnote).use(markdownItAnchor, opts);
 	
 	eleventyConfig.setLibrary("md", markdownLib);
-  
-	//EMPHASIS OVERRIDE
-	const markdown = markdownLib;
-  
-	  eleventyConfig.addPlugin(emphasisOverrides, {
-		  'md': markdown,
-		  '_': 'mark',
-		  '__': 'b'
-	  });
-  
-	  eleventyConfig.setLibrary('md', markdown);
-  
+
 	  //PLUGIN
 	  eleventyConfig.addPlugin(pluginTOC);
 	//   eleventyConfig.addPlugin(embedTwitter);

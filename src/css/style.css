@@ -226,6 +226,10 @@ h1 {
   margin-inline-start: 20.688px;
 }
 
+.footnotes-list li + li {
+  margin-top: var(--s-2);
+}
+
 footer,
 main > * {
   display: block;
