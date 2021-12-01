@@ -1,0 +1,19 @@
+---
+layout: layouts/page
+title: "Articles"
+eleventyNavigation:
+  key: Home
+  order: 1
+pagination:
+  data: collections.posts
+  reverse: true
+  size: 4
+  alias: posts
+---
+
+{% include partials/posts-collection.html %}
+
+<a href="/blog">View More →</a>
+
+
+

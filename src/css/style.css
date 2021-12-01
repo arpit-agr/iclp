@@ -106,7 +106,7 @@ nav {
 
 .sidebar {
   flex-grow: 1;
-  flex-basis: 15rem;
+  flex-basis: 14rem;
   position: relative;
   text-align: center;
   outline: var(--border-thin) solid;
@@ -115,11 +115,15 @@ nav {
 .not-sidebar {
   flex-basis: 0;
   flex-grow: 999;
-  min-width: 66%;
+  min-width: 70%;
 }
 
 .sidebar * + * {
   margin-top: var(--s1);
+}
+
+.not-sidebar > * + * {
+  margin-top: var(--s3);
 }
 
 .sidebar h2 {
@@ -155,7 +159,6 @@ main > * + * {
   margin-top: var(--s3);
 }
 
-p + p,
 main p + p {
   margin-top: var(--s-1);
 }
@@ -184,13 +187,22 @@ hr {
 }
 
 h1 {
-  font-size: var(--s4);
+  font-size: var(--s3);
+  line-height: var(--line-height-small);
 }
 
 h1,
 h2,
 h3 {
   text-transform: capitalize;
+}
+
+h1.post {
+  font-size: var(--s2);
+}
+
+h1.post + div {
+  margin-top: var(--s1);
 }
 
 .aside-toc {
@@ -230,6 +242,40 @@ h3 {
   text-decoration: none;
 }
 
+.post-list article {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-1);
+}
+
+.post-list > * + * {
+  margin-top: var(--s2);
+}
+
+.post-list a {
+  display: inline-block;
+  line-height: var(--line-height);
+  font-size: var(--s1);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.post-list a:not([aria-current="true"]):hover {
+  text-decoration: underline;
+}
+.post-list [aria-current="true"] {
+  position: relative;
+  text-indent: -1em;
+}
+
+.color\:darkish {
+  color: var(--color-darkish);
+}
+
+.post-list hr:last-child {
+  display: none;
+}
+
 .eleventy-plugin-embed-twitter {
   margin-top: var(--s2);
 }
@@ -256,4 +302,8 @@ main > * {
   margin-left: auto;
   margin-right: auto;
   max-width: 35rem;
+}
+
+footer > * + * {
+  margin-top: var(--s-3);
 }

@@ -1,5 +1,22 @@
 ---
 layout: layouts/base
 ---
-{% include partials/toc.html %}
-{{ content | safe}}
+<main id="main">
+    <h1 class="post">{{ title | addNbsp }}</h1>
+    <div class="color:darkish"> 
+      <span class="color:darkish">
+          {% if author %}
+              {{ author }}
+          {% else %}
+            Gautam Bhatia 
+          {% endif %}
+        </span>
+        <span>
+          •
+        </span>
+        <time datetime="{{ page.date | postDate}}">
+          {{ page.date | postDate}}</time>
+    </div>
+    {% include partials/toc.html %}
+    {{ content | safe}}
+</main>

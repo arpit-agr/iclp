@@ -1,3 +1,5 @@
+const { DateTime } = require("luxon");
+const slugify = require("slugify");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const embedTwitter = require("eleventy-plugin-embed-twitter");
 const pluginTOC = require('eleventy-plugin-toc')
@@ -37,19 +39,52 @@ module.exports = function (eleventyConfig) {
 	
 	eleventyConfig.setLibrary("md", markdownLib);
 
-	  //PLUGIN
-	  eleventyConfig.addPlugin(pluginTOC);
-	//   eleventyConfig.addPlugin(embedTwitter);
+	//PLUGIN
+	eleventyConfig.addPlugin(pluginTOC);
 
 	eleventyConfig.addPlugin(embedTwitter, {
 		cacheDuration: "60m"
 	});
 
 	eleventyConfig.addPlugin(eleventyNavigationPlugin);
+	
+	//FILTER
+	eleventyConfig.addFilter("slug", (str) => {
+		if (!str) {
+		  return;
+		}
+	  
+		return slugify(str, {
+		  lower: true,
+		  strict: true,
+		  remove: /["]/g,
+		});
+	});
+
+	eleventyConfig.addFilter("postDate", (dateObj) => {
+		return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
+	});
+
+	eleventyConfig.addFilter("excerpt", (post) => {
+		const content = post.replace(/(<([^>]+)>)/gi, "");
+		return content.substr(0, content.lastIndexOf(" ", 200)) + "...";
+	  });
+
+	eleventyConfig.addFilter("addNbsp", (str) => {
+	if (!str) {
+		return;
+	}
+	let title = str.replace(/((.*)\s(.*))$/g, "$2&nbsp;$3");
+	title = title.replace(/"(.*)"/g, '\\"$1\\"');
+	return title;
+	});
+
+	//SHORTCODES
+	eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
 	//COLLECTION
 	eleventyConfig.addCollection("posts", function(collectionApi) {
-		return collectionApi.getFilteredByGlob("./src/posts/*.md").reverse();
+		return collectionApi.getFilteredByGlob("./src/posts/*.md");
 	  });
 
 	return {

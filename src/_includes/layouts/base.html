@@ -18,9 +18,17 @@
         </header>
         <div class="not-sidebar">
             <main id="main">
-                <h1>{{ title }}</h1>
                 {{ content | safe}}
             </main>
+            <footer>
+                <p>&copy; {% year %} {{ site.name }}</p>
+                <p>
+                    Site Credit: 
+                    <a href="{{ site.developerLink }}">
+                        {{ site.developerName }}
+                    </a>
+                </p>
+            </footer>
         </div>
     </div>
 </body>
