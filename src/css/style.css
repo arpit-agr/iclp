@@ -96,6 +96,7 @@ nav {
   display: flex;
   flex-wrap: wrap;
   /* gap: var(--s1); */
+  min-height: 100vh;
 }
 
 .sidebar,
@@ -118,7 +119,7 @@ nav {
 }
 
 .sidebar * + * {
-  margin-top: var(--s-3);
+  margin-top: var(--s1);
 }
 
 .sidebar h2 {
@@ -165,14 +166,14 @@ mark {
 }
 
 blockquote {
-  margin-top: var(--s1);
+  margin-top: var(--s2);
   padding: var(--s0);
   border-left: var(--border-thin) solid currentColor;
   background-color: var(--color-lightish);
 }
 
 blockquote + * {
-  margin-top: var(--s1);
+  margin-top: var(--s2);
 }
 
 hr {
@@ -184,6 +185,12 @@ hr {
 
 h1 {
   font-size: var(--s4);
+}
+
+h1,
+h2,
+h3 {
+  text-transform: capitalize;
 }
 
 .aside-toc {
@@ -213,6 +220,7 @@ h1 {
   margin: 0;
 }
 .aside-toc li {
+  text-transform: capitalize;
   line-height: var(--line-height-small);
 }
 .aside-toc li + li {
@@ -220,6 +228,18 @@ h1 {
 }
 .aside-toc a {
   text-decoration: none;
+}
+
+.eleventy-plugin-embed-twitter {
+  margin-top: var(--s2);
+}
+
+.eleventy-plugin-embed-twitter + script {
+  margin: 0;
+}
+
+.eleventy-plugin-embed-twitter + script + * {
+  margin-top: var(--s2);
 }
 
 .footnotes-list {

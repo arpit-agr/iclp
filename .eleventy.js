@@ -1,3 +1,4 @@
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const embedTwitter = require("eleventy-plugin-embed-twitter");
 const pluginTOC = require('eleventy-plugin-toc')
 
@@ -43,6 +44,13 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPlugin(embedTwitter, {
 		cacheDuration: "60m"
 	});
+
+	eleventyConfig.addPlugin(eleventyNavigationPlugin);
+
+	//COLLECTION
+	eleventyConfig.addCollection("posts", function(collectionApi) {
+		return collectionApi.getFilteredByGlob("./src/posts/*.md").reverse();
+	  });
 
 	return {
 		dir: {
