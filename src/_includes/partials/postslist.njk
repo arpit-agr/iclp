@@ -1,0 +1,36 @@
+<section reversed class="post-list" style="counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }}">
+{% for post in postslist | reverse %}
+  <article class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
+    <h2>
+      <a href="{{ post.url | url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+    </h2>
+    <div class="post-meta color:darkish">
+      <span>
+        {% if post.data.author %}
+          {{ post.data.author }}
+        {% else %}
+          Gautam Bhatia 
+        {% endif %} 
+      </span>
+        •
+      <time datetime="{{ post.date | postDate}}">
+        {{ post.date | postDate}}
+      </time>
+      {% if post.data.tags %}
+        {% for tag in post.data.tags | filterTagList %}
+          {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+          <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+        {% endfor %}
+      {% endif %}
+    </div>
+    <p class="color:darkish">
+      {% if post.data.excerpt %}
+        {{ post.data.excerpt }}
+      {% else %}
+        {{ post.templateContent | excerpt }}</>
+      {% endif %}
+    </p>
+  </article>
+  <hr>
+{% endfor %}
+</section>

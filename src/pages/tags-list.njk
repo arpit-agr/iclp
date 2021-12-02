@@ -1,0 +1,10 @@
+---
+title: Tags
+permalink: /tags/
+---
+<div class="post-meta color:darkish" style="font-size: var(--s0);">
+    {% for tag in collections.tagList | sort %}
+    {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+        <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+    {% endfor %}
+</div>

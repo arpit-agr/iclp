@@ -1,0 +1,17 @@
+---
+layout: layouts/page
+title: "Latest Articles"
+eleventyNavigation:
+  key: Home
+  order: 1
+---
+{% set postslist = collections.posts | head(-4) %}
+{% set postslistCounter = collections.posts | length %}
+{% include "partials/postslist.njk" %}
+
+<a href="/blog" class="view-all-link">
+  View All
+</a>
+
+
+

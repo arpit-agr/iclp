@@ -48,6 +48,9 @@ module.exports = function (eleventyConfig) {
 	});
 
 	eleventyConfig.addPlugin(eleventyNavigationPlugin);
+
+	//SHORTCODES
+	eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 	
 	//FILTER
 	eleventyConfig.addFilter("slug", (str) => {
@@ -80,10 +83,38 @@ module.exports = function (eleventyConfig) {
 	return title;
 	});
 
-	//SHORTCODES
-	eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+	
+	eleventyConfig.addFilter("head", (array, n) => {
+		if(!Array.isArray(array) || array.length === 0) {
+		  return [];
+		}
+		if( n < 0 ) {
+		  return array.slice(n);
+		}
+	
+		return array.slice(0, n);
+	  });
+
+	eleventyConfig.addFilter("min", (...numbers) => {
+		return Math.min.apply(null, numbers);
+	  });
+
+	function filterTagList(tags) {
+		return (tags || []).filter(tag => ["all", "nav", "pages", "post", "posts"].indexOf(tag) === -1);
+	  }
+	
+	  eleventyConfig.addFilter("filterTagList", filterTagList)
 
 	//COLLECTION
+	eleventyConfig.addCollection("tagList", function(collection) {
+		let tagSet = new Set();
+		collection.getAll().forEach(item => {
+		  (item.data.tags || []).forEach(tag => tagSet.add(tag));
+		});
+	
+		return filterTagList([...tagSet]);
+	  });
+
 	eleventyConfig.addCollection("posts", function(collectionApi) {
 		return collectionApi.getFilteredByGlob("./src/posts/*.md");
 	  });

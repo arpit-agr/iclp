@@ -3,7 +3,7 @@ layout: layouts/base
 ---
 <main id="main">
     <h1 class="post">{{ title | addNbsp }}</h1>
-    <div class="color:darkish"> 
+    <div class="post-meta color:darkish"> 
       <span class="color:darkish">
           {% if author %}
               {{ author }}
@@ -16,6 +16,11 @@ layout: layouts/base
         </span>
         <time datetime="{{ page.date | postDate}}">
           {{ page.date | postDate}}</time>
+          {% if tags %}
+            {% for tag in tags %}
+              <a href="/tags/{{ tag | slug | url }}/" class="post-tag">{{ tag }}</a>
+            {% endfor %}
+          {% endif %}
     </div>
     {% include partials/toc.html %}
     {{ content | safe}}
