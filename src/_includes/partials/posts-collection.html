@@ -1,7 +1,9 @@
 <section class="post-list">
     {% for post in posts %}
       <article {% if page.url == post.url %} aria-current="page"{% endif %}>
-        <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+        <h2>
+          <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+        </h2>
         <div class="color:darkish">
           <span>
             {% if post.data.author %}

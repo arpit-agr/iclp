@@ -1,11 +1,11 @@
+<h2 class="site-name">
+    <a href="/">
+        ICLP
+    </a>
+</h2>
+<small style="font-size: var(--s0); line-height: var(--line-height-small);">
+    {{ site.name}}
+</small>
 <nav>
-    <h2>
-        <a href="/">
-            ICLP
-        </a>
-    </h2>
-    <small style="font-size: var(--s0); line-height: var(--line-height-small);">
-        {{ site.name}}
-    </small>
     {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
 </nav>

@@ -68,6 +68,32 @@ nav {
   }
 }
 
+button {
+  font-size: inherit;
+  font-weight: 700;
+  display: inline-block;
+  cursor: pointer;
+  font-family: var(--font-special);
+  color: var(--color-light);
+  background-color: var(--color-dark);
+  padding: var(--s-1) var(--s2);
+  border-width: var(--border-thin);
+}
+
+button {
+  border-color: var(--color-dark);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button,
+pre {
+  outline: var(--border-thin) solid transparent;
+  outline-offset: calc(var(--border-thin) * -1);
+}
+
 :focus {
   outline: var(--border-thin) solid var(--color-mid);
   outline-offset: var(--border-thin);
@@ -126,8 +152,9 @@ nav {
   margin-top: var(--s3);
 }
 
-.sidebar h2 {
-  font-size: var(--s2);
+.sidebar .site-name {
+  font-family: var(--font-special);
+  font-size: var(--s3);
   text-transform: uppercase;
   line-height: var(--line-height);
 }
@@ -187,6 +214,7 @@ hr {
 }
 
 h1 {
+  font-family: var(--font-special);
   font-size: var(--s3);
   line-height: var(--line-height-small);
 }
@@ -272,10 +300,6 @@ h1.post + div {
   color: var(--color-darkish);
 }
 
-.post-list hr:last-child {
-  display: none;
-}
-
 .eleventy-plugin-embed-twitter {
   margin-top: var(--s2);
 }
@@ -304,6 +328,90 @@ main > * {
   max-width: 35rem;
 }
 
+footer {
+  text-align: center;
+}
+
 footer > * + * {
   margin-top: var(--s-3);
+}
+
+footer:before {
+  content: "\2726";
+  display: block;
+  padding-bottom: var(--s-1);
+}
+
+.view-all-link {
+  display: inline-block;
+  font-size: var(--s1);
+  line-height: var(--line-height-small);
+  font-weight: 700;
+}
+
+.view-all-link::after {
+  content: "→";
+}
+
+label {
+  font-weight: 700;
+}
+
+label,
+label small {
+  display: block;
+}
+
+label small {
+  font-weight: 400;
+  font-style: italic;
+}
+
+[type="checkbox"] ~ svg,
+input,
+textarea {
+  box-shadow: inset 0.25rem 0.25rem 0 #ddd;
+  border-radius: 0;
+}
+
+[type="email"],
+[type="text"],
+textarea {
+  width: 100%;
+  font-size: inherit;
+  border-width: var(--border-thin);
+  padding: var(--s-1);
+}
+
+[type="checkbox"] ~ svg {
+  stroke: transparent;
+  border-width: var(--border-thin);
+  vertical-align: middle;
+  padding: 2px;
+  box-sizing: content-box;
+}
+
+[type="checkbox"]:checked ~ svg {
+  stroke: currentColor;
+}
+
+[type="checkbox"]:focus ~ svg {
+  outline: var(--border-thin) solid var(--color-mid);
+}
+
+input:focus,
+textarea:focus {
+  outline-offset: 0;
+}
+
+label + * {
+  margin-top: var(--s-3);
+}
+
+form > * + * {
+  margin-top: var(--s1);
+}
+
+[type="submit"] {
+  width: 100%;
 }

@@ -10,7 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
 </head>
-<body>
+<body
+  class="page--
+  {% if page.fileSlug %}{{ page.fileSlug }}{% else %}home{% endif %}">
     <a href="#main">Skip to content</a>
     <div class="with-sidebar">
         <header class="sidebar">
@@ -21,7 +23,7 @@
                 {{ content | safe}}
             </main>
             <footer>
-                <p>&copy; {% year %} {{ site.name }}</p>
+                <!-- <p>&copy; {% year %} {{ site.name }}</p> -->
                 <p>
                     Site Credit: 
                     <a href="{{ site.developerLink }}">
