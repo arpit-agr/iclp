@@ -4,6 +4,13 @@
     <h2>
       <a href="{{ post.url | url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
     </h2>
+    {%- from "macros/macro.njk" import meta -%}
+      {{ meta({
+        author: post.data.author,
+        date: post.date,
+        tags: post.data.tags
+      }) }}
+    {# <hr>
     <div class="post-meta color:darkish">
       <span>
         {% if post.data.author != "Gautam Bhatia" and post.data.author !=  "Vasudev Devadasan" %}
@@ -22,14 +29,14 @@
       <time datetime="{{ post.date | postDate}}">
         {{ post.date | postDate}}
       </time>
-      {% if post.data.tags %}
+      {% if page.data.tags %}
         {% for tag in post.data.tags | filterTagList %}
           {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
           <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
         {% endfor %}
       {% endif %}
-    </div>
-    <p class="color:darkish">
+    </div> #}
+    <p class="excerpt color:darkish">
       {% if post.data.excerpt %}
         {{ post.data.excerpt }}
       {% else %}

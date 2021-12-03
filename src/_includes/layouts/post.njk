@@ -2,7 +2,14 @@
 layout: layouts/base
 ---
 <main id="main" class="post">
-    <h1>{{ title }}</h1>
+    <h1>{{ title | addNbsp | safe }}</h1>
+    {%- from "macros/macro.njk" import meta -%}
+      {{ meta({
+        author: author,
+        date: page.date,
+        tags: tags
+      }) }}
+    {# <hr>
     <div class="post-meta color:darkish"> 
       <span class="color:darkish">
           {% if author != "Gautam Bhatia" and author !=  "Vasudev Devadasan" %}
@@ -27,7 +34,7 @@ layout: layouts/base
               <a href="/tags/{{ tag | slug | url }}/" class="post-tag">{{ tag }}</a>
             {% endfor %}
           {% endif %}
-    </div>
+    </div> #}
     {% include "partials/toc.html" %}
     {{ content | safe}}
 </main>
@@ -42,6 +49,12 @@ layout: layouts/base
       <h3>
         <a href="{{ previousPost.url }}" class="postlist-link">{% if previousPost.data.title %}{{ previousPost.data.title }}{% else %}<code>{{ previousPost.url }}</code>{% endif %}</a>
       </h3>
+      {{ meta({
+        author: author,
+        date: page.date,
+        tags: tags
+      }) }}
+      {# <hr>
       <div class="post-meta color:darkish">
         <span>
           {% if previousPost.data.author %}
@@ -63,7 +76,7 @@ layout: layouts/base
             <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
           {% endfor %}
         {% endif %}
-      </div>
+      </div> #}
       {# <p class="color:darkish">
         {% if previousPost.data.excerpt %}
           {{ previousPost.data.excerpt }}

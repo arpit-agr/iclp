@@ -493,3 +493,12 @@ form > * + * {
 [type="submit"] {
   width: 100%;
 }
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s1);
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}

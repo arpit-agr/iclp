@@ -1,0 +1,25 @@
+<div class="post-meta color:darkish">
+    <span>
+    {% if params.author != "Gautam Bhatia" and params.author !=  "Vasudev Devadasan" %}
+        Guest Post: 
+    {% endif %} 
+    {% if params.author %}
+        {% set comma = joiner() %}
+        {% for author in params.author -%}
+            {{ comma() }} {{ author }}
+        {%- endfor %}
+    {% else %}
+        Gautam Bhatia 
+    {% endif %} 
+    </span>
+    •
+    <time datetime="{{ params.date | postDate}}">
+    {{ params.date | postDate}}
+    </time>
+    {% if params.tags %}
+    {% for tag in params.tags | filterTagList %}
+        {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+        <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+    {% endfor %}
+    {% endif %}
+</div>

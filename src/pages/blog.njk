@@ -5,7 +5,7 @@ eleventyNavigation:
   order: 2
 pagination:
   data: collections.posts
-  size: 6
+  size: 5
   reverse: true
 permalink: "blog/page-{{ pagination.pageNumber + 1 }}/index.html"
 ---
@@ -13,14 +13,33 @@ permalink: "blog/page-{{ pagination.pageNumber + 1 }}/index.html"
 {% include "partials/postslist.njk" %}
 
 <nav aria-labelledby="my-pagination">
-  <h2 id="my-pagination">This is my Pagination</h2>
-  <ol>
-    <li>{% if page.url != pagination.href.first %}<a href="{{ pagination.href.first }}">First</a>{% else %}First{% endif %}</li>
-    <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Previous</a>{% else %}Previous{% endif %}</li>
-{%- for pageEntry in pagination.pages %}
-    <li><a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>Page {{ loop.index }}</a></li>
-{%- endfor %}
-    <li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next</a>{% else %}Next{% endif %}</li>
-    <li>{% if page.url != pagination.href.last %}<a href="{{ pagination.href.last }}">Last</a>{% else %}Last{% endif %}</li>
+  <ol class="cluster">
+    {# <li>{% if page.url != pagination.href.first %}
+      <a href="{{ pagination.href.first }}">First</a>{% else %}First{% endif %}
+    </li> #}
+    <li>{% if pagination.href.previous %}
+      <a href="{{ pagination.href.previous }}">Previous</a>{% else %}Previous{% endif %}
+    </li>
+    <ul class="cluster">
+      {%- for pageEntry in pagination.pages %}
+        <li>
+          <a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>{{ loop.index }}</a>
+        </li>
+      {%- endfor %}
+    </ul>
+        <li>
+          {% if pagination.href.next %}
+            <a href="{{ pagination.href.next }}">Next</a>
+          {% else %}
+            Next
+          {% endif %}
+        </li>
+      {# <li>
+        {% if page.url != pagination.href.last %}
+          <a href="{{ pagination.href.last }}">Last</a>
+        {% else %}
+          Last
+        {% endif %}
+      </li> #}
   </ol>
 </nav>
