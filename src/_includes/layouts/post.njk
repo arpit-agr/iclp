@@ -5,6 +5,9 @@ layout: layouts/base
     <h1>{{ title }}</h1>
     <div class="post-meta color:darkish"> 
       <span class="color:darkish">
+          {% if author != "Gautam Bhatia" and author !=  "Vasudev Devadasan" %}
+            Guest Post:
+          {% endif %}
           {% if author %}
             {% set comma = joiner() %}
             {% for author in author -%}

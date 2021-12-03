@@ -233,6 +233,10 @@ h3 {
   font-size: var(--s2);
 }
 
+.post * + h1 {
+  margin-top: var(--s-1);
+}
+
 .post h1 + div {
   margin-top: var(--s1);
 }
@@ -323,6 +327,7 @@ h3 {
   gap: var(--s-3);
   align-items: center;
   font-size: var(--s-1);
+  font-weight: 500;
   text-transform: uppercase;
 }
 
@@ -351,6 +356,14 @@ h3 {
 
 .color\:darkish {
   color: var(--color-darkish);
+}
+
+.font-weight\:500 {
+  font-weight: 500;
+}
+
+.font-weight\:700 {
+  font-weight: 700;
 }
 
 .eleventy-plugin-embed-twitter {
@@ -393,6 +406,7 @@ aside > * {
 
 footer {
   margin-top: auto !important;
+  font-size: var(--s-1);
   text-align: center;
 }
 
