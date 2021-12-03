@@ -1,6 +1,6 @@
 <section reversed class="post-list" style="counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }}">
 {% for post in postslist | reverse %}
-  <article class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
+  <article class="postlist-item">
     <h2>
       <a href="{{ post.url | url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
     </h2>

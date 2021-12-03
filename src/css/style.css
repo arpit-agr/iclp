@@ -191,7 +191,7 @@ main > * + * {
 }
 
 main p + p {
-  margin-top: var(--s-1);
+  margin-top: var(--s0);
 }
 
 mark {
@@ -214,7 +214,7 @@ hr {
   display: block;
   unicode-bidi: isolate;
   overflow: hidden;
-  border-top: var(--border-thin) solid;
+  border-top: var(--border-thin) dotted;
 }
 
 h1 {
@@ -229,17 +229,17 @@ h3 {
   text-transform: capitalize;
 }
 
-h1.post {
+.post h1 {
   font-size: var(--s2);
 }
 
-h1.post + div {
+.post h1 + div {
   margin-top: var(--s1);
 }
 
 .aside-toc {
   position: relative;
-  border: var(--border-thin) solid currentColor;
+  border: var(--border-thin) dotted;
   font-weight: 700;
 }
 
@@ -274,6 +274,14 @@ h1.post + div {
   text-decoration: none;
 }
 
+.post h2 {
+  font-size: var(--s1);
+}
+
+.post h2 + * {
+  margin-top: var(--s1);
+}
+
 .post-list article {
   display: flex;
   flex-direction: column;
@@ -285,9 +293,15 @@ h1.post + div {
 }
 
 .post-list h2 {
-  display: inline-block;
   line-height: var(--line-height);
   font-size: var(--s1);
+  font-weight: 700;
+}
+
+.post-list h3 {
+  /* display: inline-block; */
+  line-height: var(--line-height);
+  font-size: var(--s0);
   font-weight: 700;
 }
 
@@ -351,6 +365,10 @@ h1.post + div {
   margin-top: var(--s2);
 }
 
+hr.footnotes-sep {
+  width: var(--s5);
+}
+
 .footnotes-list {
   margin-inline-start: 20.688px;
 }
@@ -359,8 +377,14 @@ h1.post + div {
   margin-top: var(--s-2);
 }
 
+aside.post-list h2 {
+  font-size: var(--s2);
+  font-family: var(--font-special);
+}
+
 footer,
-main > * {
+main > *,
+aside > * {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -384,7 +408,6 @@ footer:before {
 }
 
 .view-all-link {
-  display: inline-block;
   font-size: var(--s1);
   line-height: var(--line-height-small);
   font-weight: 700;

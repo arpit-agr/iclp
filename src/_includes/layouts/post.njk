@@ -1,8 +1,8 @@
 ---
 layout: layouts/base
 ---
-<main id="main">
-    <h1 class="post">{{ title | addNbsp }}</h1>
+<main id="main" class="post">
+    <h1>{{ title }}</h1>
     <div class="post-meta color:darkish"> 
       <span class="color:darkish">
           {% if author %}
@@ -28,3 +28,83 @@ layout: layouts/base
     {% include "partials/toc.html" %}
     {{ content | safe}}
 </main>
+<hr style="border-style: solid;">
+<aside class="post-list">
+  <h2>Recent Articles</h2>
+  {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+  {% set nextPost = collections.posts | getNextCollectionItem(page) %}
+  
+  {% if previousPost %}
+    <article class="postlist-item">
+      <h3>
+        <a href="{{ previousPost.url }}" class="postlist-link">{% if previousPost.data.title %}{{ previousPost.data.title }}{% else %}<code>{{ previousPost.url }}</code>{% endif %}</a>
+      </h3>
+      <div class="post-meta color:darkish">
+        <span>
+          {% if previousPost.data.author %}
+            {% set comma = joiner() %}
+            {% for author in previousPost.data.author -%}
+              {{ comma() }} {{ author }}
+            {%- endfor %}
+          {% else %}
+            Gautam Bhatia 
+          {% endif %} 
+        </span>
+          •
+        <time datetime="{{ previousPost.date | postDate}}">
+          {{ previousPost.date | postDate}}
+        </time>
+        {% if previousPost.data.tags %}
+          {% for tag in previousPost.data.tags | filterTagList %}
+            {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+            <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+          {% endfor %}
+        {% endif %}
+      </div>
+      {# <p class="color:darkish">
+        {% if previousPost.data.excerpt %}
+          {{ previousPost.data.excerpt }}
+        {% else %}
+          {{ previousPost.templateContent | excerpt }}</>
+        {% endif %}
+      </p> #}
+    </article>
+  {% endif %}
+  {% if nextPost %}
+    <hr>
+    <article class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
+      <h3>
+        <a href="{{ nextPost.url }}" class="postlist-link">{% if nextPost.data.title %}{{ nextPost.data.title }}{% else %}<code>{{ nextPost.url }}</code>{% endif %}</a>
+      </h3>
+      <div class="post-meta color:darkish">
+        <span>
+          {% if nextPost.data.author %}
+            {% set comma = joiner() %}
+            {% for author in nextPost.data.author -%}
+              {{ comma() }} {{ author }}
+            {%- endfor %}
+          {% else %}
+            Gautam Bhatia 
+          {% endif %} 
+        </span>
+          •
+        <time datetime="{{ nextPost.date | postDate}}">
+          {{ nextPost.date | postDate}}
+        </time>
+        {% if nextPost.data.tags %}
+          {% for tag in nextPost.data.tags | filterTagList %}
+            {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+            <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+          {% endfor %}
+        {% endif %}
+      </div>
+      {# <p class="color:darkish">
+        {% if nextPost.data.excerpt %}
+          {{ nextPost.data.excerpt }}
+        {% else %}
+          {{ nextPost.templateContent | excerpt }}</>
+        {% endif %}
+      </p> #}
+    </article>
+  {% endif %}
+</aside>
