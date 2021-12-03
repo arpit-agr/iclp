@@ -5,14 +5,14 @@ eleventyNavigation:
   order: 2
 pagination:
   data: collections.posts
-  size: 5
+  size: 6
   reverse: true
 permalink: "blog/page-{{ pagination.pageNumber + 1 }}/index.html"
 ---
 {% set postslist = pagination.items.reverse() %}
 {% include "partials/postslist.njk" %}
 
-<nav aria-labelledby="my-pagination">
+<nav>
   <ol class="cluster">
     {# <li>{% if page.url != pagination.href.first %}
       <a href="{{ pagination.href.first }}">First</a>{% else %}First{% endif %}
@@ -20,13 +20,13 @@ permalink: "blog/page-{{ pagination.pageNumber + 1 }}/index.html"
     <li>{% if pagination.href.previous %}
       <a href="{{ pagination.href.previous }}">Previous</a>{% else %}Previous{% endif %}
     </li>
-    <ul class="cluster">
+    <ol class="cluster">
       {%- for pageEntry in pagination.pages %}
         <li>
-          <a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>{{ loop.index }}</a>
+          <a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="true"{% endif %}>{{ loop.index }}</a>
         </li>
       {%- endfor %}
-    </ul>
+    </ol>
         <li>
           {% if pagination.href.next %}
             <a href="{{ pagination.href.next }}">Next</a>

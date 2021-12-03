@@ -4,7 +4,7 @@
     <h2>
       <a href="{{ post.url | url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
     </h2>
-    {%- from "macros/macro.njk" import meta -%}
+    {% from "macros/macro.njk" import meta %}
       {{ meta({
         author: post.data.author,
         date: post.date,

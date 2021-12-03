@@ -3,7 +3,7 @@ layout: layouts/base
 ---
 <main id="main" class="post">
     <h1>{{ title | addNbsp | safe }}</h1>
-    {%- from "macros/macro.njk" import meta -%}
+    {% from "macros/macro.njk" import meta %}
       {{ meta({
         author: author,
         date: page.date,

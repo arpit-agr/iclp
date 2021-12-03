@@ -415,10 +415,10 @@ footer > * + * {
 }
 
 footer:before {
-  content: "\2726";
+  content: "\25AC";
   display: block;
   margin-top: var(--s3);
-  padding-bottom: var(--s-1);
+  padding-bottom: var(--s-3);
 }
 
 .view-all-link {
@@ -500,5 +500,24 @@ form > * + * {
   gap: var(--s1);
   justify-content: space-between;
   align-items: center;
+}
+
+ol.cluster {
   list-style: none;
+}
+
+.cluster a {
+  text-decoration: none;
+}
+
+.cluster a:not([aria-current="true"]):hover {
+  text-decoration: underline;
+}
+.cluster [aria-current="true"] {
+  position: relative;
+}
+
+.cluster [aria-current="true"]::before {
+  content: "\25B8";
+  padding-right: var(--s-3);
 }

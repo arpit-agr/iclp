@@ -14,18 +14,12 @@
     <a href="#main">Skip to content</a>
     <div class="with-sidebar">
         <header class="sidebar">
-            {% include partials/nav.html %}
+            {% include "partials/nav.html" %}
         </header>
         <div class="not-sidebar">
             {{ content | safe}}
             <footer>
-                <!-- <p>&copy; {% year %} {{ site.name }}</p> -->
-                <p>
-                    Site Credit: 
-                    <a href="{{ site.developerLink }}">
-                        {{ site.developerName }}
-                    </a>
-                </p>
+                {% include "partials/footer.njk" %}
             </footer>
         </div>
     </div>
