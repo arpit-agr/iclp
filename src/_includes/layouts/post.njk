@@ -6,7 +6,10 @@ layout: layouts/base
     <div class="post-meta color:darkish"> 
       <span class="color:darkish">
           {% if author %}
-              {{ author }}
+            {% set comma = joiner() %}
+            {% for author in author -%}
+              {{ comma() }} {{ author }}
+            {%- endfor %}
           {% else %}
             Gautam Bhatia 
           {% endif %}
@@ -22,6 +25,6 @@ layout: layouts/base
             {% endfor %}
           {% endif %}
     </div>
-    {% include partials/toc.html %}
+    {% include "partials/toc.html" %}
     {{ content | safe}}
 </main>

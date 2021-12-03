@@ -7,7 +7,10 @@
     <div class="post-meta color:darkish">
       <span>
         {% if post.data.author %}
-          {{ post.data.author }}
+          {% set comma = joiner() %}
+          {% for author in post.data.author -%}
+            {{ comma() }} {{ author }}
+          {%- endfor %}
         {% else %}
           Gautam Bhatia 
         {% endif %} 

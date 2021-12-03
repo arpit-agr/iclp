@@ -34,6 +34,7 @@ module.exports = function (eleventyConfig) {
 		  },
 		  permalinkClass: "direct-link",
 		  permalinkSymbol: "#",
+		  tabIndex: false,
 		  level: [2,3,4] 
 	  };
 	let markdownLib = markdownIt(options).use(markdownItMark).use(markdownItFootnote).use(markdownItAnchor, opts);

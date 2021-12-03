@@ -322,6 +322,19 @@ h1.post + div {
   text-decoration: none;
 }
 
+.direct-link {
+  opacity: 0;
+  transition: opacity 180ms ease-in;
+}
+
+.direct-link:hover {
+  opacity: 1;
+}
+
+.direct-link:focus {
+  opacity: 1;
+}
+
 .color\:darkish {
   color: var(--color-darkish);
 }
