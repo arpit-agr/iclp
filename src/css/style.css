@@ -196,7 +196,19 @@ main p + p {
 
 mark {
   background-color: yellow;
-  color: black;
+  color: var(--color-dark);
+}
+
+share-highlight {
+  /* default state */
+  --share-highlight-text-color: inherit;
+  --share-highlight-bg-color: yellow;
+  /* hover/focus state */
+  --share-highlight-text-color-active: inherit;
+  --share-highlight-bg-color-active: yellow;
+  /* tooltip */
+  --share-highlight-tooltip-text-color: var(--color-light);
+  --share-highlight-tooltip-bg-color: var(--color-dark);
 }
 
 blockquote {
@@ -269,7 +281,7 @@ h3 {
 }
 .aside-toc li {
   text-transform: capitalize;
-  line-height: var(--line-height-small);
+  line-height: var(--line-height);
 }
 .aside-toc li + li {
   margin-top: var(--s-2);
