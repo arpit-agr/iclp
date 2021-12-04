@@ -1,3 +1,4 @@
+const emojiReadTime = require("@11tyrocks/eleventy-plugin-emoji-readtime");
 const pluginShareHighlight = require('eleventy-plugin-share-highlight');
 const { DateTime } = require("luxon");
 const slugify = require("slugify");
@@ -43,6 +44,8 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.setLibrary("md", markdownLib);
 
 	//PLUGIN
+	eleventyConfig.addPlugin(emojiReadTime, { showEmoji: false });
+
 	eleventyConfig.addPlugin(pluginTOC);
 
 	eleventyConfig.addPlugin(embedTwitter, {

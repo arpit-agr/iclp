@@ -301,7 +301,7 @@ h3 {
 .post-list article {
   display: flex;
   flex-direction: column;
-  gap: var(--s-1);
+  gap: var(--s0);
 }
 
 .post-list > * + * {
@@ -344,6 +344,12 @@ h3 {
 }
 
 .post-tag {
+  display: flex;
+  gap: var(--s-3);
+  flex-wrap: wrap;
+}
+
+.post-tag-item {
   display: inline-flex;
   align-items: center;
   justify-content: center;
