@@ -118,7 +118,7 @@ class ShareHighlight extends HTMLElement {
             .join(' ')
 
         return {
-            url: window.location.href,
+            url: document.querySelector("link[rel='canonical']").href,
             title: document.title,
             text: `"${text}"`
         }
