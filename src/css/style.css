@@ -253,13 +253,13 @@ h3 {
   margin-top: var(--s1);
 }
 
-.aside-toc {
+.table-of-contents {
   position: relative;
   border: var(--border-thin) dotted;
   font-weight: 700;
 }
 
-.aside-toc > [aria-hidden] {
+.table-of-contents > [aria-hidden] {
   position: absolute;
   right: 1rem;
   top: -0.75em;
@@ -271,22 +271,22 @@ h3 {
   z-index: 1;
 }
 
-.aside-toc > span {
+.table-of-contents > span {
   background-color: var(--color-light);
 }
 
-.aside-toc ol {
+.table-of-contents ol {
   padding: var(--s1) var(--s3);
   margin: 0;
 }
-.aside-toc li {
+.table-of-contents li {
   text-transform: capitalize;
   line-height: var(--line-height);
 }
-.aside-toc li + li {
+.table-of-contents li + li {
   margin-top: var(--s-2);
 }
-.aside-toc a {
+.table-of-contents a {
   text-decoration: none;
 }
 
