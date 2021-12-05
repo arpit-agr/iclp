@@ -11,32 +11,6 @@ layout: layouts/base
         content: content,
         tags: tags
       }) }}
-    {# <hr>
-    <div class="post-meta color:darkish"> 
-      <span class="color:darkish">
-          {% if author != "Gautam Bhatia" and author !=  "Vasudev Devadasan" %}
-            Guest Post:
-          {% endif %}
-          {% if author %}
-            {% set comma = joiner() %}
-            {% for author in author -%}
-              {{ comma() }} {{ author }}
-            {%- endfor %}
-          {% else %}
-            Gautam Bhatia 
-          {% endif %}
-        </span>
-        <span>
-          •
-        </span>
-        <time datetime="{{ page.date | postDate}}">
-          {{ page.date | postDate}}</time>
-          {% if tags %}
-            {% for tag in tags %}
-              <a href="/tags/{{ tag | slug | url }}/" class="post-tag">{{ tag }}</a>
-            {% endfor %}
-          {% endif %}
-    </div> #}
     {% include "partials/toc.html" %}
     {{ content | safe}}
 </main>
@@ -56,36 +30,6 @@ layout: layouts/base
         date: page.date,
         tags: tags
       }) }}
-      {# <hr>
-      <div class="post-meta color:darkish">
-        <span>
-          {% if previousPost.data.author %}
-            {% set comma = joiner() %}
-            {% for author in previousPost.data.author -%}
-              {{ comma() }} {{ author }}
-            {%- endfor %}
-          {% else %}
-            Gautam Bhatia 
-          {% endif %} 
-        </span>
-          •
-        <time datetime="{{ previousPost.date | postDate}}">
-          {{ previousPost.date | postDate}}
-        </time>
-        {% if previousPost.data.tags %}
-          {% for tag in previousPost.data.tags | filterTagList %}
-            {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
-            <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
-          {% endfor %}
-        {% endif %}
-      </div> #}
-      {# <p class="color:darkish">
-        {% if previousPost.data.excerpt %}
-          {{ previousPost.data.excerpt }}
-        {% else %}
-          {{ previousPost.templateContent | excerpt }}</>
-        {% endif %}
-      </p> #}
     </article>
   {% endif %}
   {% if nextPost %}
@@ -94,35 +38,34 @@ layout: layouts/base
       <h3>
         <a href="{{ nextPost.url }}" class="postlist-link">{% if nextPost.data.title %}{{ nextPost.data.title }}{% else %}<code>{{ nextPost.url }}</code>{% endif %}</a>
       </h3>
-      <div class="post-meta color:darkish">
-        <span>
-          {% if nextPost.data.author %}
-            {% set comma = joiner() %}
-            {% for author in nextPost.data.author -%}
-              {{ comma() }} {{ author }}
-            {%- endfor %}
-          {% else %}
-            Gautam Bhatia 
-          {% endif %} 
-        </span>
-          •
-        <time datetime="{{ nextPost.date | postDate}}">
-          {{ nextPost.date | postDate}}
-        </time>
-        {% if nextPost.data.tags %}
-          {% for tag in nextPost.data.tags | filterTagList %}
-            {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
-            <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
-          {% endfor %}
-        {% endif %}
-      </div>
-      {# <p class="color:darkish">
-        {% if nextPost.data.excerpt %}
-          {{ nextPost.data.excerpt }}
-        {% else %}
-          {{ nextPost.templateContent | excerpt }}</>
-        {% endif %}
-      </p> #}
+      {{ meta({
+        author: author,
+        date: page.date,
+        tags: tags
+      }) }}
     </article>
   {% endif %}
+</aside>
+<hr style="border-style: solid;">
+<aside class="post-list">
+  <h2>Related Posts</h2>
+    {% set pickedPosts %}
+      {{ tags }}
+    {% endset %}
+    {% for post in collections.posts | pluck(pickedPosts, 'tags') | reverse | limit(3) %}
+      {% if post.url == page.url %}
+      {% else %}
+      <article class="postlist-item">
+        <h3>
+          <a href="{{ post.url }}" class="postlist-link">{{ post.data.title }}</a>
+        </h3>
+        {{ meta({
+          author: post.data.author,
+          date: post.date,
+          tags: post.data.tags
+        }) }}
+        <hr>
+      </article>
+      {% endif %}
+    {% endfor %}
 </aside>

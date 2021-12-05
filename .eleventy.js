@@ -69,6 +69,14 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 	
 	//FILTER
+	eleventyConfig.addFilter("pluck", function (arr, selections, attr) {
+		return arr.filter((item) => selections.includes(item.data[attr]));
+	  });
+
+	eleventyConfig.addFilter("limit", function (arr, limit) {
+	return arr.slice(0, limit);
+	});
+
 	eleventyConfig.addFilter("slug", (str) => {
 		if (!str) {
 		  return;
