@@ -8,6 +8,11 @@ const pluginTOC = require('eleventy-plugin-toc')
 
 module.exports = function (eleventyConfig) {
 
+	eleventyConfig.setBrowserSyncConfig({
+		ui: false,
+		ghostMode: false
+	});
+
 	//PASSTHROUGH COPY
 	eleventyConfig.addPassthroughCopy("./src/css/");
 	eleventyConfig.addPassthroughCopy("./src/scripts/");
