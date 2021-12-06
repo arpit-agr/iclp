@@ -1,11 +1,11 @@
 {
-    "name": "Indian Constitutional<br>Law & Philosophy",
-    "shortDesc": "Hylia is a lightweight Eleventy starter kit to help you to create your own blog or personal website.",
-    "url": "https://iclp.com",
-    "authorEmail": "hi@piccalil.li",
+    "name": "Indian Constitutional Law & Philosophy",
+    "shortDesc": "",
+    "url": "https://iclp.netlify.app",
+    "authorEmail": "#",
     "authorHandle": "@gautambhatia88",
     "authorName": "Gautam Bhatia",
-    "faviconPath": "/images/favicon.png",
+    "faviconPath": "#",
     "developerName": "Arpit Agrawal",
     "developerLink": "mailto:arpit.agrawal2502@gmail.com"
   }
