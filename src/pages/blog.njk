@@ -11,4 +11,4 @@ permalink: "blog/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber
 ---
 {% set postslist = pagination.items.reverse() %}
 {% include "partials/postslist.njk" %}
-{% include "partials/blognav.njk" %}
+{% include "partials/pagination.njk" %}
