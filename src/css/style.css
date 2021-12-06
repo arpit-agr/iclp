@@ -172,18 +172,23 @@ pre {
 }
 
 .sidebar a {
-  display: inline-block;
+  display: block;
   line-height: var(--line-height-small);
   font-weight: 700;
   text-decoration: none;
 }
 
-.sidebar a:not([aria-current="true"]):hover {
+.sidebar a:not([aria-current="page"]):hover {
   text-decoration: underline;
 }
-.sidebar [aria-current="true"] {
+.sidebar [aria-current="page"] {
   position: relative;
   text-indent: -1em;
+}
+
+.sidebar [aria-current="page"]::before {
+  content: "\25B8";
+  padding-right: var(--s-3);
 }
 
 main > * + * {
@@ -539,7 +544,7 @@ ol.cluster {
   content: "\25B8";
   padding-right: var(--s-3);
 }
-
+/* 
 @media (max-width: 883px) {
   header nav ul {
     display: flex;
@@ -548,4 +553,4 @@ ol.cluster {
     gap: var(--s0);
     flex-wrap: wrap;
   }
-}
+} */

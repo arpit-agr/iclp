@@ -7,5 +7,15 @@
     {{ site.name | safe }}
 </small>
 <nav>
-    {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
+    {% set navPages = collections.all | eleventyNavigation %}
+    <ul>
+    {% for entry in navPages %}
+        <li>
+            <a href="{{ entry.url | url }}" 
+            {% if entry.url == page.url %} aria-current="page"
+            {% endif %}>{{ entry.title }}</a>
+        </li>
+    {% endfor %}
+    </ul>
 </nav>
+
