@@ -199,6 +199,10 @@ main p + p {
   margin-top: var(--s0);
 }
 
+main > h2 + p {
+  margin-top: var(--s1);
+}
+
 mark {
   background-color: yellow;
   color: var(--color-dark);
@@ -236,7 +240,7 @@ hr {
 
 h1 {
   font-family: var(--font-special);
-  font-size: var(--s3);
+  font-size: var(--s4);
   line-height: var(--line-height-small);
 }
 
@@ -261,7 +265,7 @@ h3 {
 .table-of-contents {
   position: relative;
   border: var(--border-thin) dotted;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .table-of-contents > [aria-hidden] {
