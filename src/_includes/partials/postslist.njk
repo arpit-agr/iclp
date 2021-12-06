@@ -1,4 +1,4 @@
-<section class="post-list" style="counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }}">
+<div class="post-list" style="counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }}">
 {% for post in postslist | reverse %}
   <article class="postlist-item">
     <h2>
@@ -48,4 +48,4 @@
   </article>
   <hr>
 {% endfor %}
-</section>
+</div>
