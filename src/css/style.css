@@ -539,3 +539,13 @@ ol.cluster {
   content: "\25B8";
   padding-right: var(--s-3);
 }
+
+@media (max-width: 883px) {
+  header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: var(--s0);
+    flex-wrap: wrap;
+  }
+}
