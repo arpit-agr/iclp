@@ -413,7 +413,11 @@ hr.footnotes-sep {
   margin-top: var(--s-2);
 }
 
-aside.post-list h2 {
+aside.post-list details > * + * {
+  margin-top: var(--s3);
+}
+
+aside.post-list summary {
   font-size: var(--s2);
   font-family: var(--font-special);
 }
@@ -471,7 +475,7 @@ label small {
 [type="checkbox"] ~ svg,
 input,
 textarea {
-  box-shadow: inset 0.25rem 0.25rem 0 #ddd;
+  /* box-shadow: inset 0.25rem 0.25rem 0 #ddd; */
   border-radius: 0;
 }
 

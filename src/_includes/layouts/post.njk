@@ -16,39 +16,40 @@ layout: layouts/base
 </main>
 <hr style="border-style: solid;">
 <aside class="post-list">
-  <h2>Recent Articles</h2>
-  {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
-  {% set nextPost = collections.posts | getNextCollectionItem(page) %}
-  
-  {% if previousPost %}
-    <article class="postlist-item">
-      <h3>
-        <a href="{{ previousPost.url }}" class="postlist-link">{% if previousPost.data.title %}{{ previousPost.data.title }}{% else %}<code>{{ previousPost.url }}</code>{% endif %}</a>
-      </h3>
-      {{ meta({
-        author: author,
-        date: page.date,
-        tags: tags
-      }) }}
-    </article>
-  {% endif %}
-  {% if nextPost %}
-    <hr>
-    <article class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
-      <h3>
-        <a href="{{ nextPost.url }}" class="postlist-link">{% if nextPost.data.title %}{{ nextPost.data.title }}{% else %}<code>{{ nextPost.url }}</code>{% endif %}</a>
-      </h3>
-      {{ meta({
-        author: author,
-        date: page.date,
-        tags: tags
-      }) }}
-    </article>
-  {% endif %}
-</aside>
-<hr style="border-style: solid;">
-<aside class="post-list">
-  <h2>Related Posts</h2>
+  {# <details>
+    <summary>Recent Articles</summary>
+    {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+    {% set nextPost = collections.posts | getNextCollectionItem(page) %}
+    
+    {% if previousPost %}
+      <article class="postlist-item">
+        <h3>
+          <a href="{{ previousPost.url }}" class="postlist-link">{% if previousPost.data.title %}{{ previousPost.data.title }}{% else %}<code>{{ previousPost.url }}</code>{% endif %}</a>
+        </h3>
+        {{ meta({
+          author: author,
+          date: page.date,
+          tags: tags
+        }) }}
+      </article>
+    {% endif %}
+    {% if nextPost %}
+      <hr>
+      <article class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
+        <h3>
+          <a href="{{ nextPost.url }}" class="postlist-link">{% if nextPost.data.title %}{{ nextPost.data.title }}{% else %}<code>{{ nextPost.url }}</code>{% endif %}</a>
+        </h3>
+        {{ meta({
+          author: author,
+          date: page.date,
+          tags: tags
+        }) }}
+      </article>
+    {% endif %}
+  </details>
+  <hr style="border-style: solid;"> #}
+  <details>
+    <summary>Related Posts</summary>
     {% set pickedPosts %}
       {{ tags }}
     {% endset %}
@@ -64,8 +65,9 @@ layout: layouts/base
           date: post.date,
           tags: post.data.tags
         }) }}
-        <hr>
       </article>
+      <hr>
       {% endif %}
     {% endfor %}
+  </details>
 </aside>
