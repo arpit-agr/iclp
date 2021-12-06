@@ -1,9 +1,11 @@
-<p class="site-name">
-    <a href="/" tabindex="-1">{{ site.abbr }}</a>
-</p>
-<small class="font-weight:500">
-    {{ site.name | safe }}
-</small>
+<div class="site-name">
+    <p class="site-abbr">
+        <a href="/" tabindex="-1">{{ site.abbr }}</a>
+    </p>
+    <p class="site-full-name">
+        {{ site.name }}
+    </p>
+</div>
 <nav>
     {% set navPages = collections.all | eleventyNavigation %}
     <ul>

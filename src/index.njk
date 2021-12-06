@@ -8,10 +8,9 @@ eleventyNavigation:
 {% set postslist = collections.posts | head(-3) %}
 {% set postslistCounter = collections.posts | length %}
 {% include "partials/postslist.njk" %}
-
-<a href="/blog" class="view-all-link">
-  View All
-</a>
+<div>
+  <a href="/blog" class="view-all-link">View All </a>
+</div>
 
 
 
