@@ -189,6 +189,7 @@ pre {
 .sidebar a:not([aria-current="page"]):hover {
   text-decoration: underline;
 }
+
 .sidebar [aria-current="page"] {
   position: relative;
   text-indent: -1em;
@@ -197,6 +198,15 @@ pre {
 .sidebar [aria-current="page"]::before {
   content: "\25B8";
   padding-right: var(--s-3);
+}
+
+.sidebar [data-state="active"]::before {
+  content: "\25B8";
+  padding-right: var(--s-3);
+}
+
+.sidebar a:not([aria-current="page"])[data-state="active"]:hover {
+  text-decoration: none;
 }
 
 main > * + * {

@@ -1,5 +1,5 @@
 {
     "layout": "layouts/post",
-    "permalink": "./{{ page.date | date: '%Y/%m' }}/{% if customSlug %}{{ customSlug | slug }}{% else %}{{ title | slug }}{% endif %}/",
+    "permalink": "./blog/{{ page.date | date: '%Y/%m' }}/{% if customSlug %}{{ customSlug | slug }}{% else %}{{ title | slug }}{% endif %}/",
     "author": ["Gautam Bhatia"]
 }
