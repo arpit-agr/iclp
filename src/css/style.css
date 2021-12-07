@@ -195,6 +195,11 @@ pre {
   text-indent: -1em;
 }
 
+.sidebar [data-state="active"] {
+  position: relative;
+  text-indent: -1em;
+}
+
 .sidebar [aria-current="page"]::before {
   content: "\25B8";
   padding-right: var(--s-3);
