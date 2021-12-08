@@ -13,7 +13,7 @@
     {% endif %} 
     </span>
     •
-    <time datetime="{{ params.date }}">
+    <time datetime="{{ params.date | dump }}">
     {{ params.date | postDate}}
     </time>
     {% if params.layout == 'layouts/post' %}
