@@ -48,26 +48,26 @@ layout: layouts/base
     {% endif %}
   </details>
   <hr style="border-style: solid;"> #}
-  <details>
-    <summary>Related Posts</summary>
-    {% set pickedPosts %}
-      {{ tags }}
-    {% endset %}
-    {% for post in collections.posts | pluck(pickedPosts, 'tags') | reverse | limit(3) %}
-      {% if post.url == page.url %}
-      {% else %}
-      <article class="postlist-item">
-        <h3>
-          <a href="{{ post.url }}" class="postlist-link">{{ post.data.title }}</a>
-        </h3>
-        {{ meta({
-          author: post.data.author,
-          date: post.date,
-          tags: post.data.tags
-        }) }}
-      </article>
-      <hr>
-      {% endif %}
-    {% endfor %}
-  </details>
+  <h2>More Posts</h2>
+  {% for post in collections.posts | randomLimit(2, page.url) %}
+    <article class="postlist-item">
+      <h3>
+        <a href="{{ post.url }}" class="postlist-link">{{ post.data.title }}</a>
+      </h3>
+      {{ meta({
+        author: post.data.author,
+        date: post.date,
+        tags: post.data.tags
+      }) }}
+      <p class="excerpt color:darkish">
+        {% if post.data.excerpt %}
+          {{ post.data.excerpt }}
+        {% else %}
+          {{ post.templateContent | excerpt }}</>
+        {% endif %}
+      </p>
+    </article>
+    <hr>
+  {% endfor %}
+
 </aside>

@@ -440,11 +440,11 @@ hr.footnotes-sep {
   margin-top: var(--s-2);
 }
 
-aside.post-list details > * + * {
+aside.post-list > * + * {
   margin-top: var(--s3);
 }
 
-aside.post-list summary {
+aside.post-list h2 {
   font-size: var(--s2);
   font-family: var(--font-special);
 }

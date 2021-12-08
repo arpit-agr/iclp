@@ -69,9 +69,18 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 	
 	//FILTER
-	eleventyConfig.addFilter("pluck", function (arr, selections, attr) {
-		return arr.filter((item) => selections.includes(item.data[attr]));
-	  });
+	eleventyConfig.addFilter("randomLimit", (arr, limit, currPage) => {
+		// Filters out current page
+		const pageArr = arr.filter((page) => page.url !== currPage);
+	
+		// Randomizes remaining items
+		pageArr.sort(() => {
+			return 0.5 - Math.random();
+		});
+	
+		// Returns array items up to limit
+		return pageArr.slice(0, limit);
+	});
 
 	eleventyConfig.addFilter("limit", function (arr, limit) {
 	return arr.slice(0, limit);
