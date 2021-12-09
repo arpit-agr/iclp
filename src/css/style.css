@@ -121,7 +121,7 @@ pre {
 
 [href="#main"] {
   display: inline-block;
-  padding: var(--s-1);
+  padding: var(--s-1) var(--s2);
   color: var(--primary-background-color);
   background-color: var(--primary-text-color);
   position: absolute;
