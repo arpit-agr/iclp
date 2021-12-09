@@ -43,7 +43,7 @@
   --primary-text-color: var(--color-dark);
   --secondary-text-color: var(--color-darkish);
   --primary-background-color: var(--color-light);
-  --secondary-background-color: var(--color-light);
+  --secondary-background-color: var(--color-lightish);
   --outline-color: var(--color-mid);
 
   color: var(--primary-text-color);
@@ -439,6 +439,10 @@ h3 {
 
 .eleventy-plugin-embed-twitter {
   margin-top: var(--s2);
+}
+
+.eleventy-plugin-embed-twitter iframe {
+  border-radius: 12px;
 }
 
 .eleventy-plugin-embed-twitter + script {
