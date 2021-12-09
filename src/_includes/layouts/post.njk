@@ -49,8 +49,13 @@ layout: layouts/base
   </details>
   <hr style="border-style: solid;"> #}
   <h2>More Posts</h2>
-  {% for post in collections.posts | randomLimit(2, page.url) %}
-    <article class="postlist-item">
+
+  {% set postslist = collections.posts | randomLimit(2, page.url) %}
+  {% set headingLevel = 'h3' %}
+  {% include "partials/postslist.njk" %}
+
+  {# {% for post in collections.posts | randomLimit(2, page.url) %}
+    <article class="postlist-item stack">
       <h3>
         <a href="{{ post.url }}" class="postlist-link">{{ post.data.title }}</a>
       </h3>
@@ -68,6 +73,6 @@ layout: layouts/base
       </p>
     </article>
     <hr>
-  {% endfor %}
+  {% endfor %} #}
 
 </aside>

@@ -1,17 +1,19 @@
-<div class="post-list" style="counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }}">
+<div class="post-list">
 {% for post in postslist | reverse %}
-  <article class="postlist-item">
-    <h2>
-      <a href="{{ post.url | url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
-    </h2>
-    {% from "macros/macro.njk" import meta %}
-      {{ meta({
-        author: post.data.author,
-        date: post.date,
-        layout: layout,
-        content: post.data.content,
-        tags: post.data.tags
-      }) }}
+  <article class="postlist-item stack">
+    <div class="stack" style="gap: var(--s-1);">
+      <{{ headingLevel if headingLevel else 'h2' }}>
+        <a href="{{ post.url | url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+      </{{ headingLevel if headingLevel else 'h2' }}>
+      {% from "macros/macro.njk" import meta %}
+        {{ meta({
+          author: post.data.author,
+          date: post.date,
+          layout: layout,
+          content: post.data.content,
+          tags: post.data.tags
+        }) }}
+    </div>
     {# <hr>
     <div class="post-meta color:darkish">
       <span>
