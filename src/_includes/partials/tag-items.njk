@@ -1,0 +1,8 @@
+{% if post.data.tags %}
+<div class="post-tag color:darkish">
+    {% for tag in post.data.tags | filterTagList %}
+      {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+      <a href="{{ tagUrl | url }}" class="post-tag-item">{{ tag }}</a>
+    {% endfor %}
+</div>
+{% endif %}

@@ -2,51 +2,23 @@
 {% for post in postslist | reverse %}
   <article class="postlist-item stack">
     <div class="stack" style="gap: var(--s-1);">
+
+      {# Dynamic heading #}
       <{{ headingLevel if headingLevel else 'h2' }}>
         <a href="{{ post.url | url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
       </{{ headingLevel if headingLevel else 'h2' }}>
+      
       {% from "macros/macro.njk" import meta %}
         {{ meta({
           author: post.data.author,
           date: post.date,
           layout: layout,
-          content: post.data.content,
-          tags: post.data.tags
+          content: post.data.content
         }) }}
     </div>
-    {# <hr>
-    <div class="post-meta color:darkish">
-      <span>
-        {% if post.data.author != "Gautam Bhatia" and post.data.author !=  "Vasudev Devadasan" %}
-          Guest Post: 
-        {% endif %} 
-        {% if post.data.author %}
-          {% set comma = joiner() %}
-          {% for author in post.data.author -%}
-            {{ comma() }} {{ author }}
-          {%- endfor %}
-        {% else %}
-          Gautam Bhatia 
-        {% endif %} 
-      </span>
-        •
-      <time datetime="{{ post.date | postDate}}">
-        {{ post.date | postDate}}
-      </time>
-      {% if page.data.tags %}
-        {% for tag in post.data.tags | filterTagList %}
-          {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
-          <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
-        {% endfor %}
-      {% endif %}
-    </div> #}
-    <p class="excerpt color:darkish">
-      {% if post.data.excerpt %}
-        {{ post.data.excerpt }}
-      {% else %}
-        {{ post.templateContent | excerpt }}</>
-      {% endif %}
-    </p>
+    
+    {% include "partials/excerpt.njk" %}
+    {% include "partials/tag-items.njk" %}
   </article>
   <hr>
 {% endfor %}

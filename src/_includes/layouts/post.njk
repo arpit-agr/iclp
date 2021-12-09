@@ -2,77 +2,38 @@
 layout: layouts/base
 ---
 <main id="main" class="post">
+  <header>
     <h1>{{ title | addNbsp | safe }}</h1>
     {% from "macros/macro.njk" import meta %}
       {{ meta({
         author: author,
         date: page.date,
         layout: layout,
-        content: content,
-        tags: tags
+        content: content
       }) }}
+  </header>
     {% include "partials/toc.html" %}
     {{ content | safe}}
+    {% if tags %}
+    <div class="post-tag color:darkish">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-tags-fill" viewBox="0 0 16 16">
+        <path d="M2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2zm3.5 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+        <path d="M1.293 7.793A1 1 0 0 1 1 7.086V2a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l.043-.043-7.457-7.457z"/>
+      </svg>
+        {% for tag in tags | filterTagList %}
+          {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+          <a href="{{ tagUrl | url }}" class="post-tag-item">{{ tag }}</a>
+        {% endfor %}
+    </div>
+    {% endif %}
 </main>
 <hr style="border-style: solid;">
 <aside class="post-list">
-  {# <details>
-    <summary>Recent Articles</summary>
-    {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
-    {% set nextPost = collections.posts | getNextCollectionItem(page) %}
-    
-    {% if previousPost %}
-      <article class="postlist-item">
-        <h3>
-          <a href="{{ previousPost.url }}" class="postlist-link">{% if previousPost.data.title %}{{ previousPost.data.title }}{% else %}<code>{{ previousPost.url }}</code>{% endif %}</a>
-        </h3>
-        {{ meta({
-          author: author,
-          date: page.date,
-          tags: tags
-        }) }}
-      </article>
-    {% endif %}
-    {% if nextPost %}
-      <hr>
-      <article class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
-        <h3>
-          <a href="{{ nextPost.url }}" class="postlist-link">{% if nextPost.data.title %}{{ nextPost.data.title }}{% else %}<code>{{ nextPost.url }}</code>{% endif %}</a>
-        </h3>
-        {{ meta({
-          author: author,
-          date: page.date,
-          tags: tags
-        }) }}
-      </article>
-    {% endif %}
-  </details>
-  <hr style="border-style: solid;"> #}
-  <h2>More Posts</h2>
 
   {% set postslist = collections.posts | randomLimit(2, page.url) %}
   {% set headingLevel = 'h3' %}
-  {% include "partials/postslist.njk" %}
 
-  {# {% for post in collections.posts | randomLimit(2, page.url) %}
-    <article class="postlist-item stack">
-      <h3>
-        <a href="{{ post.url }}" class="postlist-link">{{ post.data.title }}</a>
-      </h3>
-      {{ meta({
-        author: post.data.author,
-        date: post.date,
-        tags: post.data.tags
-      }) }}
-      <p class="excerpt color:darkish">
-        {% if post.data.excerpt %}
-          {{ post.data.excerpt }}
-        {% else %}
-          {{ post.templateContent | excerpt }}</>
-        {% endif %}
-      </p>
-    </article>
-    <hr>
-  {% endfor %} #}
+  <h2>More Posts</h2>
+  {% include "partials/postslist.njk" %}
 
 </aside>

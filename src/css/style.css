@@ -278,7 +278,7 @@ hr {
   display: block;
   unicode-bidi: isolate;
   overflow: hidden;
-  border-top: var(--border-thin) dotted;
+  border-top: var(--border-thin) dashed;
 }
 
 h1 {
@@ -307,7 +307,7 @@ h3 {
 
 .table-of-contents {
   position: relative;
-  border: var(--border-thin) dotted;
+  border: var(--border-thin) dashed;
   font-weight: 500;
 }
 
@@ -399,6 +399,12 @@ h3 {
   display: flex;
   gap: var(--s-3);
   flex-wrap: wrap;
+  align-items: center;
+  font-size: var(--s-1);
+  text-transform: uppercase;
+}
+.post-tag svg {
+  fill: var(--primary-text-color);
 }
 
 .post-tag-item {
@@ -406,10 +412,12 @@ h3 {
   align-items: center;
   justify-content: center;
   padding: 0.06776036em 0.36443149em;
-  border: calc(var(--border-thin) / 1.4 / 1.4) dotted
-    var(--secondary-text-color);
+  border: calc(var(--border-thin) / 1.4) solid var(--primary-text-color);
   border-radius: var(--s-1);
   text-decoration: none;
+  background-color: var(--primary-text-color);
+  color: var(--secondary-background-color);
+  /* opacity: calc(1 / var(--ratio)); */
 }
 
 .direct-link {
