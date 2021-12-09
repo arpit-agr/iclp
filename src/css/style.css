@@ -247,17 +247,17 @@ main > h2 + p {
 }
 
 mark {
-  background-color: yellow;
+  background-color: paleturquoise;
   color: var(--color-dark);
 }
 
 share-highlight {
   /* default state */
   --share-highlight-text-color: var(--color-dark);
-  --share-highlight-bg-color: yellow;
+  --share-highlight-bg-color: paleturquoise;
   /* hover/focus state */
   --share-highlight-text-color-active: var(--color-dark);
-  --share-highlight-bg-color-active: yellow;
+  --share-highlight-bg-color-active: paleturquoise;
   /* tooltip */
   --share-highlight-tooltip-text-color: var(--primary-background-color);
   --share-highlight-tooltip-bg-color: var(--primary-text-color);
