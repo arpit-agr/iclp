@@ -578,12 +578,23 @@ textarea:focus {
   outline-offset: 0;
 }
 
-label + * {
-  margin-top: var(--s-3);
+form.contact-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2);
+  align-items: baseline;
 }
 
-form > * + * {
-  margin-top: var(--s1);
+form.contact-form > * {
+  flex-grow: 1;
+}
+
+/* form > * + * {
+  margin-top: var(--s2);
+} */
+
+form div > * + * {
+  margin-top: var(--s-3);
 }
 
 [type="submit"] {
