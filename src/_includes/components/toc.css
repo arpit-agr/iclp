@@ -1,0 +1,36 @@
+.table-of-contents {
+  position: relative;
+  border: var(--border-thin) dashed;
+  font-weight: 500;
+}
+
+.table-of-contents > [aria-hidden] {
+  position: absolute;
+  right: 1rem;
+  top: -0.75em;
+  text-transform: uppercase;
+  font-family: var(--font-special);
+  padding: 0 0.5rem;
+  font-size: var(--s1);
+  line-height: var(--line-height-small);
+  z-index: 1;
+}
+
+.table-of-contents > span {
+  background-color: var(--primary-background-color);
+}
+
+.table-of-contents ol {
+  padding: var(--s1) var(--s3);
+  margin: 0;
+}
+.table-of-contents li {
+  text-transform: capitalize;
+  line-height: var(--line-height);
+}
+.table-of-contents li + li {
+  margin-top: var(--s-2);
+}
+.table-of-contents a {
+  text-decoration: none;
+}

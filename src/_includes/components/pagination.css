@@ -1,0 +1,19 @@
+ol.pagination {
+  list-style: none;
+}
+
+.pagination a {
+  text-decoration: none;
+}
+
+.pagination a:not([aria-current="true"]):hover {
+  text-decoration: underline;
+}
+.pagination [aria-current="true"] {
+  position: relative;
+}
+
+.pagination [aria-current="true"]::before {
+  content: "\25B8";
+  padding-right: var(--s-3);
+}

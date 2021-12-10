@@ -1,0 +1,28 @@
+.with-sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+.sidebar,
+.not-sidebar {
+  padding: var(--s2);
+}
+
+.sidebar {
+  flex-grow: 1;
+  flex-basis: 14rem;
+  position: relative;
+  text-align: center;
+  outline: var(--border-thin) solid;
+}
+
+.not-sidebar {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: 70%;
+
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+}

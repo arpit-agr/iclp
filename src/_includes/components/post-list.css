@@ -1,0 +1,33 @@
+.post-list > * + * {
+  margin-top: var(--s2);
+}
+
+.post-list h2 {
+  line-height: var(--line-height);
+  font-size: var(--s1);
+  font-weight: 700;
+}
+
+.post-list h3 {
+  /* display: inline-block; */
+  line-height: var(--line-height);
+  font-size: var(--s0);
+  font-weight: 700;
+}
+
+.post-list a {
+  text-decoration: none;
+}
+
+.post-list a:not([aria-current="true"]):hover {
+  text-decoration: underline;
+}
+
+aside.post-list > * + * {
+  margin-top: var(--s3);
+}
+
+aside.post-list h2 {
+  font-size: var(--s2);
+  font-family: var(--font-special);
+}

@@ -1,0 +1,77 @@
+label {
+  font-weight: 700;
+}
+
+label,
+label small {
+  display: block;
+}
+
+label small {
+  font-weight: 400;
+  font-style: italic;
+}
+
+input,
+textarea {
+  background-color: inherit;
+}
+
+[type="checkbox"] ~ svg,
+input,
+textarea {
+  border-radius: 0;
+}
+
+[type="email"],
+[type="text"],
+textarea {
+  width: 100%;
+  font-size: inherit;
+  border-width: var(--border-thin);
+  padding: var(--s-1);
+}
+
+[type="checkbox"] ~ svg {
+  stroke: transparent;
+  border-width: var(--border-thin);
+  vertical-align: middle;
+  padding: 2px;
+  box-sizing: content-box;
+}
+
+[type="checkbox"]:checked ~ svg {
+  stroke: currentColor;
+}
+
+[type="checkbox"]:focus ~ svg {
+  outline: var(--border-thin) solid var(--outline-color);
+}
+
+input:focus,
+textarea:focus {
+  outline-offset: 0;
+}
+
+[type="submit"] {
+  width: 100%;
+}
+
+form.contact-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2);
+  align-items: baseline;
+}
+
+form.contact-form > * {
+  flex-grow: 1;
+}
+
+/* form > * + * {
+  margin-top: var(--s2);
+} */
+
+form div > * + * {
+  margin-top: var(--s-3);
+}

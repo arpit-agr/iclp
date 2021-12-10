@@ -1,12 +1,12 @@
 <nav>
-  <ol class="cluster">
+  <ol class="cluster pagination">
     {# <li>{% if page.url != pagination.href.first %}
       <a href="{{ pagination.href.first }}">First</a>{% else %}First{% endif %}
     </li> #}
     <li>{% if pagination.href.previous %}
       <a href="{{ pagination.href.previous }}">Previous</a>{% else %}Previous{% endif %}
     </li>
-    <ol class="cluster">
+    <ol class="cluster pagination">
       {%- for pageEntry in pagination.pages %}
         <li>
           <a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="true"{% endif %}>{{ loop.index }}</a>

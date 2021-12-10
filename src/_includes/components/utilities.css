@@ -1,0 +1,25 @@
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s1);
+}
+
+.color\:darkish {
+  color: var(--secondary-text-color);
+}
+
+.font-weight\:500 {
+  font-weight: 500;
+}
+
+.font-weight\:700 {
+  font-weight: 700;
+}
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s1);
+  justify-content: space-between;
+  align-items: center;
+}

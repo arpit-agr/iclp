@@ -1,3 +1,4 @@
+const CleanCSS = require("clean-css");
 const emojiReadTime = require("@11tyrocks/eleventy-plugin-emoji-readtime");
 const pluginShareHighlight = require('eleventy-plugin-share-highlight');
 const { DateTime } = require("luxon");
@@ -69,6 +70,10 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 	
 	//FILTER
+	eleventyConfig.addFilter("cssmin", function(code) {
+    return new CleanCSS({}).minify(code).styles;
+  });
+
 	eleventyConfig.addFilter("randomLimit", (arr, limit, currPage) => {
 		// Filters out current page
 		const pageArr = arr.filter((page) => page.url !== currPage);

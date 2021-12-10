@@ -1,0 +1,34 @@
+h1 {
+  font-family: var(--font-special);
+  font-size: var(--s4);
+  line-height: var(--line-height-small);
+}
+
+h1,
+h2,
+h3 {
+  text-transform: capitalize;
+}
+
+blockquote {
+  padding: var(--s0);
+  border-left: var(--border-thin) solid currentColor;
+  background-color: var(--secondary-background-color);
+}
+
+mark {
+  background-color: paleturquoise;
+  color: var(--color-dark);
+}
+
+share-highlight {
+  /* default state */
+  --share-highlight-text-color: var(--color-dark);
+  --share-highlight-bg-color: paleturquoise;
+  /* hover/focus state */
+  --share-highlight-text-color-active: var(--color-dark);
+  --share-highlight-bg-color-active: paleturquoise;
+  /* tooltip */
+  --share-highlight-tooltip-text-color: var(--primary-background-color);
+  --share-highlight-tooltip-bg-color: var(--primary-text-color);
+}

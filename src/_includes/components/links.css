@@ -1,0 +1,28 @@
+.view-all-link {
+  font-size: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  font-family: var(--font-special);
+  color: var(--primary-background-color);
+  background-color: var(--primary-text-color);
+  padding: var(--s-1) var(--s2);
+  border-width: var(--border-thin);
+}
+
+.view-all-link::after {
+  content: "→";
+}
+
+/* Heading anchor links */
+.direct-link {
+  opacity: 0;
+  transition: opacity 180ms ease-in;
+}
+
+.direct-link:hover {
+  opacity: 1;
+}
+
+.direct-link:focus {
+  opacity: 1;
+}

@@ -1,0 +1,28 @@
+sup {
+  font-size: var(--s-1);
+  color: inherit;
+}
+
+hr.footnotes-sep + *,
+* + hr.footnotes-sep {
+  margin-top: var(--s1);
+}
+
+hr.footnotes-sep {
+  /* display: none; */
+  border-style: dashed;
+  border-top-width: 1px;
+}
+
+.footnotes-list {
+  margin-inline-start: 20.688px;
+  font-size: var(--s-1);
+}
+
+.footnotes-list li + li {
+  margin-top: var(--s-2);
+}
+
+.footnotes + * {
+  margin-top: var(--s2);
+}
