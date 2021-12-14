@@ -1,15 +1,11 @@
 .view-all-link {
+  font-family: var(--font-special);
   font-size: inherit;
   font-weight: 700;
   text-decoration: none;
   color: var(--primary-background-color);
   background-color: var(--primary-text-color);
   padding: 0.51020408em 1.4em;
-  transition: background-color 0.2s cubic-bezier(0.05, 0, 0, 1);
-}
-
-.view-all-link:hover {
-  background-color: var(--secondary-text-color);
 }
 
 .view-all-link::after {
@@ -19,7 +15,6 @@
 /* Heading anchor links */
 .direct-link {
   opacity: 0;
-  transition: opacity 180ms ease-in;
 }
 
 .direct-link:hover {

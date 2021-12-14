@@ -49,7 +49,6 @@
   width: 100%;
   text-align: center;
   background-color: var(--tag-background-color);
-  /* box-shadow: 0px 2px 0 var(--tag-border-color); */
   border: none;
   display: none;
 }
