@@ -13,6 +13,13 @@
   line-height: var(--line-height);
 }
 
+.site-abbr a {
+  text-decoration: none;
+}
+.site-abbr a:hover {
+  text-decoration: underline;
+}
+
 .site-full-name {
   --measure: 21ch;
   max-width: var(--measure);

@@ -148,3 +148,15 @@ hr {
   overflow: hidden;
   border-top: var(--border-thin) dashed;
 }
+
+@media print {
+  .sidebar,
+  aside,
+  .not-sidebar footer {
+    display: none;
+  }
+
+  p {
+    break-inside: avoid-page;
+  }
+}
