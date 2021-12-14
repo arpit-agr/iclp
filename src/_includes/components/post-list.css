@@ -28,6 +28,10 @@ aside.post-list > * + * {
 }
 
 aside.post-list h2 {
-  font-size: var(--s2);
+  font-size: var(--s3);
   font-family: var(--font-special);
+}
+
+aside.post-list h3 {
+  font-size: var(--s1);
 }

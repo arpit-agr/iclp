@@ -1,7 +1,7 @@
 .post-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--s-3);
+  gap: var(--s-1);
   align-items: center;
   font-size: var(--s-1);
   font-weight: 500;

@@ -1,43 +1,43 @@
-.sidebar ul {
+.primary-nav ul {
   list-style: none;
 }
 
-.sidebar li + li {
-  margin-top: var(--s0);
+.primary-nav li + li {
+  margin-top: var(--s-2);
 }
 
-.sidebar a {
+.primary-nav a {
   display: block;
   line-height: var(--line-height-small);
   font-weight: 700;
   text-decoration: none;
 }
 
-.sidebar a:not([aria-current="page"]):hover {
+.primary-nav a:not([aria-current="page"]):hover {
   text-decoration: underline;
 }
 
-.sidebar [aria-current="page"] {
+.primary-nav [aria-current="page"] {
   position: relative;
   text-indent: -1em;
 }
 
-.sidebar [data-state="active"] {
+.primary-nav [data-state="active"] {
   position: relative;
   text-indent: -1em;
 }
 
-.sidebar [aria-current="page"]::before {
+.primary-nav [aria-current="page"]::before {
   content: "\25B8";
   padding-right: var(--s-3);
 }
 
-.sidebar [data-state="active"]::before {
+.primary-nav [data-state="active"]::before {
   content: "\25B8";
   padding-right: var(--s-3);
 }
 
-.sidebar a:not([aria-current="page"])[data-state="active"]:hover {
+.primary-nav a:not([aria-current="page"])[data-state="active"]:hover {
   text-decoration: none;
 }
 
