@@ -150,13 +150,33 @@ hr {
 }
 
 @media print {
+  main {
+    overflow: visible;
+    display: table;
+  }
+
   .sidebar,
   aside,
-  .not-sidebar footer {
+  .not-sidebar footer,
+  hr.section-sep {
     display: none;
   }
 
-  p {
-    break-inside: avoid-page;
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-weight: bold;
+    break-after: avoid;
+    break-inside: avoid;
+  }
+
+  h2 + p,
+  h3 + p {
+    break-before: avoid;
+  }
+
+  .eleventy-plugin-embed-twitter {
+    break-inside: avoid;
   }
 }
