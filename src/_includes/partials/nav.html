@@ -6,7 +6,13 @@
         {{ site.name }}
     </p>
 </div>
-<nav>
+<button class="primary-nav-toggle" aria-expanded="false">
+    <svg class="nav-menu-icon" focusable="false" viewBox="0 0 32 32">
+      <path d="M3,3 29,3 M3,16 29,16 M3,29 29,29"></path>
+    </svg>
+    Menu
+  </button>
+  <nav class="primary-nav" aria-labelledby="nav-label">
     {% set navPages = collections.all | eleventyNavigation %}
     <ul>
     {% for entry in navPages %}

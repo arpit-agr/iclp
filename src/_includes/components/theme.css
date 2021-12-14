@@ -48,7 +48,6 @@
   --tag-background-color: rgba(0, 0, 0, 0.05);
   --tag-background-hover-color: rgba(0, 0, 0, 0.1);
   --tag-border-color: rgba(0, 0, 0, 0.1);
-  --tag-text-color: var(--color-dark);
 
   color: var(--primary-text-color);
   background-color: var(--primary-background-color);
