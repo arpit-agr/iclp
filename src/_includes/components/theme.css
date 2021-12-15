@@ -80,7 +80,7 @@
   margin: 0;
   padding: 0;
   border: 0 solid;
-  scroll-padding-top: var(--s3);
+  scroll-margin-top: var(--s3);
 }
 
 footer,
@@ -94,6 +94,16 @@ nav {
   :root {
     scroll-behavior: smooth;
   }
+}
+
+/*Superscript styles*/
+sup {
+  display: inline-block;
+  transform: translateY(-0.25ex);
+}
+
+sup a {
+  text-decoration: none;
 }
 
 button {
