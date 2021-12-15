@@ -17,17 +17,17 @@ blockquote {
 }
 
 mark {
-  background-color: paleturquoise;
+  background-color: #b4d7ff;
   color: var(--color-dark);
 }
 
 share-highlight {
   /* default state */
   --share-highlight-text-color: var(--color-dark);
-  --share-highlight-bg-color: paleturquoise;
+  --share-highlight-bg-color: #b4d7ff;
   /* hover/focus state */
   --share-highlight-text-color-active: var(--color-dark);
-  --share-highlight-bg-color-active: paleturquoise;
+  --share-highlight-bg-color-active: #b4d7ff;
   /* tooltip */
   --share-highlight-tooltip-text-color: var(--primary-background-color);
   --share-highlight-tooltip-bg-color: var(--primary-text-color);
