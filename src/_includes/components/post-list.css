@@ -29,6 +29,11 @@
   text-decoration: underline;
 }
 
+aside.post-list {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 850px;
+}
+
 aside.post-list > * + * {
   margin-top: var(--s3);
 }

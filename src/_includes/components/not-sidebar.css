@@ -27,6 +27,9 @@ footer {
   margin-top: auto !important;
   font-size: var(--s-1);
   text-align: center;
+
+  content-visibility: auto;
+  contain-intrinsic-size: 0 120px;
 }
 
 footer > * + * {
