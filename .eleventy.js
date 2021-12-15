@@ -41,7 +41,7 @@ module.exports = function (eleventyConfig) {
 			  return encodeURIComponent(String(s).replace(/New\ in\ v\d+\.\d+\.\d+/, '').trim().toLowerCase().replace(/\s+/g, '-'));
 		  },
 		  permalinkClass: "direct-link",
-		  permalinkSymbol: "#",
+		  permalinkSymbol: "",
 		  tabIndex: false,
 		  level: [2,3,4] 
 	  };
