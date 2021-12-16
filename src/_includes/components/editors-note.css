@@ -1,0 +1,14 @@
+.post details > * + * {
+  margin-top: var(--s0);
+}
+
+.post summary {
+  font-weight: 500;
+}
+
+.editors-note {
+  padding: var(--s0);
+  color: var(--primary-text-color);
+  background-color: var(--tag-background-color);
+  /* border: var(--border-thin) dashed currentColor; */
+}
