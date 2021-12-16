@@ -48,8 +48,6 @@
   --tag-background-color: rgba(0, 0, 0, 0.05);
   --tag-background-hover-color: rgba(0, 0, 0, 0.1);
   --tag-border-color: rgba(0, 0, 0, 0.1);
-  --gnarly-filter: invert(0%) sepia(95%) saturate(6%) hue-rotate(327deg)
-    brightness(99%) contrast(96%);
 
   color: var(--primary-text-color);
   background-color: var(--primary-background-color);
@@ -68,8 +66,6 @@
     --tag-background-hover-color: rgba(255, 255, 255, 0.2);
     --tag-border-color: rgba(255, 255, 255, 0.1);
     --tag-text-color: hsl(216, 12%, 92%);
-    --gnarly-filter: invert(90%) sepia(10%) saturate(65%) hue-rotate(176deg)
-      brightness(107%) contrast(87%);
   }
 }
 
