@@ -55,7 +55,9 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPlugin(pluginTOC);
 
 	eleventyConfig.addPlugin(embedTwitter, {
-		cacheDuration: "60m"
+		doNotTrack: true,
+		cacheText: true,
+		cacheDuration: "1d"
 	});
 
 	eleventyConfig.addPlugin(eleventyNavigationPlugin);
