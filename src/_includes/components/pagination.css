@@ -17,3 +17,7 @@ ol.pagination {
   content: "\25B8";
   padding-right: var(--s-3);
 }
+
+.pagination [data-direction="forwards"] {
+  margin-inline-start: auto;
+}
