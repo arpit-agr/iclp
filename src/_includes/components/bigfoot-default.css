@@ -30,7 +30,6 @@
 
 .bigfoot-footnote__button:hover,
 .bigfoot-footnote__button:focus {
-  outline: none;
   background-color: var(--tag-background-hover-color);
   color: var(--primary-background-color);
 }
