@@ -9,9 +9,12 @@ hr.footnotes-sep + *,
 }
 
 hr.footnotes-sep {
-  /* display: none; */
   border-style: dashed;
   border-top-width: 1px;
+}
+
+.with-js hr.footnotes-sep {
+  display: none;
 }
 
 .footnotes-list {

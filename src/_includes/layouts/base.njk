@@ -15,6 +15,7 @@
         {% include "components/post-content.css" %}
         {% include "components/toc.css" %}
         {% include "components/editors-note.css" %}
+        {% include "components/bigfoot-default.css" %}
         {% include "components/twitter-embed.css" %}
         {% include "components/footnotes.css" %}
     {% endif %}
@@ -43,6 +44,12 @@
     <style>
         {{ css | cssmin | safe }}
     </style>
+
+    <script type="text/javascript" src="/scripts/jquery.js"></script>
+    <script type="text/javascript" src="/scripts/bigfoot.js"></script>
+    <script type="text/javascript">
+        $.bigfoot();
+    </script>
 </head>
 <body>
     <a href="#main">Skip to content</a>
