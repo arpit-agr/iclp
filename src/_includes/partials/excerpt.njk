@@ -1,6 +1,6 @@
 <p class="excerpt color:darkish">
-  {% if post.data.excerpt %}
-    {{ post.data.excerpt }}
+  {% if post.data.summary %}
+    {{ post.data.summary }}
   {% else %}
     {{ post.templateContent | excerpt }}</>
   {% endif %}
