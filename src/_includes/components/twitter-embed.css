@@ -10,6 +10,6 @@
   margin: 0;
 }
 
-.eleventy-plugin-embed-twitter + script + * {
+.eleventy-plugin-embed-twitter + p {
   margin-top: var(--s2);
 }
