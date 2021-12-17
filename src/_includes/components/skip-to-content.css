@@ -1,0 +1,13 @@
+@media (max-width: 883px) {
+  [href="#main"] {
+    display: block;
+    padding: var(--s-3) 0 var(--s0);
+    color: var(--primary-text-color);
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+}

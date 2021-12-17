@@ -10,7 +10,7 @@
   font-family: var(--font-special);
   font-size: var(--s4);
   text-transform: uppercase;
-  line-height: var(--line-height);
+  line-height: var(--line-height-small);
 }
 
 .site-abbr a {
@@ -24,7 +24,6 @@
   --measure: 21ch;
   max-width: var(--measure);
   margin-inline: auto;
-  margin-top: calc(var(--s-3) * -1);
   font-size: var(--s-1);
   font-weight: 500;
 }

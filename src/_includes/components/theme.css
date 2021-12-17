@@ -186,6 +186,10 @@ hr {
     break-before: avoid;
   }
 
+  [href="#main"] {
+    visibility: hidden;
+  }
+
   .eleventy-plugin-embed-twitter {
     break-inside: avoid;
   }
