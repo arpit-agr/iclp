@@ -32,8 +32,23 @@
     <title>{{ post.data.title }}</title>
     <link href="{{ absolutePostUrl }}"/>
     <updated>{{ post.date | dateToRfc3339 }}</updated>
+    <author>
+      <name>{{ post.data.author }}</name>
+    </author>
     <id>{{ absolutePostUrl }}</id>
-    <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+    <content type="html">
+    {% if post.data.customEditorsNote %}
+      {% set editorsNoteContent = post.data.customEditorsNote %}
+    {% else %}
+      {% set editorsNoteContent %}
+        Justice is an indivisible concept. We cannot, therefore, discuss contemporary Supreme Court judgments without also acknowledging the Court’s failure – at an institutional level – to do justice in the case involving <a href="https://www.thenewsminute.com/article/women-lawyers-demand-fair-inquiry-sexual-harassment-charges-against-cji-gogoi-100441">sexual harassment allegations</a> against a former Chief Justice. This editorial caveat will remain in place for all future posts on this blog dealing with the Supreme Court, until there is a material change in circumstances (e.g., the introduction of structural mechanisms to ensure accountability).
+      {% endset %}
+    {% endif %}
+
+    {% if post.data.editorsNote %}
+      &lt;p&gt;Editor's Note: {{ editorsNoteContent }}&lt;/p&gt;
+    {% endif %}
+    {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
   </entry>
   {%- endfor %}
 </feed>
