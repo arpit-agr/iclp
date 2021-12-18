@@ -6,13 +6,13 @@
 
 .sidebar,
 .not-sidebar {
-  padding: var(--s2);
+  padding-block: var(--s2);
 }
 
 .sidebar {
+  z-index: 1;
   flex-grow: 1;
   flex-basis: 14rem;
-  position: relative;
   text-align: center;
   outline: var(--border-thin) solid;
 }

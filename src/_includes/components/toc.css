@@ -1,6 +1,6 @@
 .table-of-contents {
   position: relative;
-  border: var(--border-thin) dashed;
+  border: var(--border-thin) solid;
   font-weight: 500;
 }
 

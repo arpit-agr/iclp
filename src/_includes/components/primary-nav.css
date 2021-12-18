@@ -56,6 +56,8 @@
 @media (max-width: 883px) {
   .with-js .primary-nav-toggle {
     display: block;
+    margin-inline: auto;
+    max-width: calc(100% - (2 * var(--s2)));
   }
 }
 

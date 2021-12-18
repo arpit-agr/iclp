@@ -30,6 +30,9 @@
 }
 
 aside.post-list {
+  padding-block: var(--s3);
+  border-block: var(--border-thin) solid;
+  background-color: var(--secondary-background-color);
   content-visibility: auto;
   contain-intrinsic-size: 0 850px;
 }
@@ -45,4 +48,8 @@ aside.post-list h2 {
 
 aside.post-list h3 {
   font-size: var(--s1);
+}
+
+aside.post-list hr:last-child {
+  display: none;
 }

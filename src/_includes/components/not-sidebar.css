@@ -1,5 +1,13 @@
-.not-sidebar > * + * {
+.not-sidebar > * {
+  padding-inline: var(--s2);
+}
+
+/* .not-sidebar > * + * {
   margin-top: var(--s3);
+} */
+
+.not-sidebar main {
+  padding-block-end: var(--s3);
 }
 
 main > * + * {
@@ -28,9 +36,12 @@ aside > * {
 }
 
 footer {
+  min-width: 100%;
   margin-top: auto !important;
+  padding-block-start: var(--s2);
   font-size: var(--s-1);
   text-align: center;
+  /* border-block-start: var(--border-thin) solid; */
 
   content-visibility: auto;
   contain-intrinsic-size: 0 120px;
@@ -40,9 +51,9 @@ footer > * + * {
   margin-top: var(--s-3);
 }
 
-footer:before {
+/* footer:before {
   content: "\25AC";
   display: block;
   margin-top: var(--s3);
   padding-bottom: var(--s-3);
-}
+} */

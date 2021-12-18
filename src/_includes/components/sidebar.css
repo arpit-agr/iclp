@@ -1,3 +1,7 @@
+.sidebar > * {
+  padding-inline: var(--s2);
+}
+
 .sidebar > * + * {
   margin-top: var(--s1);
 }
