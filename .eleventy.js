@@ -1,3 +1,4 @@
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 const CleanCSS = require("clean-css");
 const emojiReadTime = require("@11tyrocks/eleventy-plugin-emoji-readtime");
 const pluginShareHighlight = require('eleventy-plugin-share-highlight');
@@ -117,6 +118,8 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.setLibrary("md", markdownLib);
 
 	//PLUGIN
+	eleventyConfig.addPlugin(pluginRss);
+
 	eleventyConfig.addPlugin(emojiReadTime, { showEmoji: false });
 
 	eleventyConfig.addPlugin(pluginTOC);
