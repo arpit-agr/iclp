@@ -21,7 +21,7 @@
 }
 
 .table-of-contents ol {
-  padding: var(--s1) var(--s3);
+  padding: var(--s1) var(--s1) var(--s1) var(--s3);
   margin: 0;
 }
 .table-of-contents li {
@@ -33,4 +33,11 @@
 }
 .table-of-contents a {
   text-decoration: none;
+}
+
+.table-of-contents li ol {
+  list-style: lower-roman;
+  padding-inline: var(--s1) 0;
+  padding-block: var(--s-2) 0;
+  opacity: 0.71;
 }
