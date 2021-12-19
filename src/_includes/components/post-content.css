@@ -2,6 +2,10 @@
   font-size: var(--s1);
 }
 
+.post h3 {
+  font-size: var(--s0);
+}
+
 p + blockquote,
 blockquote + * {
   margin-top: var(--s2);
