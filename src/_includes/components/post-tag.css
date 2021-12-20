@@ -6,6 +6,7 @@
   font-size: var(--s-1);
   font-weight: 500;
   text-transform: uppercase;
+  list-style: none;
 }
 
 .post-tag-item {
