@@ -22,8 +22,11 @@ main > h2 + p {
   margin-top: var(--s1);
 }
 
-.heading-wrapper + * {
+.heading-wrapper.h2 + * {
   margin-top: var(--s1);
+}
+.heading-wrapper.h3 + * {
+  margin-top: var(--s-1);
 }
 
 footer,
