@@ -55,9 +55,9 @@
     <script src="/scripts/main.js" type="module"></script>
     {% if layout == 'layouts/post' %}
         <script src="/scripts/share-highlight.js" async defer></script>
-        <script type="text/javascript" src="/scripts/jquery.js"></script>
-        <script type="text/javascript" src="/scripts/bigfoot.js"></script>
-        <script type="text/javascript">
+        <script type="text/javascript" src="/scripts/jquery.js" async defer></script>
+        <script type="text/javascript" src="/scripts/bigfoot.js" async defer></script>
+        <script type="text/javascript" async defer>
             $.bigfoot();
         </script>
     {% endif %}
