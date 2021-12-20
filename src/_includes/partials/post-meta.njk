@@ -22,6 +22,6 @@
     𝍄 {{ params.date | postDate}}
     </time>
     {% if params.layout == 'layouts/post' %}
-        <p>📖 {{ params.content | emojiReadTime }}</p>
+        <p><span aria-hidden="true">📖</span> {{ params.content | emojiReadTime }}</p>
     {% endif %}
 </div>
