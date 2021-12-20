@@ -1,3 +1,7 @@
+.post-list {
+  list-style: none;
+}
+
 .post-list > * + * {
   margin-top: var(--s3);
 }

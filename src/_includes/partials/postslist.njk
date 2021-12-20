@@ -1,5 +1,6 @@
-<div class="post-list">
+<ol class="post-list">
 {% for post in postslist | reverse %}
+  <li>
   <article class="postlist-item stack">
     <div class="stack" style="gap: var(--s-1);">
 
@@ -20,6 +21,7 @@
     {% include "partials/excerpt.njk" %}
     {% include "partials/tag-items.njk" %}
   </article>
+  </li>
   <hr aria-hidden="true" >
 {% endfor %}
-</div>
+</ol>
