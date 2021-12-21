@@ -17,17 +17,24 @@ blockquote {
 }
 
 mark {
-  background-color: #b4d7ff;
-  color: var(--color-dark);
+  background-color: Lavender;
+  color: var(--primary-text-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  mark {
+    background-color: hsla(240, 67%, 94%, 80%);
+    color: var(--primary-background-color);
+  }
 }
 
 share-highlight {
   /* default state */
-  --share-highlight-text-color: var(--color-dark);
-  --share-highlight-bg-color: #b4d7ff;
+  --share-highlight-text-color: var(--primary-text-color);
+  --share-highlight-bg-color: Lavender;
   /* hover/focus state */
-  --share-highlight-text-color-active: var(--color-dark);
-  --share-highlight-bg-color-active: #b4d7ff;
+  --share-highlight-text-color-active: var(--primary-text-color);
+  --share-highlight-bg-color-active: Lavender;
   /* tooltip */
   --share-highlight-tooltip-text-color: var(--primary-background-color);
   --share-highlight-tooltip-bg-color: var(--primary-text-color);

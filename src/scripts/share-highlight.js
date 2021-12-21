@@ -33,6 +33,13 @@ class ShareHighlight extends HTMLElement {
             :host(:focus) ::slotted(mark) {
                 color: var(--share-highlight-text-color-active) !important;
             }
+            @media (prefers-color-scheme: dark) {
+                ::slotted(mark) {
+                    --share-highlight-text-color: var(--primary-background-color);
+                    --share-highlight-bg-color: hsla(240, 67%, 94%, 80%);
+                    --share-highlight-text-color-active: var(--primary-background-color);
+                }
+            }
             .tooltip {
                 display:none;
                 position: absolute;
