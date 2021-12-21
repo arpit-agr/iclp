@@ -17,7 +17,7 @@ blockquote {
 }
 
 mark {
-  background-color: Lavender;
+  background-color: hsl(240deg 67% 92%);
   color: var(--primary-text-color);
 }
 
@@ -31,10 +31,10 @@ mark {
 share-highlight {
   /* default state */
   --share-highlight-text-color: var(--primary-text-color);
-  --share-highlight-bg-color: Lavender;
+  --share-highlight-bg-color: hsl(240deg 67% 92%);
   /* hover/focus state */
   --share-highlight-text-color-active: var(--primary-text-color);
-  --share-highlight-bg-color-active: Lavender;
+  --share-highlight-bg-color-active: hsl(240deg 67% 92%);
   /* tooltip */
   --share-highlight-tooltip-text-color: var(--primary-background-color);
   --share-highlight-tooltip-bg-color: var(--primary-text-color);
