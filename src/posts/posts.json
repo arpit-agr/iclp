@@ -2,6 +2,7 @@
     "layout": "layouts/post",
     "permalink": "./blog/{{ page.date | date: '%Y/%m' }}/{% if customSlug %}{{ customSlug | slug }}{% else %}{{ title | slug }}{% endif %}/",
     "author": ["Gautam Bhatia"],
+    "tags": "miscellaneous",
     "eleventyComputed": {
         "metaDesc": "Written by {{ author | join() }}. Published on {{ date | postDate }}."
     }
