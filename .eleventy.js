@@ -101,6 +101,8 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 	
 	//FILTER
+	eleventyConfig.addFilter("getByTags", require("./src/scripts/getByTags.js"));
+
 	eleventyConfig.addFilter("cssmin", function(code) {
     return new CleanCSS({}).minify(code).styles;
   });
