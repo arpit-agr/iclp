@@ -1,8 +1,10 @@
 ---
 title: Tags
+subtitle: —Sorted alphabetically
 permalink: /tags/
 ---
-<ul class="post-tag" style="font-size: var(--s0);">
+<small style="margin-top: var(--s-3); font-size: var(--s-1)">{{ subtitle }}</small>
+<ul class="post-tag" style="font-size: var(--s0); gap: var(--s-2);">
     {% for tag in collections.tagList | sort %}
     {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
         <li><a href="{{ tagUrl | url }}" class="post-tag-item">{{ tag }}</a></li>
