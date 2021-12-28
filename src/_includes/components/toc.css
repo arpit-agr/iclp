@@ -37,7 +37,9 @@
 
 .table-of-contents li ol {
   list-style: lower-roman;
-  padding-inline: var(--s1) 0;
+  padding-inline: var(--s-1) 0;
   padding-block: var(--s-2) 0;
-  opacity: 0.71;
+  font-weight: 400;
+  color: var(--secondary-text-color);
+  font-size: var(--s-1);
 }
