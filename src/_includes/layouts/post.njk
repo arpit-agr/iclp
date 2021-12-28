@@ -26,8 +26,11 @@ layout: layouts/base
     {% endif %}
 </main>
 <aside class="post-list">
-
-  {% set postslist = collections.posts | randomLimit(2, page.url) %}
+  {% set postslist = collections.posts | getByTags(tags) | randomLimit(2, page.url) %}
+  {% set postsListLength = postslist | length %}
+  {% if postsListLength == 0 %}
+    {% set postslist = collections.posts | randomLimit(2, page.url) %}
+  {% endif %}
   {% set headingLevel = 'h3' %}
 
   <h2>More Posts</h2>
