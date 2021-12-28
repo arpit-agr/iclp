@@ -1,10 +1,10 @@
 h1 {
   font-family: var(--font-special);
-  font-size: var(--s4);
+  font-size: var(--s3);
   line-height: var(--line-height-small);
+  text-transform: uppercase;
 }
 
-h1,
 h2,
 h3 {
   text-transform: capitalize;
