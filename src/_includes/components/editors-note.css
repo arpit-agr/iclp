@@ -1,11 +1,11 @@
 .editors-note summary {
   cursor: pointer;
   text-transform: uppercase;
-  font-family: var(--font-special);
-  font-size: var(--s1);
+  font-size: var(--s-1);
+  font-weight: 700;
 }
 
 .editors-note p {
-  margin-top: var(--s1);
+  margin-top: var(--s0);
   padding-bottom: var(--s3);
 }
