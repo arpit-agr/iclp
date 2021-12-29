@@ -1,45 +1,74 @@
-.table-of-contents {
-  position: relative;
-  border: var(--border-thin) solid;
-  font-weight: 500;
+.table-of-contents > * + * {
+  margin-top: var(--s-2);
 }
 
 .table-of-contents > [aria-hidden] {
-  position: absolute;
-  right: 1rem;
-  top: -0.75em;
   text-transform: uppercase;
-  font-family: var(--font-special);
-  padding: 0 0.5rem;
-  font-size: var(--s1);
+  font-size: var(--s-1);
+  font-weight: 700;
   line-height: var(--line-height-small);
-  z-index: 1;
 }
 
-.table-of-contents > span {
-  background-color: var(--primary-background-color);
+.toc ol {
+  counter-reset: toc;
+  list-style: none;
 }
-
-.table-of-contents ol {
-  padding: var(--s1) var(--s1) var(--s1) var(--s3);
-  margin: 0;
-}
-.table-of-contents li {
-  text-transform: capitalize;
+.toc > ol > li {
   line-height: var(--line-height);
+  counter-increment: toc;
+  border-top: 1px solid;
 }
-.table-of-contents li + li {
+
+.toc ol li a {
+  display: grid;
+  gap: var(--s-3);
+  grid-template-columns: var(--s-1) 1fr auto;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: var(--s-1);
+  font-weight: 500;
+}
+
+.toc > ol > li > a {
+  padding-block: var(--s-2);
+}
+
+.toc ol li a:before {
+  content: counter(toc) ".";
+}
+
+.toc > ol > li > a::after {
+  display: inline-block;
+  width: var(--s-1);
+  height: var(--s-1);
+  margin-top: var(--s-5);
+  content: "";
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 13 13'><path fill='hsl(0, 0%, 10%)' d='M12.02.7h-2v7.9L1.42 0 0 1.41l8.6 8.61H.7v2h11.32V.71z'/></svg>");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform 250ms;
+}
+
+.toc ol li a:hover::after {
+  transform: rotate(-45deg);
+}
+
+.toc li ol {
+  padding-block-end: var(--s-2);
+  color: var(--secondary-text-color);
+}
+
+.toc li ol li {
+  counter-increment: toc;
+  margin-inline-start: calc(var(--s-1) + var(--s-3));
+}
+
+.toc li ol li + li {
   margin-top: var(--s-2);
 }
-.table-of-contents a {
-  text-decoration: none;
-}
 
-.table-of-contents li ol {
-  list-style: lower-roman;
-  padding-inline: var(--s-1) 0;
-  padding-block: var(--s-2) 0;
-  font-weight: 400;
-  color: var(--secondary-text-color);
-  font-size: var(--s-1);
+@media (prefers-color-scheme: dark) {
+  .toc > ol > li > a::after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 13 13'><path fill='hsl(216, 12%, 92%)' d='M12.02.7h-2v7.9L1.42 0 0 1.41l8.6 8.61H.7v2h11.32V.71z'/></svg>");
+  }
 }
