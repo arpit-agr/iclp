@@ -1,9 +1,9 @@
 {% set authorLength = params.author | length %}
 
 <div class="post-meta color:darkish">
-    <span class="cluster" style="gap:var(--s-5);">
+    <span class="cluster author-info">
         <p class="visually-hidden">Author:</p>
-        <span aria-hidden="true" style="vertical-align: middle; margin-right: 2px;">
+        <span aria-hidden="true" class="author-icon">
         {% if authorLength > 1 %}
             <svg 
                 xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16" 
@@ -20,17 +20,17 @@
             </svg>
         {% endif %}
         </span>
-    {% if params.author != "Gautam Bhatia" and params.author !=  "Vasudev Devadasan" %}
-        Guest Post : 
-    {% endif %} 
-    {% if params.author %}
-        {% set comma = joiner() %}
-        {% for author in params.author -%}
-            {{ comma() }} {{ author }}
-        {%- endfor %}
-    {% else %}
-        Gautam Bhatia 
-    {% endif %} 
+        {% if params.author != "Gautam Bhatia" and params.author !=  "Vasudev Devadasan" %}
+            Guest Post : 
+        {% endif %} 
+        {% if params.author %}
+            {% set comma = joiner() %}
+            {% for author in params.author -%}
+                {{ comma() }} {{ author }}
+            {%- endfor %}
+        {% else %}
+            Gautam Bhatia 
+        {% endif %} 
     </span>
     <p class="visually-hidden">Publish Date:</p>
     <time datetime={{ params.date | dump | safe }}>
@@ -38,7 +38,7 @@
     </time>
     {% if params.layout == 'layouts/post' %}
         <p>
-            <span aria-hidden="true" style="vertical-align: middle;">
+            <span aria-hidden="true" class= "time-icon">
                 <svg 
                     xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-hourglass-split" viewBox="0 0 16 16"
                 >

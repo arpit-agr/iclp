@@ -2,7 +2,7 @@
 {% for post in postslist | reverse %}
   <li>
   <article class="postlist-item stack">
-    <div class="stack" style="gap: var(--s-1);">
+    <div class="stack postlist-item-header">
 
       {# Dynamic heading #}
       <{{ headingLevel if headingLevel else 'h2' }}>

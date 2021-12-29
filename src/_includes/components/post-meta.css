@@ -7,3 +7,16 @@
   font-weight: 500;
   text-transform: uppercase;
 }
+
+.author-info {
+  gap: var(--s-5);
+}
+
+.author-icon {
+  vertical-align: middle;
+  margin-right: 2px;
+}
+
+.time-icon {
+  vertical-align: middle;
+}

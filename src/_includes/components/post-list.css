@@ -6,6 +6,10 @@
   margin-top: var(--s3);
 }
 
+.postlist-item-header {
+  gap: var(--s-1);
+}
+
 .post-list h2 {
   line-height: var(--line-height);
   font-size: var(--s1);
@@ -16,13 +20,6 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis; */
-}
-
-.post-list h3 {
-  /* display: inline-block; */
-  line-height: var(--line-height);
-  font-size: var(--s0);
-  font-weight: 700;
 }
 
 .post-list a {
