@@ -6,7 +6,7 @@
 
       {# Dynamic heading #}
       <{{ headingLevel if headingLevel else 'h2' }}>
-        <a href="{{ post.url | url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title | addNbsp | safe }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+        <a href="{{ post.url | url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
       </{{ headingLevel if headingLevel else 'h2' }}>
       
       {% from "macros/macro.njk" import meta %}
