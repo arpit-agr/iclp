@@ -154,10 +154,6 @@ pre {
   outline: none;
 }
 
-a {
-  text-underline-offset: var(--border-thin);
-}
-
 [href="#main"] {
   display: inline-block;
   padding: var(--s-1) var(--s2);
