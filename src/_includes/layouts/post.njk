@@ -3,7 +3,7 @@ layout: layouts/base
 ---
 <main id="main" class="post">
   <header>
-    <h1>{{ title | addNbsp | safe }}</h1>
+    <h1>{{ title }}</h1>
     {% from "macros/macro.njk" import meta %}
       {{ meta({
         author: author,
