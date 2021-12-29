@@ -67,8 +67,9 @@
   margin-top: var(--s-2);
 }
 
+/* Manually add dark theme text color in the fill*/
 @media (prefers-color-scheme: dark) {
   .toc > ol > li > a::after {
-    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 13 13'><path fill='hsl(216, 12%, 92%)' d='M12.02.7h-2v7.9L1.42 0 0 1.41l8.6 8.61H.7v2h11.32V.71z'/></svg>");
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 13 13'><path fill='hsl(216, 12%, 82%)' d='M12.02.7h-2v7.9L1.42 0 0 1.41l8.6 8.61H.7v2h11.32V.71z'/></svg>");
   }
 }

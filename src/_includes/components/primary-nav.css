@@ -2,41 +2,59 @@
   list-style: none;
 }
 
-.primary-nav li + li {
-  margin-top: var(--s-2);
-}
-
 .primary-nav a {
   display: block;
-  line-height: var(--line-height-small);
+  line-height: var(--line-height);
   font-weight: 700;
   text-decoration: none;
+  font-size: var(--s-1);
+  text-transform: uppercase;
+  padding-block: var(--s-5);
 }
 
 .primary-nav a:not([aria-current="page"]):hover {
   text-decoration: underline;
+  text-decoration-thickness: var(--border-thin);
 }
 
 .primary-nav [aria-current="page"] {
   position: relative;
-  text-indent: -1em;
+  text-indent: calc(-10.33px - var(--s-3));
 }
 
 .primary-nav [data-state="active"] {
   position: relative;
-  text-indent: -1em;
+  text-indent: calc((var(--s-2) + var(--s-3)) * -1);
 }
 
 .primary-nav [aria-current="page"]::before {
-  content: "\25B8";
-  padding-right: var(--s-3);
+  display: inline-block;
+  width: var(--s-2);
+  height: var(--s-2);
+  margin-right: var(--s-3);
+  content: "";
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewBox='0 0 16 16'><path d=\"m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z\"/></svg>");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .primary-nav [data-state="active"]::before {
-  content: "\25B8";
-  padding-right: var(--s-3);
+  display: inline-block;
+  width: var(--s-2);
+  height: var(--s-2);
+  margin-right: var(--s-3);
+  content: "";
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewBox='0 0 16 16'><path d=\"m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z\"/></svg>");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
-
+/* Manually add dark theme text color in the fill*/
+@media (prefers-color-scheme: dark) {
+  .primary-nav [aria-current="page"]::before,
+  .primary-nav [data-state="active"]::before {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='hsl(216, 12%, 82%)' viewBox='0 0 16 16'><path d=\"m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z\"/></svg>");
+  }
+}
 .primary-nav a:not([aria-current="page"])[data-state="active"]:hover {
   text-decoration: none;
 }
@@ -81,6 +99,11 @@
 @media (max-width: 883px) {
   .with-js .primary-nav {
     display: none;
+  }
+
+  .with-js .primary-nav a {
+    font-size: var(--s0);
+    padding-block: var(--s-4);
   }
 }
 
