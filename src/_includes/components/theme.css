@@ -141,6 +141,7 @@ button {
 }
 
 button {
+  text-transform: uppercase;
   border-color: var(--primary-text-color);
 }
 

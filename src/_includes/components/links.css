@@ -2,6 +2,7 @@
   font-family: var(--font-special);
   font-size: inherit;
   font-weight: 700;
+  text-transform: uppercase;
   text-decoration: none;
   color: var(--primary-background-color);
   background-color: var(--primary-text-color);
