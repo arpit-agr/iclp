@@ -1,4 +1,25 @@
+.call-out {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: stretch;
+  outline: var(--border-thin) solid;
+}
+
+.call-out-label {
+  padding: var(--s-1);
+  font-family: var(--font-special);
+  text-transform: uppercase;
+  color: var(--primary-background-color);
+  background-color: var(--primary-text-color);
+}
+
+.call-out-content {
+  padding: var(--s-1);
+  align-self: center;
+}
+
 label {
+  font-size: var(--s1);
   font-weight: 700;
 }
 
@@ -55,6 +76,11 @@ textarea:focus {
 
 [type="submit"] {
   width: 100%;
+}
+
+::placeholder {
+  color: var(--primary-text-color);
+  opacity: calc(1 / var(--ratio));
 }
 
 form.contact-form {
