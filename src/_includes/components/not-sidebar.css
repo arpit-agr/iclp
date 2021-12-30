@@ -14,7 +14,7 @@ main > * + * {
   margin-top: var(--s3);
 }
 
-main p + p {
+main > p + p {
   margin-top: var(--s0);
 }
 
