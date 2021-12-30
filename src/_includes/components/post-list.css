@@ -6,6 +6,11 @@
   margin-top: var(--s3);
 }
 
+.post-list > li + li {
+  padding-top: var(--s3);
+  border-top: var(--border-thin) dashed;
+}
+
 .postlist-item-header {
   gap: var(--s-1);
 }
@@ -49,8 +54,4 @@ aside.post-list h2 {
 
 aside.post-list h3 {
   font-size: var(--s1);
-}
-
-aside.post-list hr:last-child {
-  display: none;
 }
