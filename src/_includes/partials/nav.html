@@ -17,7 +17,7 @@
     <ul>
     {% for entry in navPages %}
         <li>
-            <a href="{{ entry.url | url }}" {{ helpers.getLinkActiveState(entry.url, page.url) | safe }}>{{ entry.title }}</a>
+            <a href="{{ entry.url | url }}" {{ helpers.getLinkActiveState(entry.url, page.url) | safe }} aria-label="{{ entry.title }}">{{ entry.title }}</a>
         </li>
     {% endfor %}
     </ul>
