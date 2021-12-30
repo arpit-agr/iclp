@@ -4,12 +4,13 @@
 
 .primary-nav a {
   display: block;
-  line-height: var(--line-height);
+  padding-block: var(--s-5);
+  font-size: var(--s-1);
   font-weight: 700;
   text-decoration: none;
-  font-size: var(--s-1);
+  letter-spacing: calc(var(--s-1) * 1 / 100);
+  line-height: var(--line-height);
   text-transform: uppercase;
-  padding-block: var(--s-5);
 }
 
 .primary-nav a:not([aria-current="page"]):hover {

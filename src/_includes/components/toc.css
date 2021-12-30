@@ -3,10 +3,11 @@
 }
 
 .table-of-contents > [aria-hidden] {
-  text-transform: uppercase;
   font-size: var(--s-1);
   font-weight: 700;
+  letter-spacing: calc(var(--s-1) * 1 / 100);
   line-height: var(--line-height-small);
+  text-transform: uppercase;
 }
 
 .toc ol {
@@ -23,10 +24,11 @@
   display: grid;
   gap: var(--s-3);
   grid-template-columns: var(--s-1) 1fr auto;
-  text-decoration: none;
-  text-transform: uppercase;
   font-size: var(--s-1);
   font-weight: 500;
+  letter-spacing: calc(var(--s-1) * 1 / 100);
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .toc > ol > li > a {
