@@ -636,3 +636,5 @@
   })(jQuery);
 
 }).call(this);
+
+$.bigfoot();
