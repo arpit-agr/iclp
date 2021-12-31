@@ -1,11 +1,16 @@
-<div class="site-name">
-    <p class="site-abbr" aria-hidden="true">
-        <a href="/">{{ site.abbr }}</a>
-    </p>
-    <p class="site-full-name">
+<section class="site-head">
+    <a 
+        class="site-abbr" 
+        href="/" 
+        tabindex="-1" 
+        aria-hidden=true>
+        {{ site.abbr }}
+    </a>
+    <p class="site-name">
         {{ site.name }}
     </p>
-</div>
+</section>
+
 <button class="primary-nav-toggle" aria-expanded="false">
     <svg class="nav-menu-icon" focusable="false" viewBox="0 0 32 32">
       <path d="M3,3 29,3 M3,16 29,16 M3,29 29,29"></path>

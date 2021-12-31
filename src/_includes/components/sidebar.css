@@ -6,7 +6,7 @@
   margin-top: var(--s1);
 }
 
-.site-name > * + * {
+.site-head > * + * {
   margin-top: var(--s-3);
 }
 
@@ -14,17 +14,15 @@
   font-family: var(--font-special);
   font-size: var(--s4);
   text-transform: uppercase;
+  text-decoration: none;
   line-height: var(--line-height-small);
 }
 
-.site-abbr a {
-  text-decoration: none;
-}
-.site-abbr a:hover {
+.site-abbr:hover {
   text-decoration: underline;
 }
 
-.site-full-name {
+.site-name {
   --measure: 21ch;
   max-width: var(--measure);
   margin-inline: auto;
