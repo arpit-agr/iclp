@@ -1,21 +1,17 @@
 .call-out {
   display: grid;
   grid-template-columns: auto 1fr;
-  align-items: stretch;
-  outline: var(--border-thin) solid;
+  align-items: center;
 }
 
 .call-out-label {
-  padding: var(--s-1);
-  font-family: var(--font-special);
-  text-transform: uppercase;
-  color: var(--primary-background-color);
-  background-color: var(--primary-text-color);
+  margin-inline-end: var(--s-1);
 }
 
 .call-out-content {
-  padding: var(--s-1);
-  align-self: center;
+  padding-block: var(--s-3);
+  padding-inline-start: var(--s-1);
+  border-inline-start: var(--border-thin) solid var(--primary-text-color);
 }
 
 label {
