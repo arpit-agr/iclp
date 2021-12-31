@@ -61,15 +61,16 @@
 }
 
 .primary-nav-toggle {
+  width: 100%;
+  border: none;
+  background-color: var(--tag-background-color);
+  display: none;
+  font-family: unset;
   font-size: var(--s0);
   text-transform: uppercase;
   color: var(--primary-text-color);
   font-weight: 700;
-  width: 100%;
   text-align: center;
-  background-color: var(--tag-background-color);
-  border: none;
-  display: none;
 }
 
 @media (max-width: 883px) {
