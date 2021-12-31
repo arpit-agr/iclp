@@ -8,8 +8,9 @@
 }
 
 :root {
-  --font-plain: Helvetica Neue, Helvetica, Arial, sans-serif;
-  --font-special: "Barlow Condensed", Helvetica, sans-serif;
+  --font-plain: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-special: "Barlow Condensed", "HelveticaNeue-CondensedBold", Impact,
+    Helvetica, sans-serif;
   --font-mono: Menlo, Courier, Courier New, Andale Mono, monospace;
 
   --color-dark: hsl(0, 0%, 2%);
