@@ -1,7 +1,7 @@
 .post-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--s-1);
+  gap: var(--s0);
   align-items: center;
   font-size: var(--s-1);
   font-weight: 500;
@@ -14,11 +14,8 @@
 }
 
 .author-icon,
+.calendar-icon,
 .time-icon {
   vertical-align: middle;
   margin-right: 2px;
-}
-
-.time-icon {
-  vertical-align: middle;
 }
