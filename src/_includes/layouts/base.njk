@@ -38,7 +38,7 @@
     <link rel="alternate" type="application/atom+xml" href="{{ site.url }}/feed.xml" title="{{ site.name }}"/>
 </head>
 <body>
-    <a href="#main">Skip to content</a>
+    <a href="#main" id="skipContent">Skip to content</a>
     <div class="with-sidebar">
         <header class="sidebar">
             {% include "partials/nav.html" %}
@@ -55,6 +55,17 @@
         <script src="/scripts/share-highlight.js" async defer></script>
         <script type="text/javascript" src="/scripts/jquery.js" defer></script>
         <script type="text/javascript" src="/scripts/bigfoot.js" defer></script>
+        <script>
+            window.onscroll = function () {
+                if (pageYOffset >= 20) {
+                    document.getElementById('skipContent').style.opacity = 0;
+                    document.getElementById('skipContent').style.visibility = "hidden";
+                } else {
+                    document.getElementById('skipContent').style.opacity = 1;
+                    document.getElementById('skipContent').style.visibility = "visible";
+                }
+            };
+        </script>
     {% endif %}
 </body>
 </html>
