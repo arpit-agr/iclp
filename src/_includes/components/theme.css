@@ -112,7 +112,7 @@
   margin: 0;
   padding: 0;
   border: 0 solid;
-  scroll-margin-top: var(--s2);
+  scroll-margin-top: calc(var(--s2) - var(--border-thin));
 }
 
 footer,
