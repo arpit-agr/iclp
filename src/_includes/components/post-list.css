@@ -38,7 +38,7 @@
 aside.post-list {
   padding-block: var(--s3);
   border-block: var(--border-thin) solid;
-  background-color: var(--secondary-background-color);
+  background-color: var(--tag-background-color);
   content-visibility: auto;
   contain-intrinsic-size: 0 850px;
 }
