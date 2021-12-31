@@ -9,10 +9,6 @@
   text-transform: uppercase;
 }
 
-.author-info {
-  gap: var(--s-5);
-}
-
 .author-icon,
 .calendar-icon,
 .time-icon {
