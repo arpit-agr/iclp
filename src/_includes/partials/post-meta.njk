@@ -2,7 +2,7 @@
 
 <div class="post-meta color:darkish">
     <span>
-        <p class="visually-hidden">Author:</p>
+        <span class="visually-hidden">Author:</span>
         <span aria-hidden="true" class="author-icon">
         {% if authorLength > 1 %}
             <svg 
@@ -31,7 +31,7 @@
             Gautam Bhatia 
         {% endif %} 
     </span>
-    <p class="visually-hidden">Publish Date:</p>
+    <span class="visually-hidden">Publish Date:</span>
     <time datetime={{ params.date | dump | safe }}>
         <span aria-hidden="true" class= "calendar-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-calendar2-check-fill" viewBox="0 0 16 16">
