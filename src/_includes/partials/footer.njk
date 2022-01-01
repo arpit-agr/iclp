@@ -1,8 +1,12 @@
-<theme-toggle></theme-toggle>
-<!-- <p>&copy; {% year %} {{ site.name }}</p> -->
-<p class="font-weight:500">
-    Site Credit: 
-    <a href="{{ site.developerLink }}">
-        {{ site.developerName }}
-    </a>
-</p>
+<div class="footer-inner">
+    <div class="stack footer-inner-content">
+        <p>&copy; {% year %} {{ site.name | addNbsp | safe }}</p>
+        <p>
+            Site Credit: 
+            <a href="{{ site.developerLink }}">
+                {{ site.developerName }}
+            </a>
+        </p>
+    </div>
+    <theme-toggle></theme-toggle>
+</div>

@@ -51,12 +51,5 @@ footer {
 }
 
 footer > * + * {
-  margin-top: var(--s-3);
+  margin-top: var(--s0);
 }
-
-/* footer:before {
-  content: "\25AC";
-  display: block;
-  margin-top: var(--s3);
-  padding-bottom: var(--s-3);
-} */
