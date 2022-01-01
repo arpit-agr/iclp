@@ -10,8 +10,9 @@ CSS.registerProperty({
     inherits: !0,
     initialValue: "#050505"
 })),
+
 "paintWorklet"in CSS && CSS.paintWorklet.addModule("/scripts/image-cross.js"),
-document.body.classList.add("with-js"),
+
 function() {
     const e = document.querySelector(".primary-nav-toggle");
     document.querySelector(".primary-nav");

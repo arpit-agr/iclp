@@ -36,6 +36,7 @@
     
     <style>{{ css | cssmin | safe }}</style>
     <link rel="alternate" type="application/atom+xml" href="{{ site.url }}/feed.xml" title="{{ site.name }}"/>
+    <script>document.documentElement.classList.add('with-js');</script>
 </head>
 <body>
     <a href="#main" id="skipContent">Skip to content</a>
@@ -50,6 +51,7 @@
             </footer>
         </div>
     </div>
+    <script type="module" src="/scripts/theme-toggle.js" async defer></script>
     <script src="/scripts/main.js" type="module"></script>
     {% if layout == 'layouts/post' %}
         <script src="/scripts/share-highlight.js" async defer></script>
