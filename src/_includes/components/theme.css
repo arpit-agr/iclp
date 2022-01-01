@@ -145,7 +145,7 @@
 }
 
 body {
-  transition: background 500ms ease-in-out, color 200ms ease;
+  transition: background-color 500ms ease-in-out, color 200ms ease;
 }
 
 footer,

@@ -37,7 +37,7 @@
   font-weight: 400;
   letter-spacing: calc(var(--s-1) * 1 / 100);
   color: var(--primary-text-color);
-  transition: all 500ms ease-in-out;
+  transition: background-color 500ms ease-in-out, color 200ms ease;
 }
 
 .js-mode-toggle::after {
