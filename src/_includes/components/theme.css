@@ -64,6 +64,7 @@
   --tag-background-hover-color: rgba(0, 0, 0, 0.1);
   --tag-border-color: rgba(0, 0, 0, 0.1);
   --tag-text-color: var(--primary-text-color);
+  --section-outline-color: var(--primary-text-color);
 
   color: var(--primary-text-color);
   background-color: var(--primary-background-color);
@@ -112,6 +113,7 @@
     --tag-background-hover-color: rgba(255, 255, 255, 0.2);
     --tag-border-color: rgba(255, 255, 255, 0.1);
     --tag-text-color: hsl(216, 20%, 88%);
+    --section-outline-color: var(--tag-background-color);
     --button-icon: var(--icon-sun);
     --button-icon-filter: var(--icon-sun-filter);
   }
@@ -127,6 +129,7 @@
   --tag-background-hover-color: rgba(255, 255, 255, 0.2);
   --tag-border-color: rgba(255, 255, 255, 0.1);
   --tag-text-color: hsl(216, 20%, 88%);
+  --section-outline-color: var(--tag-background-color);
   --button-icon: var(--icon-sun);
   --button-icon-filter: var(--icon-sun-filter);
 }

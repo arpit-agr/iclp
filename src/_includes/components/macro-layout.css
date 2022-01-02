@@ -14,7 +14,7 @@
   flex-grow: 1;
   flex-basis: 14rem;
   text-align: center;
-  outline: var(--border-thin) solid;
+  outline: var(--border-thin) solid var(--section-outline-color);
 }
 
 .not-sidebar {
