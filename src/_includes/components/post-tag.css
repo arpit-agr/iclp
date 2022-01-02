@@ -32,7 +32,7 @@
   border-radius: var(--s-1);
   text-decoration: none;
   background-color: var(--tag-background-color);
-  color: var(--primary-text-color);
+  color: var(--tag-text-color);
   transition: background-color 0.5s cubic-bezier(0.05, 0, 0, 1);
 }
 
