@@ -1,3 +1,4 @@
+const socialImages = require("@11tyrocks/eleventy-plugin-social-images");
 const pluginTOC = require('eleventy-plugin-nesting-toc');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const CleanCSS = require("clean-css");
@@ -77,6 +78,8 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.setLibrary("md", markdownLib);
 
 	//PLUGIN
+	eleventyConfig.addPlugin(socialImages);
+
 	eleventyConfig.addPlugin(pluginRss);
 
 	eleventyConfig.addPlugin(emojiReadTime, { showEmoji: false });
@@ -144,16 +147,6 @@ module.exports = function (eleventyConfig) {
 		const content = post.replace(/(<([^>]+)>)/gi, "");
 		return content.substr(0, content.lastIndexOf(" ", 155)) + "...";
 	  });
-
-	eleventyConfig.addFilter("addNbsp", (str) => {
-	if (!str) {
-		return;
-	}
-	let title = str.replace(/((.*)\s(.*))$/g, "$2&nbsp;$3");
-	title = title.replace(/"(.*)"/g, '\\"$1\\"');
-	return title;
-	});
-
 	
 	eleventyConfig.addFilter("head", (array, n) => {
 		if(!Array.isArray(array) || array.length === 0) {

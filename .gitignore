@@ -1,12 +1,14 @@
-# Node
-node_modules/
+# dependencies installed by npm
+node_modules
 package-lock.json
-yarn.lock
 
-# Eleventy
-public/
+# Eleventy build artefacts
+public
+./social/pages.json
 .cache
 
 .prettierignore
-.gitignore
 .vscode
+
+# macOS related files
+.DS_Store

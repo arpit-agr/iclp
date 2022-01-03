@@ -1,0 +1,136 @@
+:root {
+  --font-plain: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-special: "Barlow Condensed", "HelveticaNeue-CondensedBold", Impact,
+    Helvetica, sans-serif;
+  --font-mono: Menlo, Courier, Courier New, Andale Mono, monospace;
+
+  --color-dark: hsl(0, 0%, 2%);
+  --color-darkish: #404040;
+  --color-lightish: #e6e6e6;
+  --color-light: #fafafa;
+  --color-mid: grey;
+
+  --ratio: 1.4;
+  --s-6: calc(
+    var(--s0) / var(--ratio) / var(--ratio) / var(--ratio) / var(--ratio) /
+      var(--ratio) / var(--ratio)
+  );
+  --s-5: calc(
+    var(--s0) / var(--ratio) / var(--ratio) / var(--ratio) / var(--ratio) /
+      var(--ratio)
+  );
+  --s-4: calc(
+    var(--s0) / var(--ratio) / var(--ratio) / var(--ratio) / var(--ratio)
+  );
+  --s-3: calc(var(--s0) / var(--ratio) / var(--ratio) / var(--ratio));
+  --s-2: calc(var(--s0) / var(--ratio) / var(--ratio));
+  --s-1: calc(var(--s0) / var(--ratio));
+  --s0: 1rem;
+  --s1: calc(var(--s0) * var(--ratio));
+  --s2: calc(var(--s0) * var(--ratio) * var(--ratio));
+  --s3: calc(var(--s0) * var(--ratio) * var(--ratio) * var(--ratio));
+  --s4: calc(
+    var(--s0) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio)
+  );
+  --s5: calc(
+    var(--s0) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio) *
+      var(--ratio)
+  );
+  --measure: 65ch;
+  --line-height: var(--ratio);
+  --line-height-small: calc(0.8 * var(--ratio));
+  --border-thin: var(--s-6);
+  --border-thick: var(--s-2);
+  line-height: var(--ratio);
+  font-size: calc(0.333vw + 1em);
+  font-family: var(--font-plain);
+
+  --color-mode: "light";
+  --primary-text-color: var(--color-dark);
+  --secondary-text-color: var(--color-darkish);
+  --primary-background-color: var(--color-light);
+  --secondary-background-color: var(--color-lightish);
+  --outline-color: var(--color-mid);
+  --tag-background-color: rgba(0, 0, 0, 0.05);
+  --tag-background-hover-color: rgba(0, 0, 0, 0.1);
+  --tag-border-color: rgba(0, 0, 0, 0.1);
+  --tag-text-color: var(--primary-text-color);
+  --section-outline-color: var(--primary-text-color);
+
+  color: var(--primary-text-color);
+  background-color: var(--primary-background-color);
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  /* background-color: inherit; */
+  font-family: inherit;
+  color: inherit;
+  overflow-wrap: break-word;
+  margin: 0;
+  padding: 0;
+  border: 0 solid;
+}
+
+body {
+  border-bottom: var(--border-thick) solid var(--section-outline-color);
+  background-color: var(--tag-background-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-family: -apple-system, Helvetica, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 700;
+  color: var(--primary-text-color);
+  line-height: var(--line-height);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body > * {
+  padding: var(--s2);
+}
+
+.meta {
+  padding-block-end: var(--s2);
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.meta > * + * {
+  margin-top: var(--s-1);
+}
+
+span:empty {
+  display: none;
+}
+
+.social-image-title {
+  max-width: 85%;
+  max-height: 48vh;
+  font-size: var(--s1);
+  line-height: var(--line-height-small);
+  text-transform: capitalize;
+  outline: none;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.social-image-site {
+  width: 100%;
+  padding-top: var(--s-1);
+  border-top: var(--border-thin) solid currentColor;
+  font-size: var(--s0);
+  text-transform: capitalize;
+  line-height: var(--line-height);
+  outline: none;
+}

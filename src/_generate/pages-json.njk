@@ -1,0 +1,20 @@
+---
+permalink: ./social/pages.json
+permalinkBypassOutputDir: true
+eleventyExcludeFromCollections: true
+---
+[
+{%- for pages in collections.all %}
+  {
+      "title":"{{ pages.data.title | addNbsp | safe }}",
+      "imgName":"{{ pages.data.title | slug }}",
+      "variables": {
+        {%- if pages.data.layout == "layouts/post" %}
+        "date": "{{ pages.date | postDate }}",
+        "author": "{{ pages.data.author }}",
+        "separator": "•"
+        {% endif %}
+      }
+  }{% if loop.last == false %},{% endif -%}
+{% endfor %}
+]
