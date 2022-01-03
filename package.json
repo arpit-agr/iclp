@@ -4,7 +4,7 @@
   "description": "",
   "main": ".eleventy.js",
   "scripts": {
-    "social-images": "eleventy-social-images --siteName 'ICLP' --outputDir public --dataFile social/pages.json --templatePath social/template.html --stylesPath social/style.css",
+    "social-images": "eleventy-social-images --siteName 'ICLP' --outputDir public --dataFile social/social-pages.json --templatePath social/template.html --stylesPath social/social-style.css",
     "start": "eleventy --serve",
     "build": "eleventy ; npm run social-images"
   },
