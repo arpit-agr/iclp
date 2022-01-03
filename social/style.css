@@ -114,10 +114,11 @@ span:empty {
 }
 
 .social-image-title {
+  padding-block-end: 0;
   max-width: 85%;
   font-family: Inter;
   font-size: var(--s1);
-  line-height: var(--line-height-small);
+  line-height: var(--line-height);
   text-transform: capitalize;
   outline: none;
 
