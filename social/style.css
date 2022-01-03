@@ -115,9 +115,8 @@ span:empty {
 
 .social-image-title {
   max-width: 85%;
-  max-height: 48vh;
   font-family: Inter;
-  font-size: var(--s2);
+  font-size: var(--s1);
   line-height: var(--line-height-small);
   text-transform: capitalize;
   outline: none;
