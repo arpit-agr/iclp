@@ -196,20 +196,8 @@
       }
   },
   {
-      "title":"Tagged&nbsp;“uapa”",
-      "imgName":"tagged-uapa",
-      "variables": {
-      }
-  },
-  {
-      "title":"Tagged&nbsp;“bail”",
-      "imgName":"tagged-bail",
-      "variables": {
-      }
-  },
-  {
-      "title":"Tagged “personal&nbsp;liberty”",
-      "imgName":"tagged-personal-liberty",
+      "title":"Tagged “freedom of&nbsp;speech”",
+      "imgName":"tagged-freedom-of-speech",
       "variables": {
       }
   },
@@ -226,8 +214,14 @@
       }
   },
   {
-      "title":"Tagged “freedom of&nbsp;speech”",
-      "imgName":"tagged-freedom-of-speech",
+      "title":"Tagged&nbsp;“bail”",
+      "imgName":"tagged-bail",
+      "variables": {
+      }
+  },
+  {
+      "title":"Tagged “personal&nbsp;liberty”",
+      "imgName":"tagged-personal-liberty",
       "variables": {
       }
   },
@@ -240,6 +234,12 @@
   {
       "title":"Tagged&nbsp;“aadhar”",
       "imgName":"tagged-aadhar",
+      "variables": {
+      }
+  },
+  {
+      "title":"Tagged&nbsp;“uapa”",
+      "imgName":"tagged-uapa",
       "variables": {
       }
   }

@@ -117,7 +117,7 @@ span:empty {
   max-width: 85%;
   max-height: 48vh;
   font-family: var(--font-special);
-  font-size: var(--s1);
+  font-size: var(--s2);
   line-height: var(--line-height-small);
   text-transform: capitalize;
   outline: none;
