@@ -1,0 +1,16 @@
+---
+layout: layouts/base
+---
+{% set postslist = collections.posts | head(-3) %}
+
+
+<main id="main">
+    <h1>{{ introHeading }}</h1>
+    {% include "partials/postslist.njk" %}
+    <hr>
+    <div>
+        <a href="/blog" class="view-all-link">
+            View All <span aria-hidden=true>→</span>
+        </a>
+    </div>
+</main>

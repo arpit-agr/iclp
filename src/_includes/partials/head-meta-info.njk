@@ -1,9 +1,5 @@
 {% set pageTitle = title + ' - ' + site.abbr %}
 
-{% if page.url === '/' %} 
-  {% set pageTitle = site.name + ' - ' + site.abbr %}
-{% endif %}
-
 {% set siteTitle = site.name %}
 {% set currentUrl = site.url + page.url %}
 
