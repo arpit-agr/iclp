@@ -1,12 +1,19 @@
-.view-all-link {
+.blog-nav-link {
+  padding: var(--s-3) var(--s0);
+  border: var(--border-thin) solid var(--primary-text-color);
+  background-color: var(--primary-text-color);
   font-family: var(--font-special);
   font-size: inherit;
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
   color: var(--primary-background-color);
-  background-color: var(--primary-text-color);
-  padding: 0.51020408em 1.4em;
+  transition: background-color 125ms ease-in-out, color 50ms ease;
+}
+
+.blog-nav-link:hover {
+  color: var(--primary-text-color);
+  background: var(--primary-background-color);
 }
 
 /* Heading anchor links */

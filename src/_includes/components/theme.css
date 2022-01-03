@@ -185,7 +185,6 @@ button {
   background-color: var(--primary-text-color);
   padding: var(--s-1) var(--s2);
   border-width: var(--border-thin);
-  box-shadow: var(--shadow-elevation-low);
 }
 
 button {

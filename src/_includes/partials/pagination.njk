@@ -6,7 +6,7 @@
     </li> #}
     {% if pagination.href.previous %}
     <li data-direction="backwards">
-      <a href="{{ pagination.href.previous }}"><span aria-hidden="true">←</span> Newer Articles</a>
+      <a class="blog-nav-link" href="{{ pagination.href.previous }}"><span aria-hidden="true">←</span> Newer Articles</a>
     </li>
     {% endif %}
     {# <ol class="cluster pagination">
@@ -18,7 +18,7 @@
     </ol> #}
         {% if pagination.href.next %}
         <li data-direction="forwards">
-            <a href="{{ pagination.href.next }}">Older Articles <span aria-hidden="true">→</span></a>
+            <a class="blog-nav-link" href="{{ pagination.href.next }}">Older Articles <span aria-hidden="true">→</span></a>
         </li>
         {% endif %}
       {# <li>
