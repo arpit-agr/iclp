@@ -29,6 +29,11 @@
   letter-spacing: calc(var(--s-1) * 1 / 100);
   text-decoration: none;
   text-transform: uppercase;
+  transition: background-color 250ms ease-out;
+}
+
+.toc ol li a:hover {
+  background-color: var(--tag-background-color);
 }
 
 .toc > ol > li > a {
@@ -48,11 +53,6 @@
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-right"><line x1="7" y1="7" x2="17" y2="17"></line><polyline points="17 7 17 17 7 17"></polyline></svg>');
   background-size: contain;
   background-repeat: no-repeat;
-  /* transition: transform 250ms ease-out; */
-}
-
-.toc ol li a:hover::after {
-  transform: rotate(-45deg);
 }
 
 .toc li ol {
