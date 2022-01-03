@@ -27,7 +27,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.18593443em 0.51020408em;
+  padding: var(--s-6) var(--s-3);
   border: 1px solid var(--tag-border-color);
   border-radius: var(--s-1);
   text-decoration: none;
