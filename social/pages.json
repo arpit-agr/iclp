@@ -1,6 +1,5 @@
 [
   {
-      "layout":"layouts/post",
       "title":"The Information Technology Rules and the Bombay High Court’s Stay&nbsp;Order",
       "imgName":"the-information-technology-rules-and-the-bombay-high-courts-stay-order",
       "variables": {
@@ -11,7 +10,6 @@
       }
   },
   {
-      "layout":"layouts/post",
       "title":"A Critique of the Uttar Pradesh Population Control&nbsp;Bill",
       "imgName":"a-critique-of-the-uttar-pradesh-population-control-bill",
       "variables": {
@@ -22,7 +20,6 @@
       }
   },
   {
-      "layout":"layouts/post",
       "title":"Imprisonment by Quotation: On the Sharjeel Imam Bail&nbsp;Order",
       "imgName":"imprisonment-by-quotation-on-the-sharjeel-imam-bail-order",
       "variables": {
@@ -33,7 +30,6 @@
       }
   },
   {
-      "layout":"layouts/post",
       "title":"The Legality of Aadhaar Seeding for Social Security&nbsp;Purposes",
       "imgName":"the-legality-of-aadhaar-seeding-for-social-security-purposes",
       "variables": {
@@ -44,7 +40,6 @@
       }
   },
   {
-      "layout":"layouts/post",
       "title":"Entrenching the Basics: The Supreme Court’s UAPA&nbsp;Judgment",
       "imgName":"entrenching-the-basics-the-supreme-courts-uapa-judgment",
       "variables": {
@@ -55,7 +50,6 @@
       }
   },
   {
-      "layout":"layouts/post",
       "title":"The Supreme Court’s judgment granting suo motu powers to the&nbsp;NGT",
       "imgName":"the-supreme-courts-judgment-granting-suo-motu-powers-to-the-ngt",
       "variables": {
@@ -66,7 +60,6 @@
       }
   },
   {
-      "layout":"layouts/post",
       "title":"Judicial Review of Legislative Process – Analyzing Calcutta High Court’s Decision in Ambika&nbsp;Roy",
       "imgName":"judicial-review-of-legislative-process-analyzing-calcutta-high-courts-decision-in-ambika-roy",
       "variables": {
@@ -77,7 +70,6 @@
       }
   },
   {
-      "layout":"layouts/post",
       "title":"The Botswana Court of Appeal’s Judgment Decriminalising Same-Sex&nbsp;Relations",
       "imgName":"the-botswana-court-of-appeals-judgment-decriminalising-same-sex-relations",
       "variables": {
@@ -88,28 +80,24 @@
       }
   },
   {
-      "layout":"layouts/page",
       "title":"Contact",
       "imgName":"contact",
       "variables": {
       }
   },
   {
-      "layout":"layouts/page",
       "title":"About",
       "imgName":"about",
       "variables": {
       }
   },
   {
-      "layout":"layouts/page",
       "title":"Blog",
       "imgName":"blog",
       "variables": {
       }
   },
   {
-      "layout":"layouts/post",
       "title":"Two New Judgments on Proportionality from the Supreme&nbsp;Court",
       "imgName":"two-new-judgments-on-proportionality-from-the-supreme-court",
       "variables": {
@@ -120,21 +108,18 @@
       }
   },
   {
-      "layout":"layouts/page",
       "title":"Latest&nbsp;Articles",
       "imgName":"latest-articles",
       "variables": {
       }
   },
   {
-      "layout":"layouts/page",
       "title":"Tags",
       "imgName":"tags",
       "variables": {
       }
   },
   {
-      "layout":"layouts/post",
       "title":"Land, Citizens, and Farmers: Recognising Political&nbsp;Constitutionalism",
       "imgName":"land-citizens-and-farmers-recognising-political-constitutionalism",
       "variables": {
@@ -145,135 +130,116 @@
       }
   },
   {
-      "layout":"layouts/page",
       "title":"Tagged “political&nbsp;constitutionalism”",
       "imgName":"tagged-political-constitutionalism",
       "variables": {
       }
   },
   {
-      "layout":"layouts/page",
       "title":"Tagged “judicial&nbsp;review”",
       "imgName":"tagged-judicial-review",
       "variables": {
       }
   },
   {
-      "layout":"layouts/page",
       "title":"Tagged “comparative constitutional&nbsp;law”",
       "imgName":"tagged-comparative-constitutional-law",
       "variables": {
       }
   },
   {
-      "layout":"layouts/page",
       "title":"Tagged “notes from a foreign&nbsp;field”",
       "imgName":"tagged-notes-from-a-foreign-field",
       "variables": {
       }
   },
   {
-      "layout":"layouts/page",
-      "title":"Tagged&nbsp;“aadhar”",
-      "imgName":"tagged-aadhar",
-      "variables": {
-      }
-  },
-  {
-      "layout":"layouts/page",
-      "title":"Tagged&nbsp;“privacy”",
-      "imgName":"tagged-privacy",
-      "variables": {
-      }
-  },
-  {
-      "layout":"layouts/page",
-      "title":"Tagged “freedom of&nbsp;speech”",
-      "imgName":"tagged-freedom-of-speech",
-      "variables": {
-      }
-  },
-  {
-      "layout":"layouts/page",
-      "title":"Tagged&nbsp;“bail”",
-      "imgName":"tagged-bail",
-      "variables": {
-      }
-  },
-  {
-      "layout":"layouts/page",
-      "title":"Tagged “personal&nbsp;liberty”",
-      "imgName":"tagged-personal-liberty",
-      "variables": {
-      }
-  },
-  {
-      "layout":"layouts/page",
-      "title":"Tagged “gender&nbsp;discrimination”",
-      "imgName":"tagged-gender-discrimination",
-      "variables": {
-      }
-  },
-  {
-      "layout":"layouts/page",
-      "title":"Tagged “population&nbsp;control”",
-      "imgName":"tagged-population-control",
-      "variables": {
-      }
-  },
-  {
-      "layout":"layouts/page",
-      "title":"Tagged “unconstitutional&nbsp;conditions”",
-      "imgName":"tagged-unconstitutional-conditions",
-      "variables": {
-      }
-  },
-  {
-      "layout":"layouts/page",
-      "title":"Tagged&nbsp;“uapa”",
-      "imgName":"tagged-uapa",
-      "variables": {
-      }
-  },
-  {
-      "layout":"layouts/page",
       "title":"Tagged “supreme&nbsp;Court”",
       "imgName":"tagged-supreme-court",
       "variables": {
       }
   },
   {
-      "layout":"layouts/page",
       "title":"Tagged “article&nbsp;14”",
       "imgName":"tagged-article-14",
       "variables": {
       }
   },
   {
-      "layout":"layouts/page",
       "title":"Tagged&nbsp;“proportionality”",
       "imgName":"tagged-proportionality",
       "variables": {
       }
   },
   {
-      "layout":"layouts/page",
-      "title":"Tagged “calcutta high&nbsp;court”",
-      "imgName":"tagged-calcutta-high-court",
+      "title":"Tagged “gender&nbsp;discrimination”",
+      "imgName":"tagged-gender-discrimination",
       "variables": {
       }
   },
   {
-      "layout":"layouts/page",
+      "title":"Tagged “population&nbsp;control”",
+      "imgName":"tagged-population-control",
+      "variables": {
+      }
+  },
+  {
+      "title":"Tagged&nbsp;“privacy”",
+      "imgName":"tagged-privacy",
+      "variables": {
+      }
+  },
+  {
+      "title":"Tagged “unconstitutional&nbsp;conditions”",
+      "imgName":"tagged-unconstitutional-conditions",
+      "variables": {
+      }
+  },
+  {
+      "title":"Tagged&nbsp;“uapa”",
+      "imgName":"tagged-uapa",
+      "variables": {
+      }
+  },
+  {
+      "title":"Tagged&nbsp;“bail”",
+      "imgName":"tagged-bail",
+      "variables": {
+      }
+  },
+  {
+      "title":"Tagged “personal&nbsp;liberty”",
+      "imgName":"tagged-personal-liberty",
+      "variables": {
+      }
+  },
+  {
       "title":"Tagged&nbsp;“tribunals”",
       "imgName":"tagged-tribunals",
       "variables": {
       }
   },
   {
-      "layout":"layouts/page",
       "title":"Tagged “suo motu&nbsp;powers”",
       "imgName":"tagged-suo-motu-powers",
+      "variables": {
+      }
+  },
+  {
+      "title":"Tagged “freedom of&nbsp;speech”",
+      "imgName":"tagged-freedom-of-speech",
+      "variables": {
+      }
+  },
+  {
+      "title":"Tagged “calcutta high&nbsp;court”",
+      "imgName":"tagged-calcutta-high-court",
+      "variables": {
+      }
+  },
+  {
+      "title":"Tagged&nbsp;“aadhar”",
+      "imgName":"tagged-aadhar",
       "variables": {
       }
   }

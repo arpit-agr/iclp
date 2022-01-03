@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+
 :root {
   --font-plain: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-special: "Barlow Condensed", "HelveticaNeue-CondensedBold", Impact,
@@ -83,8 +86,8 @@ body {
   gap: 0;
   align-items: flex-start;
   justify-content: space-between;
-  font-family: -apple-system, Helvetica, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: -apple-system, Helvetica, BlinkMacSystemFont, Roboto, sans-serif,
+    Arial, "Segoe UI", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 700;
   color: var(--primary-text-color);
   line-height: var(--line-height);
@@ -113,6 +116,7 @@ span:empty {
 .social-image-title {
   max-width: 85%;
   max-height: 48vh;
+  font-family: var(--font-special);
   font-size: var(--s1);
   line-height: var(--line-height-small);
   text-transform: capitalize;
