@@ -14,7 +14,7 @@
 {% endif %}
 
 {%- set socialImage %}
-  {{ site.url }}/previews/{{ title | slug }}.png
+  {{ site.url }}/previews/{% if customSlug %}{{ customSlug | slug }}{% else %}{{ title | slug }}{% endif %}.png
 {% endset -%}
 
 
