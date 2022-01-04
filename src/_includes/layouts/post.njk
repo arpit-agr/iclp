@@ -24,6 +24,9 @@ layout: layouts/base
         {% endfor %}
     </div>
     {% endif %}
+    <div class="social-link">
+      Share: {% include "partials/twitter-share.html" %}
+    </div>
 </main>
 <aside class="post-list">
   {% set asideHeading %}Related Posts{% endset %}
@@ -37,5 +40,5 @@ layout: layouts/base
 
   <h2>{{ asideHeading }}</h2>
   {% include "partials/postslist.njk" %}
-
+  {% include "partials/view-all.html" %}
 </aside>

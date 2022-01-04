@@ -1,0 +1,45 @@
+.eleventy-plugin-embed-twitter {
+  margin-top: var(--s2);
+}
+
+.eleventy-plugin-embed-twitter iframe {
+  border-radius: 12px;
+}
+
+.eleventy-plugin-embed-twitter + script {
+  margin: 0;
+}
+
+.eleventy-plugin-embed-twitter + p {
+  margin-top: var(--s2);
+}
+
+.social-link {
+  display: flex;
+  gap: var(--s-3);
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: var(--s-1);
+  font-weight: 500;
+  letter-spacing: calc(var(--s-1) * 1 / 100);
+  text-transform: uppercase;
+}
+
+.social-link a {
+  display: inline-flex;
+  gap: var(--s-5);
+  align-items: center;
+  justify-content: center;
+  padding: var(--s-6) var(--s-3);
+  border: var(--border-thin) solid var(--primary-text-color);
+  /* border-radius: var(--s-1); */
+  text-decoration: none;
+  background-color: var(--primary-text-color);
+  color: var(--primary-background-color);
+  transition: background-color 0.5s cubic-bezier(0.05, 0, 0, 1);
+}
+
+.social-link a:hover {
+  color: var(--primary-text-color);
+  background-color: var(--primary-background-color);
+}
