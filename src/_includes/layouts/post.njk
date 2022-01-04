@@ -26,11 +26,11 @@ layout: layouts/base
     {% endif %}
 </main>
 <aside class="post-list">
-  {% set asideHeading %}RELATED POSTS{% endset %}
+  {% set asideHeading %}Related Posts{% endset %}
   {% set postslist = collections.posts | getByTags(tags) | randomLimit(2, page.url) %}
   {% set postsListLength = postslist | length %}
   {% if postsListLength == 0 %}
-    {% set asideHeading %}MORE POSTS{% endset %}
+    {% set asideHeading %}More Posts{% endset %}
     {% set postslist = collections.posts | randomLimit(2, page.url) %}
   {% endif %}
   {% set headingLevel = 'h3' %}

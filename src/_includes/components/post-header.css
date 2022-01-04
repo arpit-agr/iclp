@@ -1,7 +1,0 @@
-.post h1 {
-  font-size: var(--s2);
-}
-
-.post h1 + div {
-  margin-top: var(--s1);
-}
