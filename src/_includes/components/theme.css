@@ -65,6 +65,8 @@
   --tag-border-color: rgba(0, 0, 0, 0.1);
   --tag-text-color: var(--primary-text-color);
   --section-outline-color: var(--primary-text-color);
+  --mark-bg-color: hsl(240deg 67% 92%);
+  --mark-text-color: var(--primary-text-color);
 
   color: var(--primary-text-color);
   background-color: var(--primary-background-color);
@@ -114,6 +116,8 @@
     --tag-border-color: rgba(255, 255, 255, 0.1);
     --tag-text-color: hsl(216, 20%, 88%);
     --section-outline-color: var(--tag-background-color);
+    --mark-bg-color: hsla(240, 67%, 94%, 80%);
+    --mark-text-color: var(--primary-background-color);
     --button-icon: var(--icon-sun);
     --button-icon-filter: var(--icon-sun-filter);
   }
@@ -130,6 +134,8 @@
   --tag-border-color: rgba(255, 255, 255, 0.1);
   --tag-text-color: hsl(216, 20%, 88%);
   --section-outline-color: var(--tag-background-color);
+  --mark-bg-color: hsla(240, 67%, 94%, 80%);
+  --mark-text-color: var(--primary-background-color);
   --button-icon: var(--icon-sun);
   --button-icon-filter: var(--icon-sun-filter);
 }
@@ -163,6 +169,29 @@ nav {
   :root {
     scroll-behavior: smooth;
   }
+}
+
+h1 {
+  font-family: var(--font-special);
+  font-size: var(--s3);
+  line-height: var(--line-height-small);
+  text-transform: uppercase;
+}
+
+h2,
+h3 {
+  text-transform: capitalize;
+}
+
+blockquote {
+  padding: var(--s0);
+  border-left: var(--border-thin) solid currentColor;
+  background-color: var(--secondary-background-color);
+}
+
+mark {
+  background-color: var(--mark-bg-color);
+  color: var(--mark-text-color);
 }
 
 /*Superscript styles*/

@@ -1,0 +1,4 @@
+:root {
+  --share-highlight-tooltip-text-color: var(--primary-background-color);
+  --share-highlight-tooltip-bg-color: var(--primary-text-color);
+}
