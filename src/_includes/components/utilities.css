@@ -4,7 +4,7 @@
   gap: var(--s1);
 }
 
-.color\:darkish {
+.color\:secondary {
   color: var(--secondary-text-color);
 }
 
