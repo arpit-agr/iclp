@@ -11,7 +11,6 @@
     {% include "components/post-tag.css" %}
     {% if layout == 'layouts/post' %}
         {% include "components/post-content.css" %}
-        {% include "components/skip-to-content.css" %}
         {% include "components/toc.css" %}
         {% include "components/editors-note.css" %}
         {% include "components/share-highlight.css" %}
@@ -57,17 +56,6 @@
         <script src="/scripts/share-highlight.js" async defer></script>
         <script src="/scripts/jquery.js" defer></script>
         <script src="/scripts/bigfoot.js" defer></script>
-        <script>
-            window.onscroll = function () {
-                if (pageYOffset >= 20) {
-                    document.getElementById('skipContent').style.opacity = 0;
-                    document.getElementById('skipContent').style.visibility = "hidden";
-                } else {
-                    document.getElementById('skipContent').style.opacity = 1;
-                    document.getElementById('skipContent').style.visibility = "visible";
-                }
-            };
-        </script>
     {% endif %}
 </body>
 </html>

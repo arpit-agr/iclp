@@ -292,4 +292,8 @@ hr {
   .eleventy-plugin-embed-twitter {
     break-inside: avoid;
   }
+
+  .social-link {
+    display: none !important;
+  }
 }
