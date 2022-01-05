@@ -34,3 +34,10 @@
   width: 1px;
   white-space: nowrap;
 }
+
+.text--s-1 {
+  font-size: var(--s-1);
+  font-weight: 700;
+  letter-spacing: calc(var(--s-1) * 1 / 100);
+  text-transform: uppercase;
+}

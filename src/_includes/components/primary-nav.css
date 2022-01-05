@@ -5,12 +5,7 @@
 .primary-nav a {
   display: block;
   padding-block: var(--s-5);
-  font-size: var(--s-1);
-  font-weight: 700;
   text-decoration: none;
-  letter-spacing: calc(var(--s-1) * 1 / 100);
-  line-height: var(--line-height);
-  text-transform: uppercase;
 }
 
 .primary-nav a:not([aria-current="page"]):hover {

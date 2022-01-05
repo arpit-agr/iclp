@@ -1,8 +1,8 @@
 {% if content | toc %}
-<div class="table-of-contents" aria-labelledby="toc-title">
-    <p aria-hidden="true" id="toc-title">
+<details class="table-of-contents">
+    <summary class="text--s-1">
         Table of contents
-    </p>
+    </summary>
     {{ content | toc | safe }}
-</div>
+</details>
 {% endif %}

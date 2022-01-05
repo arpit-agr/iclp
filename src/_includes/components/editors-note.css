@@ -1,12 +1,9 @@
-.editors-note summary {
-  font-size: var(--s-1);
-  font-weight: 700;
-  letter-spacing: calc(var(--s-1) * 1 / 100);
-  text-transform: uppercase;
-  cursor: pointer;
+.editors-note {
+  border-block-end: var(--border-thin) solid var(--primary-text-color);
+  transition: all 250ms;
 }
 
+/* Increase padding from s0 to s1 to make it look optically similar  */
 .editors-note p {
-  margin-top: var(--s0);
-  padding-bottom: var(--s3);
+  padding-bottom: var(--s1);
 }

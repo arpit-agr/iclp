@@ -258,6 +258,28 @@ hr {
   border-top: var(--border-thin) dashed;
 }
 
+details {
+  border-block: var(--border-thin) solid transparent;
+}
+
+details:not([open]) {
+  border-block: var(--border-thin) solid;
+}
+
+details summary {
+  padding-block: var(--s0);
+  cursor: pointer;
+}
+
+details + details {
+  margin-top: var(--s0);
+}
+
+details:not([open]) + details:not([open]) {
+  margin-top: 0;
+  border-block-start: 0;
+}
+
 @media print {
   main {
     overflow: visible;
