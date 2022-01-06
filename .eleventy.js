@@ -1,3 +1,4 @@
+const htmlmin = require("html-minifier");
 const socialImages = require("@11tyrocks/eleventy-plugin-social-images");
 const pluginTOC = require('eleventy-plugin-nesting-toc');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
@@ -182,6 +183,20 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addCollection("posts", function(collectionApi) {
 		return collectionApi.getFilteredByGlob("./src/posts/*.md");
 	  });
+
+	//TRANSFORM
+	eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
+    if( outputPath && outputPath.endsWith(".html") ) {
+      let minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true
+      });
+      return minified;
+    }
+
+    return content;
+  });
 
 	return {
 		dir: {
