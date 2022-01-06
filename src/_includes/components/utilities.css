@@ -16,6 +16,10 @@
   font-weight: 700;
 }
 
+.line-height-high {
+  line-height: var(--line-height-high);
+}
+
 .cluster {
   display: flex;
   flex-wrap: wrap;
@@ -37,7 +41,6 @@
 
 .text--s-1 {
   font-size: var(--s-1);
-  font-weight: 700;
   letter-spacing: calc(var(--s-1) * 1 / 100);
   text-transform: uppercase;
 }

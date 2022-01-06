@@ -71,6 +71,7 @@
   --measure: 65ch;
   --line-height: var(--ratio);
   --line-height-small: calc(0.8 * var(--ratio));
+  --line-height-high: calc(var(--ratio) * 1.25);
   --border-thin: var(--s-6);
   --border-thick: var(--s-2);
   line-height: var(--ratio);

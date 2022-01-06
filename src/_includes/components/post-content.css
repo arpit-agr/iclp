@@ -1,10 +1,10 @@
+.post header > * + * {
+  margin-top: var(--s1);
+}
+
 .post h1 {
   font-size: calc(var(--s3) * 0.8);
   text-transform: capitalize;
-}
-
-.post h1 + div {
-  margin-top: var(--s1);
 }
 
 .post h2 {
