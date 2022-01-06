@@ -1,0 +1,8 @@
+.blog-title {
+  gap: var(--s-5);
+  align-items: baseline;
+}
+
+.blog-title + * {
+  margin-top: 0;
+}
