@@ -22,7 +22,7 @@
     <ul>
     {% for entry in navPages %}
         <li>
-            <a class="text--s-1" href="{{ entry.url | url }}" {{ helpers.getLinkActiveState(entry.url, page.url) | safe }} aria-label="{{ entry.title }}">{{ entry.title }}</a>
+            <a class="text--s-1" href="{{ entry.url | url }}#main" {{ helpers.getLinkActiveState(entry.url, page.url) | safe }} aria-label="{{ entry.title }}">{{ entry.title }}</a>
         </li>
     {% endfor %}
     </ul>
