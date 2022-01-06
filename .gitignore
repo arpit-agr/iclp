@@ -5,6 +5,7 @@ package-lock.json
 # Eleventy build artefacts
 public
 social/social-pages.json
+social/template.html
 .cache
 
 .prettierignore
