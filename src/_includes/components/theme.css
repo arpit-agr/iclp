@@ -1,16 +1,39 @@
 @font-face {
-  font-family: Barlow Condensed;
-  src: local("Barlow Condensed"),
-    url(/fonts/barlowcondensed-bold.woff2) format("woff2"),
-    url(/fonts/barlowcondensed-bold.woff) format("woff");
+  font-family: TeXGyreHerosCondensed-Bold;
+  src: local("TeXGyreHerosCondensed-Bold"),
+    url(/fonts/texgyreheroscn-bold-webfont.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: TeX Gyre Heros;
+  src: local("HelveticaNeue"),
+    url(/fonts/texgyreheros-regular-webfont.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: TeX Gyre Heros;
+  src: local("HelveticaNeue-Medium"),
+    url(/fonts/texgyreheros-regular-webfont.woff) format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: TeX Gyre Heros;
+  src: local("HelveticaNeue-Bold"),
+    url(/fonts/texgyreheros-bold-webfont.woff) format("woff");
   font-weight: 700;
   font-style: normal;
 }
 
 :root {
-  --font-plain: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-special: "Barlow Condensed", "HelveticaNeue-CondensedBold", Impact,
-    Helvetica, sans-serif;
+  --font-plain: "TeX Gyre Heros", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-special: "TeXGyreHerosCondensed-Bold", "HelveticaNeue-CondensedBold",
+    Impact, Helvetica, sans-serif;
   --font-mono: Menlo, Courier, Courier New, Andale Mono, monospace;
 
   --color-dark: hsl(0, 0%, 2%);
@@ -175,7 +198,7 @@ h1 {
   font-family: var(--font-special);
   font-size: var(--s3);
   line-height: var(--line-height-small);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 h2,
