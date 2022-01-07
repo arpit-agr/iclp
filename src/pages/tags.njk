@@ -11,12 +11,17 @@ pagination:
     - tagList
   addAllPagesToCollections: true
 eleventyComputed:
-  title: Tagged “{{ tag }}”
+  title: “{{ tag }}”
 permalink: /tags/{{ tag | slug }}/
 ---
 
 {% set postslist = collections[ tag ] %}
+
+<p class="taglist-subtitle">
+  - There {% if postslist.length == 1%} is 1 item {% else %} are {{ postslist.length }} items{%endif %} tagged {{ tag }}.
+</p>
+
 {% include "partials/postslist.njk" %}
 
 <hr>
-<p>See <a href="{{ '/tags/' | url }}">all tags</a>.</p>
+<p>See <a href="{{ '/tags/' | url }}#main">all tags</a>.</p>

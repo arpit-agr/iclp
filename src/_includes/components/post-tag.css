@@ -1,7 +1,5 @@
 .taglist-subtitle {
-  margin-top: var(--s-3);
-  font-size: var(--s-1);
-  letter-spacing: calc(var(--s-1) * 1 / 100);
+  margin-top: var(--s-1);
 }
 
 .post-tag {

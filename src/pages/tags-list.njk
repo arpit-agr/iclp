@@ -7,6 +7,6 @@ permalink: /tags/
 <ul class="post-tag tags-list">
     {% for tag in collections.tagList | sort %}
     {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
-        <li><a href="{{ tagUrl | url }}" class="post-tag-item">{{ tag }}</a></li>
+        <li><a href="{{ tagUrl | url }}#main" class="post-tag-item">{{ tag }}</a></li>
     {% endfor %}
 </ul>
