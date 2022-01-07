@@ -32,7 +32,6 @@ module.exports = function (eleventyConfig) {
 	let markdownItAnchor = require("markdown-it-anchor");
 	let markdownItFootnote = require("markdown-it-footnote");
 	let markdownItMark = require("markdown-it-mark");
-
 	let options = {
 	  html: true,
 	  breaks: true,
@@ -75,26 +74,19 @@ module.exports = function (eleventyConfig) {
 		},
 	};
 	let markdownLib = markdownIt(options).use(markdownItMark).use(markdownItFootnote).use(markdownItAnchor, markdownItAnchorOptions);
-	
 	eleventyConfig.setLibrary("md", markdownLib);
 
 	//PLUGIN
 	eleventyConfig.addPlugin(socialImages);
-
 	eleventyConfig.addPlugin(pluginRss);
-
 	eleventyConfig.addPlugin(emojiReadTime, { showEmoji: false });
-
 	eleventyConfig.addPlugin(pluginTOC);
-
 	eleventyConfig.addPlugin(embedTwitter, {
 		doNotTrack: true,
 		cacheText: true,
 		cacheDuration: "1d"
 	});
-
 	eleventyConfig.addPlugin(eleventyNavigationPlugin);
-
 	eleventyConfig.addPlugin(pluginShareHighlight, {
         // optional: define the tooltip label.
         // will be "Share this" if omitted.
@@ -105,12 +97,10 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 	
 	//FILTER
-	eleventyConfig.addFilter("getByTags", require("./src/scripts/getByTags.js"));
-
+	eleventyConfig.addFilter("getByTags", require("./src/_11ty/filters/getByTags.js"));
 	eleventyConfig.addFilter("cssmin", function(code) {
     return new CleanCSS({}).minify(code).styles;
   });
-
 	eleventyConfig.addFilter("randomLimit", (arr, limit, currPage) => {
 		// Filters out current page
 		const pageArr = arr.filter((page) => page.url !== currPage);
@@ -123,11 +113,9 @@ module.exports = function (eleventyConfig) {
 		// Returns array items up to limit
 		return pageArr.slice(0, limit);
 	});
-
 	eleventyConfig.addFilter("limit", function (arr, limit) {
 	return arr.slice(0, limit);
 	});
-
 	eleventyConfig.addFilter("slug", (str) => {
 		if (!str) {
 		  return;
@@ -139,16 +127,13 @@ module.exports = function (eleventyConfig) {
 		  remove: /["]/g,
 		});
 	});
-
 	eleventyConfig.addFilter("postDate", (dateObj) => {
 		return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
 	});
-
 	eleventyConfig.addFilter("excerpt", (post) => {
 		const content = post.replace(/(<([^>]+)>)/gi, "");
 		return content.substr(0, content.lastIndexOf(" ", 155)) + "...";
-	  });
-	
+	  });	
 	eleventyConfig.addFilter("head", (array, n) => {
 		if(!Array.isArray(array) || array.length === 0) {
 		  return [];
@@ -159,7 +144,6 @@ module.exports = function (eleventyConfig) {
 	
 		return array.slice(0, n);
 	  });
-
 	eleventyConfig.addFilter("min", (...numbers) => {
 		return Math.min.apply(null, numbers);
 	  });
@@ -167,8 +151,7 @@ module.exports = function (eleventyConfig) {
 	function filterTagList(tags) {
 		return (tags || []).filter(tag => ["all", "nav", "pages", "post", "posts"].indexOf(tag) === -1);
 	  }
-	
-	  eleventyConfig.addFilter("filterTagList", filterTagList)
+	eleventyConfig.addFilter("filterTagList", filterTagList)
 
 	//COLLECTION
 	eleventyConfig.addCollection("tagList", function(collection) {
@@ -179,7 +162,6 @@ module.exports = function (eleventyConfig) {
 	
 		return filterTagList([...tagSet]);
 	  });
-
 	eleventyConfig.addCollection("posts", function(collectionApi) {
 		return collectionApi.getFilteredByGlob("./src/posts/*.md");
 	  });
