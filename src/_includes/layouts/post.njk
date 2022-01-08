@@ -1,6 +1,6 @@
----
-layout: layouts/base
----
+{% extends "layouts/base.njk" %}
+
+{% block content %}
 <main id="main" class="post">
   <header>
     <h1>{{ title }}</h1>
@@ -15,7 +15,7 @@ layout: layouts/base
   </header>
     {% include "partials/toc.html" %}
     {% include "partials/editors-note.njk" %}
-    {{ content | safe}}
+    {{ content | safe }}
     {% if tags %}
     <div class="post-tag font-weight:500">
       Tagged: 
@@ -43,3 +43,4 @@ layout: layouts/base
   {% include "partials/postslist.njk" %}
   {% include "partials/view-all.html" %}
 </aside>
+{% endblock %}

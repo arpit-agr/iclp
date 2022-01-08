@@ -1,11 +1,10 @@
----
-layout: layouts/base
----
+{% extends "layouts/base.njk" %}
 {% set postslist = collections.posts | head(-3) %}
 
-
+{% block content %}
 <main id="main">
     <h1>{{ introHeading }}</h1>
     {% include "partials/postslist.njk" %}
     {% include "partials/view-all.html" %}
 </main>
+{% endblock %}

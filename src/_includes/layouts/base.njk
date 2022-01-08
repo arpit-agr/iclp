@@ -45,7 +45,7 @@
             {% include "partials/nav.html" %}
         </header>
         <div class="not-sidebar">
-            {{ content | safe}}
+            {% block content %}{% endblock %}
             <footer>
                 {% include "partials/footer.njk" %}
             </footer>

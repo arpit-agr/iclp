@@ -1,7 +1,8 @@
----
-layout: layouts/base
----
+{% extends "layouts/base.njk" %}
+
+{% block content %}
 <main id="main">
     <h1>{{ title | safe }}</h1>
-    {{ content | safe}}
+    {{ content | safe }}
 </main>
+{% endblock %}
