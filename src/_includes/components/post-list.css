@@ -8,7 +8,7 @@
 
 .post-list > li + li {
   padding-top: var(--s3);
-  border-top: var(--border-thin) dashed;
+  border-top: var(--border-thin) solid var(--section-outline-color);
 }
 
 .postlist-item-header {
