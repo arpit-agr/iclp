@@ -35,7 +35,7 @@
   text-decoration: underline;
 }
 
-aside.post-list {
+aside.additional-posts {
   padding-block: var(--s3);
   border-block: var(--border-thin) solid var(--section-outline-color);
   background-color: var(--tag-background-color);
@@ -43,15 +43,15 @@ aside.post-list {
   contain-intrinsic-size: 0 850px;
 }
 
-aside.post-list > * + * {
+aside.additional-posts > * + * {
   margin-top: var(--s3);
 }
 
-aside.post-list h2 {
+aside.additional-posts h2 {
   font-size: var(--s3);
   font-family: var(--font-special);
 }
 
-aside.post-list h3 {
+aside.additional-posts h3 {
   font-size: var(--s1);
 }

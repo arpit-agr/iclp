@@ -16,7 +16,7 @@
 
 .view-all-link:hover {
   color: var(--primary-text-color);
-  background: var(--primary-background-color);
+  background: transparent;
 }
 
 .blog-nav-link {

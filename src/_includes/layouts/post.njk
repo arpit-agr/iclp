@@ -29,7 +29,7 @@
       <span aria-hidden="true">Share:</span>{% include "partials/twitter-share.html" %}
     </div>
 </main>
-<aside class="post-list">
+<aside class="additional-posts">
   {% set asideHeading %}Related Posts{% endset %}
   {% set postslist = collections.posts | getByTags(tags) | randomLimit(2, page.url) %}
   {% set postsListLength = postslist | length %}
