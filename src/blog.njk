@@ -1,5 +1,4 @@
 ---
-layout: layouts/base
 title: Blog
 pagination:
   data: collections.posts
@@ -10,6 +9,9 @@ eleventyNavigation:
   key: Blog
   order: 2
 ---
+{% extends "layouts/base.njk" %}
+
+{% block content %}
 <main id="main">
   {% if pagination.pageNumber == 0 %}
     <h1>{{ title }}</h1>
@@ -27,3 +29,4 @@ eleventyNavigation:
   {% include "partials/postslist.njk" %}
   {% include "partials/pagination.njk" %}
 </main>
+{% endblock %}
