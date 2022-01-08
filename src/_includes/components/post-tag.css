@@ -16,9 +16,9 @@
 
 /* Overrides styles for the tags list page */
 .tags-list {
-  font-size: var(--s0);
   gap: var(--s-2);
-  letter-spacing: unset;
+  /* font-size: var(--s0);
+  letter-spacing: unset; */
 }
 
 .post-tag-item {
