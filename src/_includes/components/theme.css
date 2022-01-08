@@ -279,7 +279,7 @@ hr {
   display: block;
   unicode-bidi: isolate;
   overflow: hidden;
-  border-top: var(--border-thin) dashed;
+  border-top: var(--border-thin) solid var(--section-outline-color);
 }
 
 details {
