@@ -19,3 +19,20 @@ p + blockquote,
 blockquote + * {
   margin-top: var(--s2);
 }
+
+.post a {
+  background: linear-gradient(
+      to right,
+      var(--secondary-background-color),
+      var(--secondary-background-color)
+    )
+    no-repeat;
+  background-size: var(--bg-size, 0) 100%;
+  background-position: var(--bg-pos, right);
+  transition: background-size 500ms ease;
+}
+
+.post a:hover {
+  --bg-size: 100%;
+  --bg-pos: left;
+}

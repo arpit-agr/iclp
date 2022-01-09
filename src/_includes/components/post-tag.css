@@ -21,7 +21,7 @@
   letter-spacing: unset; */
 }
 
-.post-tag-item {
+.post-tag .post-tag-item {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -34,7 +34,7 @@
   transition: background-color 0.5s cubic-bezier(0.05, 0, 0, 1);
 }
 
-.post-tag-item:hover {
+.post-tag .post-tag-item:hover {
   background-color: var(--tag-background-hover-color);
   text-decoration: none !important;
 }
