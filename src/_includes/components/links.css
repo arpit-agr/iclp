@@ -10,6 +10,7 @@
   padding: var(--s-3) var(--s0);
   border: var(--border-thin) solid var(--primary-text-color);
   background-color: var(--primary-text-color);
+  display: inline-block;
   color: var(--primary-background-color);
   transition: background-color 125ms ease-in-out, color 50ms ease;
 }
@@ -67,7 +68,7 @@
     transform: translateX(var(--translateX));
   }
 
-  .deeplink {
+  .heading-wrapper .deeplink {
     grid-row-start: 1;
     padding: 0;
     transform: translateX(var(--s-3));

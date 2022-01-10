@@ -21,18 +21,10 @@ blockquote + * {
 }
 
 .post a {
-  background: linear-gradient(
-      to right,
-      var(--tag-background-color),
-      var(--tag-background-color)
-    )
-    no-repeat;
-  background-size: var(--bg-size, 0) 100%;
-  background-position: var(--bg-pos, right);
-  transition: background-size 500ms ease;
+  background: transparent;
+  transition: background 250ms ease-out;
 }
 
 .post a:hover {
-  --bg-size: 100%;
-  --bg-pos: left;
+  background: var(--secondary-background-color);
 }
