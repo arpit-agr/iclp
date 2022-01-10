@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy": "^1.0.0",
     "@11ty/eleventy-cache-assets": "^2.3.0",
     "@11tyrocks/eleventy-plugin-emoji-readtime": "^1.0.1",
     "@11tyrocks/eleventy-plugin-social-images": "^0.4.0",

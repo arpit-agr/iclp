@@ -23,8 +23,8 @@ blockquote + * {
 .post a {
   background: linear-gradient(
       to right,
-      var(--secondary-background-color),
-      var(--secondary-background-color)
+      var(--tag-background-color),
+      var(--tag-background-color)
     )
     no-repeat;
   background-size: var(--bg-size, 0) 100%;

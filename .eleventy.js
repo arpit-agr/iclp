@@ -180,7 +180,14 @@ module.exports = function (eleventyConfig) {
     return content;
   });
 
+	//TURN OFF DATA DEEP MERGE
+	eleventyConfig.setDataDeepMerge(false);
+
+
 	return {
+		dataTemplateEngine: "njk",
+		markdownTemplateEngine: "njk",
+		htmlTemplateEngine: "njk",
 		dir: {
 			input: 'src',
 			output: 'public'
