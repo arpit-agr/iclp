@@ -7,8 +7,9 @@
 }
 
 .view-all-link {
-  padding: var(--s-3) var(--s0);
+  padding: var(--s-5) var(--s0);
   border: var(--border-thin) solid var(--primary-text-color);
+  border-radius: var(--s-7);
   background-color: var(--primary-text-color);
   display: inline-block;
   color: var(--primary-background-color);

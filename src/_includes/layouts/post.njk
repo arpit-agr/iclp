@@ -17,7 +17,7 @@
     {% include "partials/editors-note.njk" %}
     {{ content | safe }}
     {% if tags %}
-    <div class="post-tag font-weight:500">
+    <div class="cluster font-weight:500 line-height-high text--s-1 post-tag">
       Tagged: 
         {% for tag in tags | filterTagList %}
           {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}

@@ -43,6 +43,10 @@
   --color-mid: hsl(0, 0%, 50%);
 
   --ratio: 1.4;
+  --s-7: calc(
+    var(--s0) / var(--ratio) / var(--ratio) / var(--ratio) / var(--ratio) /
+      var(--ratio) / var(--ratio) / var(--ratio)
+  );
   --s-6: calc(
     var(--s0) / var(--ratio) / var(--ratio) / var(--ratio) / var(--ratio) /
       var(--ratio) / var(--ratio)
@@ -238,6 +242,7 @@ button {
   background-color: var(--primary-text-color);
   padding: var(--s-1) var(--s2);
   border-width: var(--border-thin);
+  border-radius: var(--s-7);
 }
 
 button {

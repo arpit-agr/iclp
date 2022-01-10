@@ -32,7 +32,7 @@ textarea {
 [type="checkbox"] ~ svg,
 input,
 textarea {
-  border-radius: 0;
+  border-radius: var(--s-7);
 }
 
 [type="email"],
