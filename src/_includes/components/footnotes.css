@@ -10,7 +10,16 @@ hr.footnotes-sep + *,
 
 hr.footnotes-sep {
   border-style: dashed;
-  border-top-width: 1px;
+  border-top-width: var(--s-7);
+}
+
+.footnotes::before {
+  display: block;
+  content: "Footnotes: ";
+  padding-block-end: var(--s-1);
+  text-transform: uppercase;
+  font-size: var(--s-1);
+  font-weight: 500;
 }
 
 .footnotes-list {
