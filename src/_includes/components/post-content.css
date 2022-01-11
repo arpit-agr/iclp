@@ -28,3 +28,7 @@ blockquote + * {
 .post a:hover {
   background: var(--secondary-background-color);
 }
+
+.post-footer {
+  justify-content: space-between;
+}
