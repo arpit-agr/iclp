@@ -203,7 +203,7 @@ h1 {
   font-family: var(--font-special);
   font-size: var(--s3);
   line-height: var(--line-height-small);
-  /* text-transform: uppercase; */
+  text-transform: capitalize;
 }
 
 h2,
