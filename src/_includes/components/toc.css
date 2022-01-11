@@ -43,10 +43,7 @@
   width: var(--s0);
   height: var(--s0);
   /* margin-top: var(--s-5); */
-  content: "";
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-right"><line x1="7" y1="7" x2="17" y2="17"></line><polyline points="17 7 17 17 7 17"></polyline></svg>');
-  background-size: contain;
-  background-repeat: no-repeat;
+  content: "→";
 }
 
 .toc li ol {
@@ -61,19 +58,4 @@
 
 .toc li ol li + li {
   margin-top: var(--s-2);
-}
-
-/* Manually add dark theme text color*/
-@media (prefers-color-scheme: dark) {
-  .toc > ol > li > a::after {
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="hsl(216, 12%, 82%)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-right"><line x1="7" y1="7" x2="17" y2="17"></line><polyline points="17 7 17 17 7 17"></polyline></svg>');
-  }
-}
-
-[data-user-color-scheme="light"] .toc > ol > li > a::after {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-right"><line x1="7" y1="7" x2="17" y2="17"></line><polyline points="17 7 17 17 7 17"></polyline></svg>');
-}
-
-[data-user-color-scheme="dark"] .toc > ol > li > a::after {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="hsl(216, 12%, 82%)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-right"><line x1="7" y1="7" x2="17" y2="17"></line><polyline points="17 7 17 17 7 17"></polyline></svg>');
 }
