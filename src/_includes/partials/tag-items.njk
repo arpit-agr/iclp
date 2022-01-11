@@ -1,6 +1,6 @@
-{% if post.data.tags %}
+{% if tags %}
 <ul class="cluster font-weight:500 line-height-high text--s-1 post-tag" aria-label="Tagged" role="list">
-    {% for tag in post.data.tags | filterTagList %}
+    {% for tag in tags | filterTagList %}
       {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
       <li><a href="{{ tagUrl | url }}#main" class="post-tag-item">{{ tag }}</a></li>
     {% endfor %}

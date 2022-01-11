@@ -16,6 +16,7 @@
         </{{ headingLevel if headingLevel else 'h2' }}>
       </div>
       {% include "partials/excerpt.njk" %}
+      {% set tags = post.data.tags %}
       {% include "partials/tag-items.njk" %}
     </article>
   </li>
