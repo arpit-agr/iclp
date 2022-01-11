@@ -1,7 +1,6 @@
 .blog-title {
   gap: var(--s-5);
   align-items: baseline;
-  text-transform: uppercase;
 }
 
 .blog-title + * {
