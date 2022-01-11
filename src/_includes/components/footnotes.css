@@ -5,7 +5,7 @@ sup {
 
 hr.footnotes-sep + *,
 * + hr.footnotes-sep {
-  margin-top: var(--s1);
+  margin-top: var(--s2);
 }
 
 hr.footnotes-sep {
@@ -13,19 +13,11 @@ hr.footnotes-sep {
   border-top-width: 1px;
 }
 
-.with-js hr.footnotes-sep {
-  display: none;
-}
-
 .footnotes-list {
-  margin-inline-start: 20.688px;
+  margin-inline-start: var(--s0);
   font-size: var(--s-1);
 }
 
 .footnotes-list li + li {
-  margin-top: var(--s-2);
-}
-
-.footnotes + * {
-  margin-top: var(--s2);
+  margin-top: var(--s-1);
 }
