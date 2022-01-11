@@ -79,7 +79,7 @@
   --border-thin: var(--s-6);
   --border-thick: var(--s-2);
   line-height: var(--ratio);
-  font-size: calc(0.333vw + 1em);
+  font-size: calc(0.2603082vw + 1em);
   font-family: var(--font-plain);
 
   --color-mode: "light";
