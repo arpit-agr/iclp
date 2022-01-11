@@ -52,8 +52,9 @@ aside.additional-posts > * + * {
 }
 
 aside.additional-posts h2 {
-  font-size: var(--s3);
+  font-size: var(--s2);
   font-family: var(--font-special);
+  text-transform: uppercase;
 }
 
 aside.additional-posts h3 {

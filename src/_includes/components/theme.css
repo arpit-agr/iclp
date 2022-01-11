@@ -1,6 +1,6 @@
 @font-face {
   font-family: TeXGyreHerosCondensed-Bold;
-  src: local("TeXGyreHerosCondensed-Bold"),
+  src: local("HelveticaNeue-CondensedBold"),
     url(/fonts/texgyreheroscn-bold-webfont.woff) format("woff");
   font-weight: 700;
   font-style: normal;
@@ -201,14 +201,18 @@ nav {
 
 h1 {
   font-family: var(--font-special);
-  font-size: var(--s3);
+  font-size: var(--s2);
   line-height: var(--line-height-small);
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 
 h2,
 h3 {
   text-transform: capitalize;
+}
+
+a {
+  text-decoration-thickness: var(--s-7);
 }
 
 blockquote {

@@ -22,7 +22,6 @@ blockquote + * {
 
 .post a {
   background: transparent;
-  text-decoration-thickness: var(--border-thin);
   transition: background 250ms ease-out;
 }
 
