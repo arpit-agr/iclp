@@ -132,7 +132,7 @@ module.exports = function (eleventyConfig) {
 	});
 	eleventyConfig.addFilter("excerpt", (post) => {
 		const content = post.replace(/(<([^>]+)>)/gi, "");
-		return content.substr(0, content.lastIndexOf(" ", 155)) + "...";
+		return content.substr(0, content.lastIndexOf(" ", 200)) + "...";
 	  });	
 	eleventyConfig.addFilter("head", (array, n) => {
 		if(!Array.isArray(array) || array.length === 0) {

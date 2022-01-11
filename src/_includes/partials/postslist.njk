@@ -1,25 +1,23 @@
 <ol class="post-list" aria-label="Articles" reversed>
 {% for post in postslist | reverse %}
   <li>
-  <article class="postlist-item stack">
-    <div class="stack postlist-item-header">
-
-      {# Dynamic heading #}
-      <{{ headingLevel if headingLevel else 'h2' }}>
-        <a href="{{ post.url | url }}#main" class="postlist-link">{% if post.data.title %}{{ post.data.title | addNbsp | safe }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
-      </{{ headingLevel if headingLevel else 'h2' }}>
-      
-      {% from "macros/macro.njk" import meta %}
-        {{ meta({
-          author: post.data.author,
-          date: post.date,
-          layout: layout,
-          content: post.data.content
-        }) }}
-    </div>
-    {% include "partials/excerpt.njk" %}
-    {% include "partials/tag-items.njk" %}
-  </article>
+    <article class="postlist-item stack">
+      <div class="stack postlist-item-header">
+        {% from "macros/macro.njk" import meta %}
+          {{ meta({
+            author: post.data.author,
+            date: post.date,
+            layout: layout,
+            content: post.data.content
+          }) }}
+        {# Dynamic heading #}
+        <{{ headingLevel if headingLevel else 'h2' }}>
+          <a href="{{ post.url | url }}#main" class="postlist-link">{% if post.data.title %}{{ post.data.title | addNbsp | safe }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+        </{{ headingLevel if headingLevel else 'h2' }}>
+      </div>
+      {% include "partials/excerpt.njk" %}
+      {% include "partials/tag-items.njk" %}
+    </article>
   </li>
 {% endfor %}
 </ol>

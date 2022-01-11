@@ -11,8 +11,12 @@
   border-top: var(--border-thin) solid var(--section-outline-color);
 }
 
+.postlist-item {
+  gap: var(--s1);
+}
+
 .postlist-item-header {
-  gap: var(--s-1);
+  gap: var(--s-2);
 }
 
 .post-list h2 {
