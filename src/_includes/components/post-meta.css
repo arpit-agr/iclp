@@ -1,17 +1,9 @@
 .post-meta {
-  display: flex;
-  flex-wrap: wrap;
   gap: var(--s-1);
-  align-items: center;
-  font-size: var(--s-1);
-  font-weight: 500;
-  letter-spacing: calc(var(--s-1) * 1 / 100);
-  text-transform: uppercase;
 }
 
 .meta-items {
-  display: flex;
-  align-items: center;
+  flex-wrap: nowrap;
   gap: var(--s-3);
 }
 
