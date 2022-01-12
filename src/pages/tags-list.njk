@@ -1,11 +1,13 @@
 ---
 title: Tags
-subtitle: —Sorted alphabetically
+subtitle: '- sorted alphabetically'
 permalink: /tags/
 ---
-<small class="taglist-subtitle">{{ subtitle }}</small>
-<ol class="font-weight:500 line-height-high text--s-1 tags-list" role="list">
-    {% for tag in collections.tagList | sort %}
+{% set tags = collections.tagList | sort %}
+
+<small class="color:secondary taglist-subtitle">{{ tags.length }} tags {{ subtitle }}</small>
+<ol class="tags-list capitalise" role="list">
+    {% for tag in tags %}
     {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
         <li><a href="{{ tagUrl | url }}#main" class="post-tag-item">{{ tag }}</a></li>
     {% endfor %}

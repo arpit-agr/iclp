@@ -18,9 +18,7 @@
     {{ content | safe }}
     <div class="cluster post-footer">
       {% include "partials/tag-items.njk" %}
-      <div class="social-link">
-        <span aria-hidden="true">Share:</span>{% include "partials/twitter-share.html" %}
-      </div>
+      {% include "partials/twitter-share.html" %}
     </div>
 </main>
 <aside class="additional-posts">
