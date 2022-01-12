@@ -4,7 +4,6 @@ const pluginTOC = require('eleventy-plugin-nesting-toc');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const CleanCSS = require("clean-css");
 const emojiReadTime = require("@11tyrocks/eleventy-plugin-emoji-readtime");
-const pluginShareHighlight = require('eleventy-plugin-share-highlight');
 const { DateTime } = require("luxon");
 const slugify = require("slugify");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
@@ -86,11 +85,6 @@ module.exports = function (eleventyConfig) {
 		cacheDuration: "1d"
 	});
 	eleventyConfig.addPlugin(eleventyNavigationPlugin);
-	eleventyConfig.addPlugin(pluginShareHighlight, {
-        // optional: define the tooltip label.
-        // will be "Share this" if omitted.
-        label: "Share"
-    });
 
 	//SHORTCODES
 	eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
