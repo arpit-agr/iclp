@@ -4,6 +4,6 @@
     "author": ["Gautam Bhatia"],
     "tags": "miscellaneous",
     "eleventyComputed": {
-        "metaDesc": "Written by {{ author | join() }}. Published on {{ date | postDate }}."
+        "metaDesc": "Written by {{ author.join(', ') }}. Published on {{ date | postDate }}."
     }
 }
