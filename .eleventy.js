@@ -74,7 +74,11 @@ module.exports = function (eleventyConfig) {
 	//PLUGIN
 	eleventyConfig.addPlugin(socialImages);
 	eleventyConfig.addPlugin(pluginRss);
-	eleventyConfig.addPlugin(emojiReadTime, { showEmoji: false });
+	eleventyConfig.addPlugin(emojiReadTime, {
+		showEmoji: false,
+		label: "minute read",
+		wpm: 220,
+	});
 	eleventyConfig.addPlugin(pluginTOC);
 	eleventyConfig.addPlugin(embedTwitter, {
 		doNotTrack: true,
