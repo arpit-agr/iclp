@@ -12,11 +12,6 @@ const embedTwitter = require("eleventy-plugin-embed-twitter");
 
 module.exports = function (eleventyConfig) {
 
-	eleventyConfig.setBrowserSyncConfig({
-		ui: false,
-		ghostMode: false
-	});
-
 	//PASSTHROUGH COPY
 	eleventyConfig.addPassthroughCopy("./src/css/");
 	eleventyConfig.addPassthroughCopy("./src/scripts/");
