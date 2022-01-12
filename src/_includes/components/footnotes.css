@@ -1,32 +1,30 @@
 sup {
-  font-size: var(--s-1);
+  font-size: var(--step--3);
   color: inherit;
 }
 
 hr.footnotes-sep + *,
 * + hr.footnotes-sep {
-  margin-top: var(--s2);
+  margin-top: var(--step-2);
 }
 
 hr.footnotes-sep {
-  border-style: dashed;
-  border-top-width: var(--s-7);
+  border-style: dotted;
+  border-top-width: var(--step--10);
 }
 
 .footnotes::before {
   display: block;
   content: "Footnotes: ";
-  padding-block-end: var(--s-1);
-  text-transform: uppercase;
-  font-size: var(--s-1);
-  font-weight: 500;
+  padding-bottom: var(--step--1);
+  font-size: var(--step--1);
 }
 
 .footnotes-list {
-  margin-inline-start: var(--s0);
-  font-size: var(--s-1);
+  margin-left: var(--step-0);
+  font-size: var(--step--1);
 }
 
 .footnotes-list li + li {
-  margin-top: var(--s-1);
+  margin-top: var(--step--8);
 }

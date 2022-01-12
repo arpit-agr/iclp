@@ -1,32 +1,25 @@
 .not-sidebar > * {
-  padding-inline: var(--s2);
+  padding-left: var(--step-2);
+  padding-right: var(--step-2);
 }
 
-/* .not-sidebar > * + * {
-  margin-top: var(--s3);
-} */
-
 .not-sidebar main {
-  padding-block-end: var(--s3);
+  padding-bottom: var(--step-2);
 }
 
 main > * + * {
-  margin-top: var(--s3);
+  margin-top: var(--step-2);
 }
 
 main > p + p {
-  margin-top: var(--s0);
-}
-
-main > h2 + p {
-  margin-top: var(--s1);
+  margin-top: var(--step-0);
 }
 
 .heading-wrapper.h2 + * {
-  margin-top: var(--s1);
+  margin-top: var(--step-0);
 }
 .heading-wrapper.h3 + * {
-  margin-top: var(--s-1);
+  margin-top: var(--step-0);
 }
 
 footer,
@@ -41,15 +34,14 @@ aside > * {
 footer {
   min-width: 100%;
   margin-top: auto !important;
-  padding-block-start: var(--s2);
-  font-size: var(--s-1);
+  padding-top: var(--step-2);
+  font-size: var(--step--2);
   text-align: center;
-  /* border-block-start: var(--border-thin) solid; */
 
   content-visibility: auto;
   contain-intrinsic-size: 0 120px;
 }
 
 footer > * + * {
-  margin-top: var(--s0);
+  margin-top: var(--step-0);
 }

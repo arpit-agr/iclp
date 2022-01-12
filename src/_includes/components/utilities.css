@@ -1,7 +1,26 @@
 .stack {
   display: flex;
   flex-direction: column;
-  gap: var(--s1);
+  gap: var(--step-2);
+}
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--step-2);
+  align-items: center;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
 }
 
 .color\:secondary {
@@ -20,27 +39,12 @@
   line-height: var(--line-height-high);
 }
 
-.cluster {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--s1);
-  align-items: center;
-}
-
-.visually-hidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: auto;
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-  white-space: nowrap;
-}
-
 .text--s-1 {
-  font-size: var(--s-1);
-  letter-spacing: calc(var(--s-1) * 1 / 100);
+  font-size: var(--step--2);
+  letter-spacing: calc(var(--step--2) * 1 / 100);
   text-transform: uppercase;
+}
+
+.capitalise {
+  text-transform: capitalize;
 }

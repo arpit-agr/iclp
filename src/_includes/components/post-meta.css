@@ -1,16 +1,8 @@
 .post-meta {
-  column-gap: var(--s-3);
-  row-gap: var(--s-5);
+  column-gap: var(--step--4);
+  row-gap: 0;
 }
 
-/* .meta-items {
-  flex-wrap: nowrap;
-  gap: var(--s-3);
-} */
-
-/* .author-icon,
-.calendar-icon,
-.time-icon {
-  vertical-align: middle;
-  margin-right: 2px;
-} */
+.post header .first-pub {
+  margin-top: var(--step--2);
+}

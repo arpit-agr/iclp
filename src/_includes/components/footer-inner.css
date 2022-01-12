@@ -1,14 +1,15 @@
 .footer-inner {
   max-width: 35rem;
-  margin-inline: auto;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   flex-wrap: wrap;
-  gap: var(--s1);
+  gap: var(--step-0);
   justify-content: space-between;
 }
 
 .footer-inner-content {
-  gap: var(--s-6);
+  gap: var(--step--8);
   align-items: flex-start;
 }
 
@@ -29,13 +30,13 @@
 .js-mode-toggle {
   height: 100%;
   display: inline-block;
-  padding: var(--s-2) var(--s0);
+  padding: var(--step--4) var(--step--2);
   border: none;
   background-color: var(--tag-background-color);
   font-family: var(--font-plain);
-  font-size: var(--s-1);
+  font-size: var(--step--2);
   font-weight: 400;
-  letter-spacing: calc(var(--s-1) * 1 / 100);
+  letter-spacing: calc(var(--step--2) * 1 / 100);
   color: var(--primary-text-color);
   transition: background-color 500ms ease-in-out, color 200ms ease;
 }
@@ -48,7 +49,7 @@
   content: "";
   width: 1em;
   height: 1em;
-  margin: 0 0 0 var(--s-2);
+  margin: 0 0 0 var(--step--2);
   filter: var(--button-icon-filter);
   transform: translateY(1px); /* Optical adjustment */
 }

@@ -1,9 +1,24 @@
 .editors-note {
-  border-block-end: var(--border-thin) solid var(--primary-text-color);
-  transition: all 250ms;
+  background: var(--tag-background-color);
+  border-radius: var(--border-radius);
 }
 
-/* Increase padding from s0 to s1 to make it look optically similar  */
 .editors-note p {
-  padding-bottom: var(--s1);
+  font-size: var(--step--1);
+  padding-bottom: var(--step-0);
+}
+
+.editors-note[open] > * {
+  padding-left: var(--step-0);
+  padding-right: var(--step-0);
+}
+
+.editors-note summary {
+  padding-top: var(--step-0);
+  padding-bottom: var(--step-0);
+}
+
+.editors-note:not([open]) summary {
+  padding-top: var(--step--2);
+  padding-bottom: var(--step--2);
 }
