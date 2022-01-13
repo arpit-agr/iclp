@@ -24,7 +24,7 @@
   align-items: center;
   justify-content: center;
   padding: var(--step--8) var(--step--4);
-  border: var(--border-thin) solid var(--primary-text-color);
+  border: calc(var(--step--2) * 10 / 100) solid var(--primary-text-color);
   border-radius: var(--border-radius);
   text-decoration: none;
   color: var(--primary-text-color);
