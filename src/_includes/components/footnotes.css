@@ -9,8 +9,8 @@ hr.footnotes-sep + *,
 }
 
 hr.footnotes-sep {
-  border-style: dotted;
-  border-top-width: var(--step--10);
+  border-style: solid;
+  border-top-width: var(--border-thin);
 }
 
 .footnotes::before {

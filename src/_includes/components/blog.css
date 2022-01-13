@@ -1,12 +1,3 @@
 .blog-title {
-  gap: 0;
-  align-items: baseline;
-}
-
-.blog-title + * {
-  margin-top: 0;
-}
-
-.blog-title a {
-  padding: var(--step--4) var(--step--8) var(--step--4) 0;
+  font-size: var(--step-1);
 }

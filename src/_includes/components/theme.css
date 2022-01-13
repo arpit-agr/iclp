@@ -149,9 +149,9 @@ nav {
 
 h1 {
   font-family: var(--font-special);
-  font-size: var(--step-3);
+  font-size: var(--step-2);
   line-height: var(--line-height-small);
-  text-transform: capitalize;
+  text-transform: uppercase;
   letter-spacing: calc(1em * -2 / 100);
 }
 
@@ -240,7 +240,7 @@ hr {
   display: block;
   unicode-bidi: isolate;
   overflow: hidden;
-  border-top: var(--border-thin) solid var(--section-outline-color);
+  border-top: var(--border-thin) solid var(--tag-background-color);
 }
 
 details {

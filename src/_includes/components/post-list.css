@@ -8,7 +8,7 @@
 
 .post-list > li + li {
   padding-top: var(--step-2);
-  border-top: var(--border-thin) solid var(--section-outline-color);
+  border-top: var(--border-thin) solid var(--tag-background-color);
 }
 
 .postlist-item {
