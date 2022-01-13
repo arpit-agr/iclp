@@ -18,7 +18,7 @@ permalink: /tags/{{ tag | slug }}/
 {% set postslist = collections[ tag ] %}
 
 <small class="color:secondary taglist-subtitle">
-  - There {% if postslist.length == 1%} is 1 item {% else %} are {{ postslist.length }} items{%endif %} tagged "{{ tag }}".
+  - There {% if postslist.length == 1%} is 1 item {% else %} are {{ postslist.length }} items{%endif %} tagged "{{ tag | addNbsp | safe }}".
 </small>
 
 {% include "partials/postslist.njk" %}
