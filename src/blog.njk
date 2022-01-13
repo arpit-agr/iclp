@@ -13,17 +13,13 @@ eleventyNavigation:
 
 {% block content %}
 <main id="main">
+  <h1 class="blog-title">
   {% if pagination.pageNumber == 0 %}
-    <h1>{{ title }}</h1>
+    {{ title }}
   {% else %}
-  <div class="cluster blog-title">
-    <a href="/blog">{{ title }}</a>
-    <svg xmlns="http://www.w3.org/2000/svg" width="0.5em" height="0.5em" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/></svg>
-  </div>
-  <h1>
-    Page {{ pagination.pageNumber + 1 }}
-  </h1>
+    <a href="/blog">{{ title }}</a> - Page {{ pagination.pageNumber + 1 }}
   {% endif %}
+  </h1>
 
   {% set postslist = pagination.items.reverse() %}
   {% include "partials/postslist.njk" %}
