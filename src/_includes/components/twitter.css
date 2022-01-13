@@ -27,12 +27,12 @@
   border: var(--border-thin) solid var(--primary-text-color);
   border-radius: var(--border-radius);
   text-decoration: none;
-  background: var(--primary-text-color);
-  color: var(--primary-background-color);
+  color: var(--primary-text-color);
   transition: background 0.5s cubic-bezier(0.05, 0, 0, 1);
 }
 
 .social-link a:hover {
+  text-decoration: underline;
   color: var(--primary-text-color);
   background: var(--primary-background-color);
 }
