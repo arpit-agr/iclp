@@ -149,7 +149,7 @@ nav {
 
 h1 {
   font-family: var(--font-special);
-  font-size: var(--step-2);
+  font-size: var(--step-3);
   line-height: var(--line-height-small);
   text-transform: capitalize;
   letter-spacing: calc(1em * -2 / 100);
