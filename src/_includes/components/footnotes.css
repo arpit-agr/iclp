@@ -16,7 +16,7 @@ hr.footnotes-sep {
 .footnotes::before {
   display: block;
   content: "Footnotes: ";
-  padding-bottom: var(--step--1);
+  padding-bottom: var(--step--4);
   font-size: var(--step--1);
 }
 
