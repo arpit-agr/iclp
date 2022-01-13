@@ -2,7 +2,3 @@
   column-gap: var(--step--4);
   row-gap: 0;
 }
-
-.post header .first-pub {
-  margin-top: var(--step--2);
-}

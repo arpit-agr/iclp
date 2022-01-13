@@ -1,5 +1,5 @@
 .post header > * + * {
-  margin-top: var(--step-0);
+  margin-top: var(--step--2);
 }
 
 .post h1 {
