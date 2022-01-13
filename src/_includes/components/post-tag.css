@@ -27,6 +27,8 @@
 .post-tag {
   gap: var(--step--4);
   list-style: none;
+  /* To make the spacing optically same */
+  margin-top: var(--step--4);
 }
 
 .post-tag .post-tag-item {
