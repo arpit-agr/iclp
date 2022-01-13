@@ -83,7 +83,7 @@
 
   :root:not([data-user-color-scheme]) {
     --primary-text-color: hsl(216, 12%, 82%);
-    --secondary-text-color: hsl(216, 12%, 66%);
+    --secondary-text-color: hsl(216, 12%, 61%);
     --primary-background-color: hsl(0, 0%, 10%);
     --secondary-background-color: hsl(0, 0%, 25%);
     --outline-color: hsl(0, 0%, 98%);
@@ -101,7 +101,7 @@
 
 [data-user-color-scheme="dark"] {
   --primary-text-color: hsl(216, 12%, 82%);
-  --secondary-text-color: hsl(216, 12%, 66%);
+  --secondary-text-color: hsl(216, 12%, 61%);
   --primary-background-color: hsl(0, 0%, 10%);
   --secondary-background-color: hsl(0, 0%, 25%);
   --outline-color: hsl(0, 0%, 98%);
