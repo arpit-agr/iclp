@@ -30,7 +30,7 @@
   --font-mono: Menlo, Courier, Courier New, Andale Mono, monospace;
 
   --color-dark: hsl(0, 0%, 2%);
-  --color-darkish: hsl(0, 0%, 32%);
+  --color-darkish: hsl(0, 0%, 33%);
   --color-lightish: hsl(0, 0%, 90%);
   --color-light: hsl(0, 0%, 98%);
   --color-mid: hsl(0, 0%, 50%);
@@ -53,7 +53,7 @@
   --tag-background-color: hsla(0, 0%, 0%, 0.05);
   --tag-background-hover-color: hsla(0, 0%, 0%, 0.1);
   --tag-border-color: hsla(0, 0%, 0%, 0.1);
-  --tag-text-color: var(--primary-text-color);
+  --tag-text-color: hsl(0deg 0% 30%);
   --section-outline-color: var(--primary-text-color);
   --mark-bg-color: hsl(240deg 67% 92%);
   --mark-text-color: var(--primary-text-color);
@@ -83,14 +83,14 @@
 
   :root:not([data-user-color-scheme]) {
     --primary-text-color: hsl(216, 12%, 82%);
-    --secondary-text-color: hsl(216, 12%, 61%);
+    --secondary-text-color: hsl(216, 12%, 66%);
     --primary-background-color: hsl(0, 0%, 10%);
     --secondary-background-color: hsl(0, 0%, 25%);
     --outline-color: hsl(0, 0%, 98%);
     --tag-background-color: hsla(0, 0%, 100%, 0.102);
     --tag-background-hover-color: hsla(0, 0%, 100%, 0.2);
     --tag-border-color: hsla(0, 0%, 100%, 0.1);
-    --tag-text-color: hsl(216, 20%, 88%);
+    --tag-text-color: hsl(216deg 20% 76%);
     --section-outline-color: var(--tag-background-color);
     --mark-bg-color: hsla(240, 67%, 94%, 80%);
     --mark-text-color: var(--primary-background-color);
@@ -101,14 +101,14 @@
 
 [data-user-color-scheme="dark"] {
   --primary-text-color: hsl(216, 12%, 82%);
-  --secondary-text-color: hsl(216, 12%, 61%);
+  --secondary-text-color: hsl(216, 12%, 66%);
   --primary-background-color: hsl(0, 0%, 10%);
   --secondary-background-color: hsl(0, 0%, 25%);
   --outline-color: hsl(0, 0%, 98%);
   --tag-background-color: hsla(0, 0%, 100%, 0.1);
   --tag-background-hover-color: hsla(0, 0%, 100%, 0.2);
   --tag-border-color: hsla(0, 0%, 100%, 0.1);
-  --tag-text-color: hsl(216, 20%, 88%);
+  --tag-text-color: hsl(216deg 20% 76%);
   --section-outline-color: var(--tag-background-color);
   --mark-bg-color: hsla(240, 67%, 94%, 80%);
   --mark-text-color: var(--primary-background-color);
