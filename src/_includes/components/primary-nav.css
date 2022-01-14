@@ -63,7 +63,7 @@
   transition: d 0.25s;
 }
 
-@media (max-width: 883px) {
+@media (max-width: 862px) {
   .with-js .primary-nav-toggle {
     display: block;
     margin-left: auto;
@@ -73,6 +73,13 @@
 
   .with-js .primary-nav {
     display: none;
+  }
+
+  .with-js .primary-nav ul {
+    opacity: var(--anim-opacity);
+    animation: var(--animation-fade-in) forwards,
+      var(--animation-slide-in-down) forwards;
+    animation-timing-function: var(--ease-1);
   }
 
   .primary-nav a {

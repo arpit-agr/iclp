@@ -143,7 +143,24 @@ nav {
 
 @media (prefers-reduced-motion: no-preference) {
   :root {
+    --anim-opacity: 0;
+    --ease-1: cubic-bezier(0.25, 0, 0.5, 1);
+    --animation-fade-in: fade-in 0.5s var(--ease-1);
+    --animation-slide-in-down: slide-in-down 0.5s var(--ease-1);
+
     scroll-behavior: smooth;
+  }
+
+  @keyframes fade-in {
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in-down {
+    from {
+      transform: translateY(calc(-1 * var(--step-0)));
+    }
   }
 }
 
