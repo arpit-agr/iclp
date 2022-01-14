@@ -47,6 +47,8 @@
 .toc > ol > li > a::after {
   display: inline-block;
   content: "→";
+  content: "→" / "";
+  alt: "";
 }
 
 .toc li ol {
