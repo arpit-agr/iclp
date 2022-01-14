@@ -40,7 +40,7 @@
   --line-height: var(--ratio);
   --line-height-small: calc(0.8 * var(--ratio));
   --line-height-high: calc(var(--ratio) * 1.25);
-  --border-thin: var(--step--9);
+  --border-thin: var(--step--10);
   --border-thick: var(--step--6);
   --border-radius: var(--step--10);
 
@@ -127,7 +127,7 @@
   margin: 0;
   padding: 0;
   border: 0 solid;
-  scroll-margin-top: calc(var(--step-2) - var(--border-thin));
+  scroll-margin-top: calc(-1 * var(--border-thin));
 }
 
 body {

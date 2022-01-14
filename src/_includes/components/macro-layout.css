@@ -4,12 +4,6 @@
   min-height: 100vh;
 }
 
-.sidebar,
-.not-sidebar {
-  padding-top: var(--step-2);
-  padding-bottom: var(--step-2);
-}
-
 .sidebar {
   z-index: 1;
   flex-grow: 1;

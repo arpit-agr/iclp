@@ -39,9 +39,11 @@
 <body>
     <a href="#main" id="skipContent">Skip to content</a>
     <div class="with-sidebar">
-        <header class="sidebar">
-            {% include "partials/nav.html" %}
-        </header>
+        <div class="sidebar">
+            <header class="stack">
+                {% include "partials/nav.html" %}
+            </header>
+        </div>
         <div class="not-sidebar">
             {% block content %}{% endblock %}
             <footer>

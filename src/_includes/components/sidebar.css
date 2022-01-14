@@ -1,10 +1,13 @@
 .sidebar > * {
-  padding-left: var(--step-2);
-  padding-right: var(--step-2);
+  padding: var(--step-2);
 }
 
 .sidebar > * + * {
   margin-top: var(--step-0);
+}
+
+.site-head {
+  scroll-margin-top: var(--step-2);
 }
 
 .site-head > * + * {

@@ -33,7 +33,6 @@ aside.additional-posts {
   padding-top: var(--step-2);
   padding-bottom: var(--step-2);
   border-top: var(--border-thin) solid var(--section-outline-color);
-  border-bottom: var(--border-thin) solid var(--section-outline-color);
   content-visibility: auto;
   contain-intrinsic-size: 0 850px;
 }

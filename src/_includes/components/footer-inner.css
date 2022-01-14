@@ -23,10 +23,6 @@
   align-items: flex-end;
 }
 
-.js-mode-toggle {
-  padding: 0;
-}
-
 @media (max-width: 509px) {
   .footer-inner {
     justify-content: center;
