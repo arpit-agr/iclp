@@ -1,19 +1,17 @@
 .footer-inner {
+  --cluster-gap: var(--step-0);
   max-width: 35rem;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--step-0);
   justify-content: space-between;
 }
 
 .footer-inner-content {
-  gap: var(--step--8);
+  --stack-gap: var(--step--8);
   align-items: flex-start;
 }
 
-@media (max-width: 499px) {
+@media (max-width: 445px) {
   .footer-inner {
     justify-content: center;
   }

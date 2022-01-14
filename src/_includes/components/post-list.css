@@ -12,11 +12,7 @@
 }
 
 .postlist-item {
-  gap: var(--step--2);
-}
-
-.postlist-item-header {
-  gap: var(--step--2);
+  --stack-gap: var(--step--2);
 }
 
 .post-list h2 {

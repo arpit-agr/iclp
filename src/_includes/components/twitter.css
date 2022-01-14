@@ -15,14 +15,11 @@
 }
 
 .social-link {
-  gap: var(--step--4);
+  --cluster-gap: var(--step--4);
 }
 
 .social-link a {
-  display: inline-flex;
-  gap: var(--step--6);
-  align-items: center;
-  justify-content: center;
+  --cluster-gap: var(--step--6);
   padding: var(--step--8) var(--step--4);
   border: calc(var(--step--2) * 10 / 100) solid var(--primary-text-color);
   border-radius: var(--border-radius);

@@ -25,7 +25,7 @@
 }
 
 .post-tag {
-  gap: var(--step--4);
+  --cluster-gap: var(--step--4);
   list-style: none;
   /* To make the spacing optically same */
   margin-top: var(--step--4);

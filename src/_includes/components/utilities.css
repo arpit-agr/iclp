@@ -1,13 +1,13 @@
 .stack {
   display: flex;
   flex-direction: column;
-  gap: var(--step-2);
+  gap: var(--stack-gap, var(--step-2));
 }
 
 .cluster {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--step-2);
+  gap: var(--cluster-gap, var(--step-2));
   align-items: center;
 }
 
