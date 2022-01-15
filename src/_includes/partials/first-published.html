@@ -1,19 +1,16 @@
 {% if firstPublished.website %}
-<div class="call-out">
-  {% include "partials/call-out.html" %}
-  <p class="text--s-1 font-weight:500 line-height-high">
-    This article was first published on 
-    {% if firstPublished.link %}
-      <a href="{{ firstPublished.link }}">{{ firstPublished.website }}</a> 
-    {% else %}
-      {{ firstPublished.website }}
-    {% endif %}
-    {% if firstPublished.date %}
-      on 
-      <time datetime={{ firstPublished.date | dump | safe }}>
-        {{ firstPublished.date | postDate }}
-      </time>
-    {% endif %}
-  </p>
-</div>
+<p class="text--s-1 font-weight:500 line-height-high">
+  Note: This article was first published on 
+  {% if firstPublished.link %}
+    <a href="{{ firstPublished.link }}">{{ firstPublished.website }}</a> 
+  {% else %}
+    {{ firstPublished.website }}
+  {% endif %}
+  {% if firstPublished.date %}
+    on 
+    <time datetime={{ firstPublished.date | dump | safe }}>
+      {{ firstPublished.date | postDate }}
+    </time>
+  {% endif %}
+</p>
 {% endif %}
