@@ -1,13 +1,14 @@
 .footer-link {
-  padding: var(--step--4) var(--step--2);
+  padding: var(--step--8) var(--step--4);
   border-radius: var(--border-radius);
-  background: var(--tag-background-color);
+  border: calc(var(--step--2) * 10 / 100) solid var(--primary-text-color);
+  /* background: var(--tag-background-color); */
   text-decoration: none;
 }
 
 .footer-link:hover {
   text-decoration: underline;
-  background: var(--tag-background-hover-color);
+  /* background: var(--tag-background-hover-color); */
 }
 
 .footer-inner {
@@ -53,6 +54,10 @@
   letter-spacing: calc(var(--step--2) * 1 / 100);
   color: var(--primary-text-color);
   transition: background-color 500ms ease-in-out, color 200ms ease;
+}
+
+.js-mode-toggle:hover {
+  text-decoration: underline;
 }
 
 .js-mode-toggle::after {
