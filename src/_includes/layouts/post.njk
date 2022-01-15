@@ -11,8 +11,8 @@
         content: content
       }) }}
       <h1>{{ title }}</h1>
-      {% include "partials/first-published.html" %}
   </header>
+    {% include "partials/first-published.html" %}
     {% include "partials/toc.html" %}
     {% include "partials/editors-note.njk" %}
     {{ content | safe }}

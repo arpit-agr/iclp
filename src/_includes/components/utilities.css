@@ -28,7 +28,7 @@
   grid-template-columns: auto 1fr;
   align-items: center;
   gap: var(--step--2);
-  margin-top: var(--step-0);
+  /* margin-top: var(--step-0); */
 }
 
 .color\:secondary {
