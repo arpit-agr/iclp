@@ -75,7 +75,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPlugin(pluginRss);
 	eleventyConfig.addPlugin(emojiReadTime, {
 		showEmoji: false,
-		label: "minute read",
+		label: "min. read",
 		wpm: 220,
 	});
 	eleventyConfig.addPlugin(pluginTOC);

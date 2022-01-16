@@ -17,9 +17,8 @@
         {{ params.date | postDate}}
     </time>
     {% if params.layout == 'layouts/post' %}
-        <span aria-hidden="true">/</span>
         <p aria-label="Reading Time">
-            {{ params.content | emojiReadTime }}
+            - {{ params.content | emojiReadTime }}
         </p>
     {% endif %}
 </div>
