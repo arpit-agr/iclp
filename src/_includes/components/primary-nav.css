@@ -17,7 +17,7 @@
 .primary-nav [aria-current="page"],
 .primary-nav [data-state="active"] {
   position: relative;
-  text-indent: calc(var(--step--8) * -1);
+  text-indent: calc(var(--step--8) * -1.5);
 }
 
 .primary-nav [aria-current="page"]::before,
