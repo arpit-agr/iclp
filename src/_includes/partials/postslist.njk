@@ -6,9 +6,7 @@
         {% from "macros/macro.njk" import meta %}
           {{ meta({
             author: post.data.author,
-            date: post.date,
-            layout: layout,
-            content: post.data.content
+            date: post.date
           }) }}
         {# Dynamic heading #}
         <{{ headingLevel if headingLevel else 'h2' }}>

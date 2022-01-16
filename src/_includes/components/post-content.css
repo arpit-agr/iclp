@@ -34,4 +34,5 @@ blockquote + * {
   padding-top: var(--step-2);
   border-top: var(--border-thin) solid var(--tag-background-color);
   justify-content: space-between;
+  align-items: baseline;
 }

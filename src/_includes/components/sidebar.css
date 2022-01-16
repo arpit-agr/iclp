@@ -6,10 +6,6 @@
   margin-top: var(--step-0);
 }
 
-.site-head {
-  scroll-margin-top: var(--step-2);
-}
-
 .site-head > * + * {
   margin-top: 0;
 }
