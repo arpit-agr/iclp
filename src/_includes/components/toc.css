@@ -17,12 +17,8 @@
   display: grid;
   gap: var(--step--4);
   grid-template-columns: auto 1fr auto;
-  font-size: var(--step--2);
-  font-weight: 500;
   line-height: var(--line-height-high);
-  letter-spacing: calc(1em * 1 / 100);
   text-decoration: none;
-  text-transform: uppercase;
   transition: background 250ms ease-out;
 }
 
