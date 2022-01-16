@@ -127,7 +127,6 @@
   margin: 0;
   padding: 0;
   border: 0 solid;
-  scroll-margin-top: calc(-1 * var(--border-thin));
 }
 
 body {
@@ -162,6 +161,14 @@ nav {
       transform: translateY(calc(-1 * var(--step-0)));
     }
   }
+}
+
+*:not(main) {
+  scroll-margin-top: calc(var(--step-2) - var(--border-thin));
+}
+
+main {
+  scroll-margin-top: calc(-1 * var(--border-thin));
 }
 
 h1 {
