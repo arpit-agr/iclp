@@ -193,7 +193,8 @@ h3 {
 }
 
 a {
-  text-decoration-thickness: calc(var(--step--2) * 10 / 100);
+  text-decoration-thickness: 0.1em;
+  text-underline-offset: 0.1em;
 }
 
 blockquote {
