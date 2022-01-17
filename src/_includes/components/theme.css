@@ -314,6 +314,11 @@ details summary {
     display: none;
   }
 
+  .editors-note {
+    border: var(--border-thin) solid;
+    border-radius: var(--border-radius);
+  }
+
   .post .post-tag {
     display: none;
   }
