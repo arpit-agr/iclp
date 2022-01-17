@@ -16,7 +16,7 @@
   text-transform: uppercase;
   text-decoration: none;
   line-height: var(--line-height-small);
-  letter-spacing: calc(1em * -2 / 100);
+  letter-spacing: -0.02em;
 }
 
 .site-abbr:hover {
@@ -30,4 +30,5 @@
   margin-right: auto;
   font-size: var(--step--2);
   font-weight: 500;
+  letter-spacing: 0.03em;
 }

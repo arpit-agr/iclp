@@ -24,7 +24,6 @@
 .footer-inner-content {
   --stack-gap: var(--step--8);
   align-items: flex-end;
-  letter-spacing: calc(1em * 3 / 100);
 }
 
 @media (max-width: 600px) {
