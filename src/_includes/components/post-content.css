@@ -16,6 +16,10 @@
   font-weight: 500;
 }
 
+aside + p {
+  margin-top: var(--step-0);
+}
+
 p + blockquote,
 blockquote + * {
   margin-top: var(--step-0);

@@ -88,6 +88,21 @@ module.exports = function (eleventyConfig) {
 
 	//SHORTCODES
 	eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+	eleventyConfig.addPairedShortcode('footnote', (content, { id }) => {
+    return `<a href="#${id}" id="${id}ref" class="c-footnote-phrase">${content}</a>`;
+  });
+
+
+  eleventyConfig.addPairedShortcode('footnoteText', (content, { id }) => {
+    return `
+<aside class="c-footnote" id="${id}" aria-labelledby="${id}ref">
+  <details>
+    <summary>Note</summary>
+    ${content}
+  </details>
+</aside>
+`;
+  });
 	
 	//FILTER
 	eleventyConfig.addFilter("getByTags", require("./src/_11ty/filters/getByTags.js"));

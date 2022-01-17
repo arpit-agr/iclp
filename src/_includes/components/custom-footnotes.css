@@ -1,0 +1,53 @@
+.c-footnote-phrase {
+  border-radius: var(--border-radius);
+  padding: 0 var(--step--8);
+  text-decoration: none;
+}
+
+.post .c-footnote-phrase {
+  background: var(--tag-background-color);
+}
+
+.c-footnote {
+  margin-top: 0;
+}
+
+.with-js .c-footnote details {
+  display: none;
+}
+
+.c-footnote details {
+  position: relative;
+  padding: var(--step--1);
+  margin-top: var(--step--1);
+  margin-bottom: var(--step--1);
+  border: var(--border-thin) solid;
+  border-radius: var(--border-radius);
+  font-size: var(--step--1);
+}
+
+.c-footnote details[open] {
+  display: block;
+}
+
+/* Progressive enhancement */
+.c-footnote summary {
+  padding: 0;
+}
+
+.with-js .c-footnote summary {
+  position: absolute;
+  right: 1rem;
+  top: -0.75em;
+  /* text-transform: uppercase; */
+  padding: 0 0.5rem;
+  background: var(--primary-background-color);
+}
+
+.with-js .c-footnote summary::marker {
+  content: "ⓧ ";
+}
+
+.c-footnote p + * {
+  margin-top: var(--step--1);
+}

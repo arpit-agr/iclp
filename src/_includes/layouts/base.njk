@@ -15,6 +15,7 @@
         {% include "components/toc.css" %}
         {% include "components/editors-note.css" %}
         {% include "components/footnotes.css" %}
+        {% include "components/custom-footnotes.css" %}
         {% include "components/twitter.css" %}
     {% endif %}
     {% include "components/links.css" %}
@@ -53,5 +54,18 @@
     </div>
     <script type="module" src="/scripts/theme-toggle.js" async defer></script>
     <script src="/scripts/main.js" type="module"></script>
+    <script>
+        // footnotes 
+        // https://github.com/jlengstorf/jason.af/blob/main/.eleventy.js#L165-L178
+        const footnotes = document.querySelectorAll(".c-footnote-phrase");
+        Array.from(footnotes).forEach((fnLink) => {
+            fnLink.addEventListener("click", (event) => {
+            event.preventDefault();
+            const [, id] = event.target.href.split("#");
+            const footnote = document.querySelector(`#${id} details`);
+            footnote.open = !footnote.open;
+            });
+        });
+    </script>
 </body>
 </html>
