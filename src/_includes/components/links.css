@@ -1,13 +1,13 @@
 .link {
   font-family: var(--font-special);
   font-size: inherit;
-  font-weight: 700;
+  font-weight: 500;
   /* text-transform: uppercase; */
   text-decoration: none;
 }
 
 .view-all-link {
-  padding: var(--step--8) var(--step--4);
+  padding: var(--step--8) var(--step--2);
   border: var(--border-thin) solid var(--primary-text-color);
   border-radius: var(--border-radius);
   background-color: var(--primary-text-color);
