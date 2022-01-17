@@ -1,6 +1,11 @@
 .table-of-contents {
-  border-top: calc(var(--step--2) * 10 / 100) solid;
-  border-bottom: calc(var(--step--2) * 10 / 100) solid;
+  border-top: var(--border-thin) solid;
+  border-bottom: var(--border-thin) solid;
+}
+
+.toc {
+  margin-top: var(--step--8);
+  margin-bottom: var(--step--8);
 }
 
 .toc ol {
@@ -10,25 +15,17 @@
 .toc > ol > li {
   line-height: var(--line-height);
   counter-increment: toc;
-  border-top: calc(var(--step--2) * 10 / 100) solid;
 }
 
 .toc ol li a {
   display: grid;
   gap: var(--step--4);
   grid-template-columns: auto 1fr auto;
+  padding-top: var(--step--8);
+  padding-bottom: var(--step--8);
   line-height: var(--line-height-high);
   text-decoration: none;
   transition: background 250ms ease-out;
-}
-
-.toc a:hover {
-  background: var(--tag-background-color);
-}
-
-.toc > ol > li > a {
-  padding-top: var(--step--4);
-  padding-bottom: var(--step--4);
 }
 
 .toc ol li a:before {
@@ -47,16 +44,7 @@
   alt: "";
 }
 
-.toc li ol {
-  padding-bottom: var(--step--4);
-  color: var(--secondary-text-color);
-}
-
 .toc li ol li {
   counter-increment: toc;
   margin-left: calc(var(--step--2) + var(--step--4));
-}
-
-.toc li ol li + li {
-  margin-top: var(--step--4);
 }
