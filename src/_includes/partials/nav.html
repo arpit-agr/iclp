@@ -19,7 +19,7 @@
   </button>
   <nav class="primary-nav" aria-label="Primary">
     {% set navPages = collections.all | eleventyNavigation %}
-    <ul class="text--s-1 font-weight:700">
+    <ul>
     {% for entry in navPages %}
         <li>
             <a href="{{ entry.url | url }}#main" {{ helpers.getLinkActiveState(entry.url, page.url) | safe }} aria-label="{{ entry.title }}">{{ entry.title }}</a>
