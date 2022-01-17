@@ -6,6 +6,10 @@
   margin-top: var(--step-0);
 }
 
+.sidebar .stack {
+  --stack-gap: var(--step-0);
+}
+
 .site-head > * + * {
   margin-top: 0;
 }
