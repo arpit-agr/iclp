@@ -3,6 +3,14 @@
   border-bottom: var(--border-thin) solid;
 }
 
+.table-of-contents summary {
+  transition: all 400ms ease;
+}
+
+details[open].table-of-contents summary {
+  padding-left: var(--step--8);
+}
+
 .toc {
   margin-top: var(--step--8);
   margin-bottom: var(--step--8);

@@ -13,7 +13,7 @@
 }
 
 .tags-list a {
-  padding: var(--step--2) var(--step--8);
+  padding: var(--step--4) var(--step--8);
   display: block;
   text-decoration: none;
   transition: background 250ms ease-out;
