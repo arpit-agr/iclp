@@ -11,12 +11,13 @@
     {% include "components/post-meta.css" %}
     {% include "components/post-tag.css" %}
     {% if layout == 'layouts/post' %}
-        {% include "components/post-content.css" %}
+        {% include "components/first-published.css" %}
         {% include "components/toc.css" %}
         {% include "components/editors-note.css" %}
-        {% include "components/footnotes.css" %}
+        {% include "components/post-content.css" %}
         {% include "components/custom-footnotes.css" %}
         {% include "components/twitter.css" %}
+        {% include "components/footnotes.css" %}
     {% endif %}
     {% include "components/links.css" %}
     {% include "components/form.css" %}

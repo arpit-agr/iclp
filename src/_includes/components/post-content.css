@@ -25,15 +25,6 @@ blockquote + * {
   margin-top: var(--step-0);
 }
 
-.post a {
-  background: transparent;
-  transition: background 250ms ease-out;
-}
-
-.post a:hover {
-  background: var(--secondary-background-color);
-}
-
 .post-footer {
   padding-top: var(--step-2);
   border-top: var(--border-thin) solid var(--section-outline-color);

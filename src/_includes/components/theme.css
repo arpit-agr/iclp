@@ -25,8 +25,8 @@
 }
 
 :root {
-  --font-plain: "Helvetica Neue", "Inter", Helvetica, Arial, sans-serif;
-  --font-special: "Helvetica Neue", "Inter", Helvetica, sans-serif;
+  --font-plain: "Helvetica Neue", Helvetica, "Inter", Arial, sans-serif;
+  --font-special: "Helvetica Neue", Helvetica, "Inter", sans-serif;
   --font-mono: Menlo, Courier, Courier New, Andale Mono, monospace;
 
   --color-dark: hsl(0, 0%, 2%);
