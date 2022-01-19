@@ -8,8 +8,12 @@ const { DateTime } = require("luxon");
 const slugify = require("slugify");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const embedTwitter = require("eleventy-plugin-embed-twitter");
+const directoryOutputPlugin = require("@11ty/eleventy-plugin-directory-output");
 
 module.exports = function (eleventyConfig) {
+
+	eleventyConfig.setQuietMode(true);
+  eleventyConfig.addPlugin(directoryOutputPlugin);
 
 	//PASSTHROUGH COPY
 	eleventyConfig.addPassthroughCopy("./src/css/");
