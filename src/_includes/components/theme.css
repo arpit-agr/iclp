@@ -241,6 +241,11 @@ pre {
   outline: var(--border-thin) solid var(--outline-color);
   outline-offset: var(--border-thin);
 }
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
 [tabindex="-1"]:focus {
   outline: none;
 }
