@@ -40,7 +40,7 @@
   background: var(--primary-background-color);
   text-decoration: none;
   color: var(--secondary-text-color);
-  transition: all 0.5s cubic-bezier(0.05, 0, 0, 1);
+  transition: background 0.5s cubic-bezier(0.05, 0, 0, 1);
 }
 
 .post-tag-item:hover {
