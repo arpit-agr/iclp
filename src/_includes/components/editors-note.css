@@ -1,23 +1,30 @@
 .editors-note {
-  background: var(--tag-background-color);
+  position: relative;
   border-radius: var(--border-radius);
+  border: var(--border-thin) solid;
+}
+
+.editors-note:not([open]) summary {
+  writing-mode: lr;
+  transform: none;
+  padding-top: var(--step--2);
+  padding-bottom: var(--step--2);
+}
+
+.editors-note[open] summary {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  position: absolute;
+  left: -0.5rem;
+  top: 0.75em;
+  padding: calc(var(--step-0) - 0.75em + 4px) 0;
+  background: var(--primary-background-color);
 }
 
 .editors-note p {
   font-size: var(--step--1);
-  padding-bottom: var(--step-0);
 }
 
-.editors-note[open] > * {
-  padding-left: var(--step-0);
-  padding-right: var(--step-0);
-}
-
-.editors-note summary {
-  padding-top: var(--step-0);
-}
-
-.editors-note:not([open]) summary {
-  padding-top: var(--step--2);
-  padding-bottom: var(--step--2);
+.editors-note[open] p {
+  padding: var(--step-0) var(--step-0) var(--step-0) var(--step-1);
 }

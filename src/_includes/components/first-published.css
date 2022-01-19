@@ -1,24 +1,23 @@
 .first-published {
+  position: relative;
   width: fit-content;
-  background: var(--tag-background-color);
   border-radius: var(--border-radius);
+  border: var(--border-thin) solid;
 }
 
-.first-published p {
-  font-size: var(--step--1);
-  padding-bottom: var(--step-0);
-}
-
-.first-published[open] > * {
-  padding-left: var(--step-0);
-  padding-right: var(--step-0);
-}
-
-.first-published summary {
-  padding-top: var(--step-0);
+.first-published[open] summary {
+  position: absolute;
+  left: 1rem;
+  top: -0.75em;
+  padding: 0 0.5rem;
+  background: var(--primary-background-color);
 }
 
 .first-published:not([open]) summary {
-  padding-top: var(--step--4);
-  padding-bottom: var(--step--4);
+  padding: var(--step--8) var(--step--4);
+}
+
+.first-published[open] p {
+  font-size: var(--step--1);
+  padding: var(--step--2);
 }
