@@ -12,13 +12,14 @@
             {{ comma() }} {{ author }}
         {%- endfor %}
     </span>
-    <span aria-hidden="true">/</span>
-    <time datetime={{ params.date | dump | safe }}  aria-label="Publish Date">
-        {{ params.date | postDate}}
-    </time>
-    {% if params.layout == 'layouts/post' %}
-        <p aria-label="Reading Time">
-            - {{ params.content | emojiReadTime }}
-        </p>
-    {% endif %}
+    <span>
+        <time datetime={{ params.date | dump | safe }}  aria-label="Publish Date">
+            <span aria-hidden="true">• </span>{{ params.date | postDate}}
+        </time>
+        {% if params.layout == 'layouts/post' %}
+            <span aria-label="Reading Time">
+                - {{ params.content | emojiReadTime }}
+            </span>
+        {% endif %}
+    </span>
 </div>
