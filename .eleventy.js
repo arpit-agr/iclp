@@ -101,7 +101,7 @@ module.exports = function (eleventyConfig) {
     return `
 <aside class="c-footnote" id="${id}" aria-labelledby="${id}ref">
   <details>
-    <summary class="text--s-1 font-weight:700">Note</summary>
+    <summary class="text--s-1 font-weight:700">Aside</summary>
     ${content}
   </details>
 </aside>

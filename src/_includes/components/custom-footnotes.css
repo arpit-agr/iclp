@@ -5,7 +5,7 @@
 }
 
 .post .c-footnote-phrase {
-  background: var(--tag-background-color);
+  background: var(--secondary-background-color);
 }
 
 .c-footnote {
@@ -50,4 +50,14 @@
 
 .c-footnote p + * {
   margin-top: var(--step--1);
+}
+
+.c-footnote:target {
+  border-radius: var(--border-radius);
+  outline: var(--border-thin) solid var(--outline-color);
+  outline-offset: var(--border-thin);
+}
+
+.with-js .c-footnote:target {
+  outline: unset;
 }
