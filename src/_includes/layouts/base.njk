@@ -33,10 +33,10 @@
     {% include "partials/head-meta-info.njk" %}
     {# <meta name="theme-color" content="hsl(0deg 0% 98%)" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="hsl(0, 0%, 10%)" media="(prefers-color-scheme: dark)"> #}
-    
+    <script>document.documentElement.classList.add('with-js');</script>
+    <script src="/scripts/theme-toggle.js"></script>
     <style>{{ css | cssmin | safe }}</style>
     <link rel="alternate" type="application/atom+xml" href="{{ site.url }}/feed.xml" title="{{ site.name }}"/>
-    <script>document.documentElement.classList.add('with-js');</script>
 </head>
 <body>
     <a href="#main" id="skipContent">Skip to content</a>
@@ -53,7 +53,6 @@
             </footer>
         </div>
     </div>
-    <script type="module" src="/scripts/theme-toggle.js" async defer></script>
     <script src="/scripts/main.js" type="module"></script>
     {% if layout == 'layouts/post' %}
         <script>

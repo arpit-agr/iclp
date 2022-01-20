@@ -3,7 +3,11 @@
         <a class="footer-link" href="#top">
             Go to the top<span aria-hidden="true"> ↑</span>
         </a>
-        <theme-toggle></theme-toggle>
+        <button id="theme-toggle" title="Toggles between light or dark theme" aria-label="auto" aria-live="polite">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+            </svg>
+        </button>
     </div>
     <div class="stack footer-inner-content">
         <p>&copy; {% year %} {{ site.name | addNbsp | safe }}</p>

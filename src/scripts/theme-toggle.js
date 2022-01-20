@@ -1,101 +1,58 @@
-// Inspired by:
-// @link https://github.com/hankchizljaw/hylia
+const storageKey = 'theme-preference'
 
-// For syntax highlighting only
-const html = String.raw;
+const onClick = () => {
+  // flip current value
+  theme.value = theme.value === 'light'
+    ? 'dark'
+    : 'light'
 
-class ThemeToggle extends HTMLElement {
-  constructor() {
-    super();
-
-    this.STORAGE_KEY = 'user-color-scheme';
-    this.COLOR_MODE_KEY = '--color-mode';
-  }
-
-  connectedCallback() {
-    this.render();
-  }
-
-  getCSSCustomProp(propKey) {
-    let response = getComputedStyle(document.documentElement).getPropertyValue(propKey);
-
-    // Tidy up the string if there’s something to work with
-    if (response.length) {
-      response = response.replace(/\'|"/g, '').trim();
-    }
-
-    // Return the string response by default
-    return response;
-  }
-
-  applySetting(passedSetting) {
-    let currentSetting = passedSetting || localStorage.getItem(this.STORAGE_KEY);
-
-    if (currentSetting) {
-      document.documentElement.setAttribute('data-user-color-scheme', currentSetting);
-      this.setButtonLabelAndStatus(currentSetting);
-    } else {
-      this.setButtonLabelAndStatus(this.getCSSCustomProp(this.COLOR_MODE_KEY));
-    }
-  }
-
-  toggleSetting() {
-    let currentSetting = localStorage.getItem(this.STORAGE_KEY);
-
-    switch (currentSetting) {
-      case null:
-        currentSetting =
-          this.getCSSCustomProp(this.COLOR_MODE_KEY) === 'dark' ? 'light' : 'dark';
-        break;
-      case 'light':
-        currentSetting = 'dark';
-        break;
-      case 'dark':
-        currentSetting = 'light';
-        break;
-    }
-
-    localStorage.setItem(this.STORAGE_KEY, currentSetting);
-
-    return currentSetting;
-  }
-
-  setButtonLabelAndStatus(currentSetting) {
-    this.modeToggleButton.innerText = `${
-      currentSetting === 'dark' ? 'Light' : 'Dark'
-    } theme`;
-    this.modeStatusElement.innerText = `Color mode is now "${currentSetting}"`;
-  }
-
-  render() {
-    this.innerHTML = html`
-      <div class="[ theme-toggle ] [ md:ta-right gap-top-500 ]">
-        <div role="status" class="[ visually-hidden ][ js-mode-status ]"></div>
-        <button class="[ button ] [ font-base text-base weight-bold ] [ js-mode-toggle ]">
-          Dark theme
-        </button>
-      </div>
-    `;
-
-    this.afterRender();
-  }
-
-  afterRender() {
-    this.modeToggleButton = document.querySelector('.js-mode-toggle');
-    this.modeStatusElement = document.querySelector('.js-mode-status');
-
-    this.modeToggleButton.addEventListener('click', evt => {
-      evt.preventDefault();
-
-      this.applySetting(this.toggleSetting());
-    });
-
-    this.applySetting();
-  }
+  setPreference()
 }
 
-if ('customElements' in window) {
-  customElements.define('theme-toggle', ThemeToggle);
+const getColorPreference = () => {
+  if (localStorage.getItem(storageKey))
+    return localStorage.getItem(storageKey)
+  else
+    return window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? 'dark'
+      : 'light'
 }
 
-export default ThemeToggle;
+const setPreference = () => {
+  localStorage.setItem(storageKey, theme.value)
+  reflectPreference()
+}
+
+const reflectPreference = () => {
+  document.firstElementChild
+    .setAttribute('data-theme', theme.value)
+
+  document
+    .querySelector('#theme-toggle')
+    ?.setAttribute('aria-label', 'Color mode is now' + ' ' + theme.value)
+}
+
+const theme = {
+  value: getColorPreference(),
+}
+
+// set early so no page flashes / CSS is made aware
+reflectPreference()
+
+window.onload = () => {
+  // set on load so screen readers can see latest value on the button
+  reflectPreference()
+
+  // now this script can find and listen for clicks on the control
+  document
+    .querySelector('#theme-toggle')
+    .addEventListener('click', onClick)
+}
+
+// sync with system changes
+window
+  .matchMedia('(prefers-color-scheme: dark)')
+  .addEventListener('change', ({matches:isDark}) => {
+    theme.value = isDark ? 'dark' : 'light'
+    setPreference()
+  })
