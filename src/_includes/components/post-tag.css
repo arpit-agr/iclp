@@ -49,4 +49,5 @@
 
 .post-tag .post-tag-item:hover {
   background: var(--secondary-background-color);
+  color: var(--primary-text-color);
 }
