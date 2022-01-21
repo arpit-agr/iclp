@@ -28,3 +28,8 @@
 .editors-note[open] p {
   padding: var(--step-0) var(--step-0) var(--step-0) var(--step-1);
 }
+
+/* To make it look optically similar*/
+details + .editors-note {
+  margin-top: var(--step-3);
+}
