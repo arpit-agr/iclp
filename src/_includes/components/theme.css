@@ -26,8 +26,6 @@
 
 :root {
   --font-plain: "Helvetica Neue", Helvetica, "Inter", Arial, sans-serif;
-  --font-special: "Helvetica Neue", Helvetica, "Inter", sans-serif;
-  --font-mono: Menlo, Courier, Courier New, Andale Mono, monospace;
 
   --color-dark: hsl(0, 0%, 2%);
   --color-darkish: hsl(0, 0%, 33%);
@@ -39,6 +37,7 @@
   --measure: 65ch;
   --line-height: var(--ratio);
   --line-height-small: calc(0.75 * var(--ratio));
+  --line-height-medium: calc(0.875 * var(--ratio));
   --line-height-high: calc(var(--ratio) * 1.25);
   --border-thin: var(--step--10);
   --border-thick: var(--step--6);
@@ -159,11 +158,9 @@ main {
 }
 
 h1 {
-  font-family: var(--font-special);
   font-size: var(--step-2);
   line-height: var(--line-height-small);
-  text-transform: uppercase;
-  letter-spacing: calc(1em * -2 / 100);
+  letter-spacing: calc(1em * -1 / 100);
 }
 
 h2 {
@@ -174,9 +171,16 @@ h3 {
   font-size: var(--step-0);
 }
 
+h1,
 h2,
 h3 {
+  font-weight: 500;
   text-transform: capitalize;
+}
+
+h2,
+h3 {
+  line-height: var(--line-height-medium);
 }
 
 a {
@@ -208,10 +212,9 @@ sup a {
 
 button {
   font-size: inherit;
-  font-weight: 700;
+  font-weight: 500;
   display: inline-block;
   cursor: pointer;
-  font-family: var(--font-special);
   color: var(--primary-background-color);
   background-color: var(--primary-text-color);
   padding: var(--step--4) var(--step--2);
@@ -220,7 +223,7 @@ button {
 }
 
 button {
-  text-transform: uppercase;
+  text-transform: capitalize;
   border-color: var(--primary-text-color);
 }
 
@@ -291,7 +294,7 @@ details summary {
   h3,
   h4,
   h5 {
-    font-weight: bold;
+    font-weight: 500;
     break-after: avoid;
     break-inside: avoid;
   }

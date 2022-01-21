@@ -1,13 +1,10 @@
 .footer-link {
   padding: var(--step--8) var(--step--4);
-  border-radius: var(--border-radius);
-  border: var(--border-thin) solid var(--secondary-background-color);
   text-decoration: none;
 }
 
 .footer-link:hover {
   text-decoration: underline;
-  background: var(--secondary-background-color);
 }
 
 .footer-inner {

@@ -32,6 +32,7 @@ footer {
   padding-top: var(--step-2);
   border-top: var(--border-thin) solid var(--section-outline-color);
   font-size: var(--step--2);
+  text-transform: capitalize;
   letter-spacing: 0.03em;
   text-align: center;
 

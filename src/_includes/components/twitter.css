@@ -21,8 +21,6 @@
 .social-link a {
   --cluster-gap: var(--step--6);
   padding: var(--step--8) var(--step--4);
-  border: var(--border-thin) solid var(--secondary-background-color);
-  border-radius: var(--border-radius);
   text-decoration: none;
   color: var(--primary-text-color);
   transition: background 0.5s cubic-bezier(0.05, 0, 0, 1);

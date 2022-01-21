@@ -39,10 +39,6 @@
   font-weight: 500;
 }
 
-.font-weight\:700 {
-  font-weight: 700;
-}
-
 .line-height-high {
   line-height: var(--line-height-high);
 }

@@ -24,23 +24,20 @@
 }
 
 .post-tag {
-  --cluster-gap: var(--step--4);
+  --cluster-gap: 0 var(--step--4);
   list-style: none;
-  /* To make the spacing optically same */
-  margin-top: var(--step--4);
 }
 
-.post-tag .post-tag-item {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 var(--step--4);
-  border-radius: var(--border-radius);
-  border: var(--border-thin) solid var(--secondary-background-color);
-  background: var(--primary-background-color);
+.post-tag li:not(:last-child):after {
+  content: ",";
+  content: "," / "";
+  alt: "";
+}
+
+a.post-tag-item {
+  font-size: var(--step--1);
+  text-transform: capitalize;
   text-decoration: none;
-  color: var(--secondary-text-color);
-  transition: background 0.5s cubic-bezier(0.05, 0, 0, 1);
 }
 
 .post-tag-item:hover {
@@ -48,6 +45,5 @@
 }
 
 .post-tag .post-tag-item:hover {
-  background: var(--secondary-background-color);
   color: var(--primary-text-color);
 }
