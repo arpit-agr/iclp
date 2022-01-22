@@ -48,7 +48,6 @@ module.exports = function (eleventyConfig) {
 				strict: true,
 				remove: /["]/g,
 			}),
-		tabIndex: false,
 		permalink(slug, opts, state, idx) {
 			state.tokens.splice(
 				idx,
