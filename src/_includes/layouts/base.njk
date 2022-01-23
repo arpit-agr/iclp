@@ -4,11 +4,11 @@
     {% include "components/macro-layout.css" %}
     {% include "components/sidebar.css" %}
     {% include "components/not-sidebar.css" %}
-    {% include "components/blog.css" %}
     {% include "components/footer-inner.css" %}
     {% include "components/primary-nav.css" %}
     {% include "components/post-list.css" %}
     {% include "components/post-meta.css" %}
+    {% include "components/excerpt.css" %}
     {% include "components/post-tag.css" %}
     {% if layout == 'layouts/post' %}
         {% include "components/first-published.css" %}
@@ -22,6 +22,7 @@
     {% include "components/links.css" %}
     {% include "components/form.css" %}
     {% include "components/pagination.css" %}
+    {% include "components/grain.css" %}
 {% endset %}
 
 <!DOCTYPE html>
@@ -53,6 +54,7 @@
             </footer>
         </div>
     </div>
+    <div class="grain"></div>
     <script src="/scripts/main.js" type="module"></script>
     {% if layout == 'layouts/post' %}
         <script>

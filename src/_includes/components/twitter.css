@@ -20,14 +20,9 @@
 
 .social-link a {
   --cluster-gap: var(--step--6);
-  padding: var(--step--8) var(--step--4);
-  text-decoration: none;
-  color: var(--primary-text-color);
-  transition: background 0.5s cubic-bezier(0.05, 0, 0, 1);
+  text-decoration-line: none;
 }
 
 .social-link a:hover {
-  text-decoration: underline;
-  color: var(--primary-text-color);
-  background: var(--primary-background-color);
+  text-decoration-line: underline;
 }

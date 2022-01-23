@@ -28,3 +28,19 @@ hr.footnotes-sep {
 .footnotes-list li + li {
   margin-top: var(--step--2);
 }
+
+[id*="fnref"]:target {
+  padding: var(--step--10) var(--step--4);
+  margin-left: var(--step--6);
+  border: 0.1em solid var(--accent-color);
+  border-radius: var(--border-radius);
+  color: var(--accent-color);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+[id*="fnref"]:target::before {
+  margin-right: var(--step--8);
+  content: "Footnote";
+}

@@ -1,11 +1,10 @@
 .c-footnote-phrase {
-  border-radius: var(--border-radius);
   padding: 0 var(--step--8);
   text-decoration: none;
 }
 
 .post .c-footnote-phrase {
-  background: var(--secondary-background-color);
+  background: var(--tag-background-color);
 }
 
 .c-footnote {

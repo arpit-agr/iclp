@@ -11,11 +11,6 @@ details[open].table-of-contents summary {
   padding-left: var(--step--8);
 }
 
-.toc {
-  margin-top: var(--step--8);
-  margin-bottom: var(--step--8);
-}
-
 .toc ol {
   counter-reset: toc;
   list-style: none;
@@ -34,6 +29,13 @@ details[open].table-of-contents summary {
   line-height: var(--line-height-high);
   text-decoration: none;
   transition: background 250ms ease-out;
+}
+
+.toc ol li a:hover {
+  --accent-a: 5%;
+  background: hsl(
+    var(--accent-h) var(--accent-s) var(--accent-l) / var(--accent-a)
+  );
 }
 
 .toc ol li a:before {

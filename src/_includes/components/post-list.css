@@ -19,16 +19,21 @@
   font-size: var(--step-0);
 }
 
-.post-list a {
-  text-decoration: none;
+.post-list :where(a) {
+  text-decoration-line: none;
 }
 
-.post-list a:not([aria-current="true"]):hover {
-  text-decoration: underline;
-}
-
-.excerpt {
-  font-size: var(--step--1);
+@media (any-hover: hover) {
+  .postlist-item h2:after {
+    opacity: 0;
+    content: "→";
+    color: var(--accent-color);
+    margin-left: var(--step--4);
+    transition: opacity 200ms ease;
+  }
+  .postlist-item h2:hover::after {
+    opacity: 1;
+  }
 }
 
 aside.additional-posts {

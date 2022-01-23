@@ -20,7 +20,10 @@
 }
 
 .tags-list a:hover {
-  background: var(--tag-background-color);
+  --accent-a: 5%;
+  background: hsl(
+    var(--accent-h) var(--accent-s) var(--accent-l) / var(--accent-a)
+  );
 }
 
 .post-tag {
@@ -34,16 +37,12 @@
   alt: "";
 }
 
-a.post-tag-item {
+.post-tag-item {
   font-size: var(--step--1);
   text-transform: capitalize;
-  text-decoration: none;
+  text-decoration-line: none;
 }
 
 .post-tag-item:hover {
-  text-decoration: underline;
-}
-
-.post-tag .post-tag-item:hover {
-  color: var(--primary-text-color);
+  text-decoration-line: underline;
 }
