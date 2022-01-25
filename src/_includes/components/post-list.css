@@ -24,7 +24,7 @@
 }
 
 @media (any-hover: hover) {
-  .postlist-item h2:after {
+  .postlist-item :where(h2, h3):after {
     opacity: 0;
     content: "→";
     content: "→" / "";
@@ -33,7 +33,7 @@
     margin-left: var(--step--4);
     transition: opacity 200ms ease;
   }
-  .postlist-item h2:hover::after {
+  .postlist-item :where(h2, h3):hover::after {
     opacity: 1;
   }
 }
