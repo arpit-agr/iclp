@@ -88,6 +88,8 @@
   --mark-bg-color: hsl(var(--accent-h) 67% 92%);
   --mark-text-color: var(--primary-text-color);
   --underline-thickness: var(--border-thin);
+  --tag-icon-filter: invert(27%) sepia(12%) saturate(2023%) hue-rotate(181deg)
+    brightness(92%) contrast(83%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -107,6 +109,8 @@
     --mark-bg-color: hsl(var(--accent-h) 67% 24%);
     --mark-text-color: var(--primary-text-color);
     --body-bg: var(--dark-bg);
+    --tag-icon-filter: invert(62%) sepia(9%) saturate(512%) hue-rotate(182deg)
+      brightness(98%) contrast(91%);
   }
 }
 
@@ -122,6 +126,8 @@
   --mark-bg-color: hsl(var(--accent-h) 67% 24%);
   --mark-text-color: var(--primary-text-color);
   --body-bg: var(--dark-bg);
+  --tag-icon-filter: invert(62%) sepia(9%) saturate(512%) hue-rotate(182deg)
+    brightness(98%) contrast(91%);
 }
 
 *,
@@ -325,6 +331,11 @@ summary {
   padding-bottom: var(--step--2);
   cursor: pointer;
   touch-action: manipulation;
+}
+
+::selection {
+  color: var(--primary-background-color);
+  background: var(--primary-text-color);
 }
 
 @media print {
