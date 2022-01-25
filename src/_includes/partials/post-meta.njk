@@ -1,6 +1,6 @@
-<div class="cluster text--s-1 font-weight:500 color:secondary line-height-high post-meta" 
-    aria-label="Article Information">
-    <span aria-label="Author">
+<div class="cluster text--s-1 font-weight:500 color:secondary line-height-high post-meta">
+    <span class="visually-hidden">Author:</span>
+    <p>
         {% if params.author != "Gautam Bhatia" and params.author !=  "Vasudev Devadasan" %}
             {% if params.layout == 'layouts/post' %}
                 Guest Post : 
@@ -11,15 +11,18 @@
         {% for author in params.author -%}
             {{ comma() }} {{ author }}
         {%- endfor %}
-    </span>
-    <span>
-        <time datetime={{ params.date | dump | safe }}  aria-label="Publish Date">
-            <span aria-hidden="true">• </span>{{ params.date | postDate}}
+    </p>
+    <span class="visually-hidden">Publish Date:</span>
+    <p>
+        <span aria-hidden="true">• </span>
+        <time datetime={{ params.date | dump | safe }}>
+            {{ params.date | postDate}}
         </time>
-        {% if params.layout == 'layouts/post' %}
-            <span aria-label="Reading Time">
-                - {{ params.content | emojiReadTime }}
-            </span>
-        {% endif %}
-    </span>
+    </p>
+    {% if params.layout == 'layouts/post' %}
+        <span class="visually-hidden">Reading Time:</span>
+        <p>
+            - {{ params.content | emojiReadTime }}
+        </p>
+    {% endif %}
 </div>
