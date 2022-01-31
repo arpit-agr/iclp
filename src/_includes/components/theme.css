@@ -194,7 +194,7 @@ nav {
   display: block;
 }
 
-[id] {
+:where([id]:not(main)) {
   scroll-margin-top: calc(var(--step-2) - var(--border-thin));
 }
 
