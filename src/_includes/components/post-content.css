@@ -17,8 +17,6 @@ blockquote + * {
 }
 
 .post-footer {
-  padding-top: var(--step-2);
-  border-top: var(--border-thin) solid var(--section-outline-color);
   justify-content: space-between;
   align-items: baseline;
 }

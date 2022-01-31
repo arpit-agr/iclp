@@ -72,6 +72,56 @@ module.exports = function (eleventyConfig) {
 	};
 	let markdownLib = markdownIt(options).use(markdownItMark).use(markdownItFootnote).use(markdownItAnchor, markdownItAnchorOptions);
 	eleventyConfig.setLibrary("md", markdownLib);
+	markdownLib.renderer.rules.footnote_ref = (tokens, idx, options, env, slf) => {
+		var id = slf.rules.footnote_anchor_name(tokens, idx, options, env, slf);
+		var caption = slf.rules.footnote_caption(tokens, idx, options, env, slf);
+		var refid = id;
+		if (tokens[idx].meta.subId > 0) {
+			refid += ':' + tokens[idx].meta.subId;
+		}
+	
+		return `
+			<sup class="footnote-ref">
+				<a href="#fn${id}" id="fnref${refid}"><span class="visually-hidden">Reference</span>${caption}</a>
+			</sup>`;
+	}
+	markdownLib.renderer.rules.footnote_anchor = (tokens, idx, options, env, slf) => {
+		var id = slf.rules.footnote_anchor_name(tokens, idx, options, env, slf);
+		var caption = slf.rules.footnote_caption(tokens, idx, options, env, slf);
+		var refid = id;
+		
+		if (tokens[idx].meta.subId > 0) {
+			id += ':' + tokens[idx].meta.subId;
+		}
+		if (tokens[idx].meta.subId > 0) {
+			refid += ':' + tokens[idx].meta.subId;
+		}
+
+		return `
+			<a href="#fnref${id}" class="footnote-backref">
+				<span class="visually-hidden">Jump up to reference ${refid}</span>
+				<span aria-hidden="true">\u21a9\uFE0E</span>
+			</a>`;
+	}
+	markdownLib.renderer.rules.footnote_block_open = () => (
+		'<details class="footnotes" open>\n' +
+		'<summary>References</summary>\n' +
+		'<ol class="footnotes-list">\n'
+	);
+	markdownLib.renderer.rules.footnote_block_close = () => (
+		'</ol>\n' +
+		'</details>\n'
+	);
+	markdownLib.renderer.rules.footnote_open = (tokens, idx, options, env, slf) => {
+		var id = slf.rules.footnote_anchor_name(tokens, idx, options, env, slf);
+		if (tokens[idx].meta.subId > 0) {
+			id += ':' + tokens[idx].meta.subId;
+		}
+	
+		return `
+			<li id="fn${id}" class="footnote-item" tabindex="-1">
+			`;
+	}
 
 	//PLUGIN
 	eleventyConfig.addPlugin(socialImages);
