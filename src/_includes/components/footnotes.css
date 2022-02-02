@@ -44,5 +44,5 @@ hr.footnotes-sep {
 
 [id*="fnref"]:target::before {
   margin-right: var(--step--8);
-  content: "Footnote";
+  content: "Reference";
 }
