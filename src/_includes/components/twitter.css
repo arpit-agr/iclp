@@ -4,7 +4,7 @@
 
 /* For dark mode reduce brightness and increase saturation to retain lost vibrancy */
 @media (prefers-color-scheme: dark) {
-  :where(:not([data-theme])) .eleventy-plugin-embed-twitter {
+  :where(:root:not([data-theme])) .eleventy-plugin-embed-twitter {
     filter: brightness(0.8) saturate(1.25);
   }
 }
