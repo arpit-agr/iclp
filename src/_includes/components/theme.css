@@ -103,7 +103,7 @@
     --primary-text-color: hsl(var(--accent-h) 14% 70%);
     --secondary-text-color: hsl(var(--accent-h) 14% 63%);
     --primary-background-color: hsl(var(--accent-h) 80% 7%);
-    --secondary-background-color: hsl(var(--accent-h) 90% 25%);
+    --secondary-background-color: hsl(var(--accent-h) 40% 25%);
     --tag-background-color: hsl(var(--accent-h) 20% 19%);
     --section-outline-color: hsl(var(--accent-h) 14% 63% / 50%);
     --mark-bg-color: hsl(var(--accent-h) 67% 24%);
@@ -120,7 +120,7 @@
   --primary-text-color: hsl(var(--accent-h) 14% 70%);
   --secondary-text-color: hsl(var(--accent-h) 14% 63%);
   --primary-background-color: hsl(var(--accent-h) 80% 7%);
-  --secondary-background-color: hsl(var(--accent-h) 90% 25%);
+  --secondary-background-color: hsl(var(--accent-h) 40% 25%);
   --tag-background-color: hsl(var(--accent-h) 20% 19%);
   --section-outline-color: hsl(var(--accent-h) 14% 63% / 50%);
   --mark-bg-color: hsl(var(--accent-h) 67% 24%);
