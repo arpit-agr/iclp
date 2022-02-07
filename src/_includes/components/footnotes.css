@@ -46,3 +46,21 @@ hr.footnotes-sep {
   margin-right: var(--step--8);
   content: "Reference";
 }
+
+.ref-backlink {
+  font-size: var(--step--2);
+  display: inline-block;
+  min-width: 44px;
+  text-align: center;
+  color: var(--primary-text-color);
+  background: var(--secondary-background-color);
+  border-radius: var(--border-radius);
+}
+
+.ref-backlink:hover {
+  --accent-a: 5%;
+  color: var(--accent-color);
+  background: transparent;
+  outline: 1px solid var(--accent-color);
+  outline-offset: calc(-1 * 1px);
+}

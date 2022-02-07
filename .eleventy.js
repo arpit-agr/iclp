@@ -16,14 +16,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(directoryOutputPlugin);
 
 	//PASSTHROUGH COPY
-	eleventyConfig.addPassthroughCopy("./src/css/");
 	eleventyConfig.addPassthroughCopy("./src/scripts/");
 	eleventyConfig.addPassthroughCopy("./src/img/");
 	eleventyConfig.addPassthroughCopy("./src/fonts/");
-
-
-	//WATCH TARGET
-	eleventyConfig.addWatchTarget("./src/css/");
 
 	//MARKDOWN-IT
 	let markdownIt = require("markdown-it");
@@ -100,7 +95,7 @@ module.exports = function (eleventyConfig) {
 		return `
 			<a href="#fnref${id}" class="footnote-backref">
 				<span class="visually-hidden">Jump up to reference ${refid}</span>
-				<span aria-hidden="true">\u21a9\uFE0E</span>
+				<span class="ref-backlink" aria-hidden="true">\u21a9</span>
 			</a>`;
 	}
 	markdownLib.renderer.rules.footnote_block_open = () => (
