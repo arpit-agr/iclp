@@ -63,8 +63,8 @@ textarea:focus {
   opacity: calc(1 / var(--ratio));
 }
 
-form.contact-form > * {
-  flex-grow: 1;
+.contact-form > * {
+  flex-basis: 100%;
 }
 
 form div > * + * {
