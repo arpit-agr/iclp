@@ -38,7 +38,7 @@
   }
 }
 
-aside.additional-posts {
+.additional-posts {
   padding-top: var(--step-2);
   padding-bottom: var(--step-2);
   border-top: var(--border-thin) solid var(--section-outline-color);
@@ -46,10 +46,10 @@ aside.additional-posts {
   contain-intrinsic-size: 0 850px;
 }
 
-aside.additional-posts > * + * {
+.additional-posts > * + * {
   margin-top: var(--step-2);
 }
 
-aside.additional-posts h2 {
+.additional-posts h2 {
   font-size: var(--step-2);
 }
