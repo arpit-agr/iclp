@@ -2,22 +2,18 @@
   position: relative;
   width: fit-content;
   border-radius: var(--border-radius);
-  border: var(--border-thin) solid;
+  border: var(--border-thin) solid var(--secondary-background-color);
+  background: var(--secondary-background-color);
 }
 
-.first-published[open] summary {
-  position: absolute;
-  left: 1rem;
-  top: -0.75em;
-  padding: 0 0.5rem;
-  background: var(--primary-background-color);
+.first-published > * {
+  padding: var(--step--4) var(--step--2);
 }
 
-.first-published:not([open]) summary {
-  padding: var(--step--8) var(--step--4);
+.first-published[open] {
+  width: 100%;
 }
 
 .first-published[open] p {
-  font-size: var(--step--1);
-  padding: var(--step--2);
+  background: var(--primary-background-color);
 }
