@@ -1,8 +1,10 @@
 {% if content | toc %}
-<details class="text--s-1 font-weight:500 table-of-contents">
-    <summary class="font-weight:700">
-        Table of contents
-    </summary>
-    {{ content | toc | safe }}
-</details>
+<details-utils close-click-outside close-esc>
+    <details class="text--s-1 font-weight:500 table-of-contents">
+        <summary class="font-weight:700">
+            Table of contents
+        </summary>
+        {{ content | toc | safe }}
+    </details>
+</details-utils>
 {% endif %}
