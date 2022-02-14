@@ -1,7 +1,12 @@
 {% set pageTitle = title + ' - ' + site.abbr %}
-
 {% set siteTitle = site.name %}
 {% set currentUrl = site.url + page.url %}
+{% if firstPublished.link %}
+  {% set canonicalLink = firstPublished.link %}
+{% else %}
+  {% set canonicalLink = currentUrl %}
+{% endif %}
+
 
 {# If the page’s Front Matter has specific metaTitle and/or metaDesc items, switch 
   them into the mix. #}
@@ -19,7 +24,7 @@
 
 
 <title>{{ pageTitle }}</title>
-<link rel="canonical" href="{{ currentUrl }}" />
+<link rel="canonical" href="{{ canonicalLink }}" />
 
 <meta property="og:site_name" content="{{ siteTitle }}" />
 <meta property="og:title" content="{{ pageTitle }}" />
