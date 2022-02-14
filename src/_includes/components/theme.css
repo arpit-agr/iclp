@@ -232,6 +232,7 @@ a {
   text-decoration-thickness: var(--underline-thickness);
   text-underline-offset: var(--underline-thickness);
   text-decoration-color: var(--accent-color);
+  text-decoration-skip-ink: none;
 }
 
 a,
