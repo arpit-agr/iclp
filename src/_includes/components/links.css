@@ -1,7 +1,7 @@
 .link {
   font-size: inherit;
   font-weight: 500;
-  text-decoration: none;
+  text-decoration-line: none;
 }
 
 .view-all-link {
@@ -19,7 +19,7 @@
 }
 
 .blog-nav-link:hover {
-  text-decoration: underline;
+  text-decoration-line: underline;
 }
 
 /* Heading anchor links */

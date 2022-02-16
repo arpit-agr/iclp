@@ -3,7 +3,7 @@ ol.pagination {
 }
 
 .pagination a {
-  text-decoration: none;
+  text-decoration-line: none;
 }
 
 /* .pagination a:not([aria-current="true"]):hover {
