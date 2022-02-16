@@ -144,7 +144,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPairedShortcode('footnoteText', (content, { id }) => {
     return `
 <aside class="c-footnote" id="${id}" aria-labelledby="${id}ref">
-	<details-utils close-click-outside close-esc>
+	<details-utils close-esc>
 	<details>
     <summary class="text--s-1 font-weight:500">Aside</summary>
     ${content}

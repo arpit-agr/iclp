@@ -1,25 +1,19 @@
 {% if firstPublished.website %}
-
-<div>
-  <details-utils close-click-outside close-esc>
-    <details class="first-published color:secondary text--s-1 font-weight:500">
-      <summary>First published</summary>
-      <p>
-        This article was first published on
-        {% if firstPublished.link %}
-          <a href="{{ firstPublished.link }}">{{ firstPublished.website }}</a>
-        {% else %}
-          {{ firstPublished.website }}
-        {% endif %}
-        {% if firstPublished.date %}
-          on
-          <time datetime={{ firstPublished.date | dump | safe }}>
-            {{ firstPublished.date | postDate }}
-          </time>
-        {% endif %}
-      </p>
-    </details>
-  </details-utils>
-</div>
-
+<details class="first-published color:secondary text--s-1 font-weight:500" open>
+  <summary>First published</summary>
+  <p>
+    This article was first published on
+    {% if firstPublished.link %}
+      <a href="{{ firstPublished.link }}">{{ firstPublished.website }}</a>
+    {% else %}
+      {{ firstPublished.website }}
+    {% endif %}
+    {% if firstPublished.date %}
+      on
+      <time datetime={{ firstPublished.date | dump | safe }}>
+        {{ firstPublished.date | postDate }}
+      </time>
+    {% endif %}
+  </p>
+</details>
 {% endif %}

@@ -3,6 +3,7 @@
 {% block content %}
 <main id="main" class="post">
   <header>
+    {% include "partials/first-published.html" %}
     <h1>{{ title }}</h1>
     {% from "macros/macro.njk" import meta %}
       {{ meta({
@@ -11,7 +12,6 @@
         layout: layout,
         content: content
       }) }}
-    {% include "partials/first-published.html" %}
   </header>
     {% include "partials/toc.html" %}
     {% include "partials/editors-note.njk" %}
