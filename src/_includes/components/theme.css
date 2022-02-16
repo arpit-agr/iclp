@@ -1,9 +1,17 @@
 @font-face {
   font-family: Inter;
-  src: local("Inter"), url(/fonts/Inter.var.woff2) format("woff2-variations");
-  font-weight: 400 700;
-  font-style: normal;
+  src: local("Inter-Regular"), url(/fonts/Inter-Regular.ttf);
+  font-weight: 400;
+  font-display: optional;
 }
+
+@font-face {
+  font-family: Inter;
+  src: local("Inter-Regular_Medium"), url(/fonts/Inter-Medium.ttf);
+  font-weight: 500;
+  font-display: optional;
+}
+
 /* spacing */
 :root {
   --step--10: clamp(0.11rem, 0.13rem + -0.06vw, 0.07rem);
@@ -26,12 +34,13 @@
 
 :root {
   --ratio: 1.5625;
+  --font-plain: "Inter", "Helvetica Neue", Helvetica, sans-serif;
   /* --measure: 65ch; */
   --line-height: var(--ratio);
   --line-height-small: calc(0.75 * var(--ratio));
   --line-height-medium: calc(0.875 * var(--ratio));
   --line-height-high: calc(var(--ratio) * 1.25);
-  --font-plain: "Helvetica Neue", Helvetica, "Inter", Arial, sans-serif;
+  --letter-spacing: 0.02em;
 }
 
 /* colors */
@@ -87,7 +96,7 @@
   --section-outline-color: var(--primary-text-color);
   --mark-bg-color: hsl(var(--accent-h) 67% 92%);
   --mark-text-color: var(--primary-text-color);
-  --underline-thickness: var(--border-thin);
+  --underline-thickness: 0.08em;
   --tag-icon-filter: invert(27%) sepia(12%) saturate(2023%) hue-rotate(181deg)
     brightness(92%) contrast(83%);
 }
@@ -205,7 +214,7 @@ main {
 h1 {
   font-size: var(--step-2);
   line-height: var(--line-height-small);
-  letter-spacing: calc(1em * -1 / 100);
+  letter-spacing: calc(-0.5 * var(--letter-spacing));
 }
 
 h2 {

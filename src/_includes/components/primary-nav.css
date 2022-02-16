@@ -12,7 +12,6 @@
 
 .primary-nav a:not([aria-current="page"]):hover {
   text-decoration: underline;
-  text-decoration-thickness: var(--border-thin);
 }
 
 .primary-nav [aria-current="page"],
