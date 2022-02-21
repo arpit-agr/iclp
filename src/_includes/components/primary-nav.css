@@ -17,15 +17,15 @@
 .primary-nav [aria-current="page"],
 .primary-nav [data-state="active"] {
   position: relative;
-  text-indent: calc(var(--step--8) * -1.5);
+  text-indent: calc(var(--step--8) * -1.8);
 }
 
 .primary-nav [aria-current="page"]::before,
 .primary-nav [data-state="active"]::before {
   display: inline-block;
   margin-right: var(--step--8);
-  content: "‣";
-  content: "‣" / "";
+  content: "▸";
+  content: "▸"/ "";
   alt: "";
 }
 
