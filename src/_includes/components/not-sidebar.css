@@ -33,7 +33,7 @@ footer {
   border-top: var(--border-thin) solid var(--section-outline-color);
   font-size: var(--step--2);
   text-transform: capitalize;
-  letter-spacing: 0.03em;
+  letter-spacing: var(--letter-spacing);
   text-align: center;
 
   content-visibility: auto;
