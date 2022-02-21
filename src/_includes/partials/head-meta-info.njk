@@ -1,6 +1,8 @@
 {% set pageTitle = title + ' - ' + site.abbr %}
 {% set siteTitle = site.name %}
 {% set currentUrl = site.url + page.url %}
+{% set opengraphUrl = site.url + '/opengraph/' + page.url %}
+{%- set encodedUrl =  opengraphUrl | urlencode %}
 {% if firstPublished.link %}
   {% set canonicalLink = firstPublished.link %}
 {% else %}
@@ -17,8 +19,6 @@
 {% if summary %}
   {% set metaDesc = summary %}
 {% endif %}
-
-{%- set encodedUrl =  currentUrl | urlencode %}
 
 {%- set socialImage %}
   {{ site.screesnshotUrl }}/{{ encodedUrl }}/opengraph
