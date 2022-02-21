@@ -153,6 +153,14 @@ module.exports = function (eleventyConfig) {
   });
 	
 	//FILTER
+	eleventyConfig.addFilter("addNbsp", (str) => {
+		if (!str) {
+			return;
+		}
+		let title = str.replace(/((.*)\s(.*))$/g, "$2&nbsp;$3");
+		title = title.replace(/"(.*)"/g, '\\"$1\\"');
+		return title;
+	});
 	eleventyConfig.addFilter("getByTags", require("./src/_11ty/filters/getByTags.js"));
 	eleventyConfig.addFilter("cssmin", function(code) {
     return new CleanCSS({}).minify(code).styles;
