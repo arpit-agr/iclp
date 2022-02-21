@@ -1,5 +1,4 @@
 const htmlmin = require("html-minifier");
-const socialImages = require("@11tyrocks/eleventy-plugin-social-images");
 const pluginTOC = require('eleventy-plugin-nesting-toc');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const CleanCSS = require("clean-css");
@@ -119,7 +118,6 @@ module.exports = function (eleventyConfig) {
 	}
 
 	//PLUGIN
-	eleventyConfig.addPlugin(socialImages);
 	eleventyConfig.addPlugin(pluginRss);
 	eleventyConfig.addPlugin(emojiReadTime, {
 		showEmoji: false,
