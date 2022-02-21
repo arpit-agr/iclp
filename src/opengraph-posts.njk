@@ -9,12 +9,10 @@ permalink: "/opengraph{{ post.url }}"
   @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
   {% include "components/theme.css" %}
   {% include "components/utilities.css" %}
-  {% include "components/macro-layout.css" %}
-  {% include "components/not-sidebar.css" %}
+  {# {% include "components/not-sidebar.css" %} #}
   {% include "components/footer-inner.css" %}
   {% include "components/post-list.css" %}
   {% include "components/post-meta.css" %}
-  {% include "components/post-tag.css" %}
   {% include "components/opengraph.css" %}
 {% endset %}
 
@@ -31,8 +29,8 @@ permalink: "/opengraph{{ post.url }}"
   <title>{{ post.data.title | addNbsp | safe }}</title>
   <style>{{ css | cssmin | safe }}</style>
 </head>
-<body>
-  <div class="not-sidebar">
+<body class="stack">
+  <div class="og-content stack">
     {# Dynamic heading #}
     {% set headingLevel = 'h1' %}
     <{{ headingLevel if headingLevel else 'h2' }}>
@@ -48,7 +46,7 @@ permalink: "/opengraph{{ post.url }}"
   {% endif %}
   </div>  
   <footer>
-      <h2>{{ site.name }}</h2>
+      <p>{{ site.name }}</p>
   </footer>
 </body>
 </html>
