@@ -18,8 +18,10 @@
   {% set metaDesc = summary %}
 {% endif %}
 
+{%- set encodedUrl =  currentUrl | urlencode %}
+
 {%- set socialImage %}
-  {{ site.url }}/previews/{% if customSlug %}{{ customSlug | slug }}{% else %}{{ title | slug }}{% endif %}.png
+  {{ site.screesnshotUrl }}/{{ encodedUrl }}/opengraph
 {% endset -%}
 
 

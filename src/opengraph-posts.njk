@@ -1,0 +1,54 @@
+---
+pagination:
+  data: "collections.all"
+  size: 1
+  alias: "post"
+permalink: "/opengraph{{ post.url }}"
+---
+{% set css %}
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+  {% include "components/theme.css" %}
+  {% include "components/utilities.css" %}
+  {% include "components/macro-layout.css" %}
+  {% include "components/not-sidebar.css" %}
+  {% include "components/footer-inner.css" %}
+  {% include "components/post-list.css" %}
+  {% include "components/post-meta.css" %}
+  {% include "components/post-tag.css" %}
+  {% include "components/opengraph.css" %}
+{% endset %}
+
+<!DOCTYPE html>
+<html lang="en" id="top">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <title>{{ post.data.title | addNbsp | safe }}</title>
+  <style>{{ css | cssmin | safe }}</style>
+</head>
+<body>
+  <div class="not-sidebar">
+    {# Dynamic heading #}
+    {% set headingLevel = 'h1' %}
+    <{{ headingLevel if headingLevel else 'h2' }}>
+      <a href="{{ post.url | url }}#main" class="postlist-link">{% if post.data.title %}{{ post.data.title | addNbsp | safe }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+    </{{ headingLevel if headingLevel else 'h2' }}>
+
+  {% if post.data.layout == 'layouts/post' %}
+    {% from "macros/macro.njk" import meta %}
+      {{ meta({
+        author: post.data.author,
+        date: post.date
+      }) }}
+  {% endif %}
+  </div>  
+  <footer>
+      <h2>{{ site.name }}</h2>
+  </footer>
+</body>
+</html>
