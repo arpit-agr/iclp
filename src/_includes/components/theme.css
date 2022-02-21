@@ -1,4 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+@font-face {
+  font-family: Inter;
+  src: local("HelveticaNeue"), local("Inter-Regular"),
+    url(/fonts/Inter-Regular.ttf);
+  font-weight: 400;
+  font-display: optional;
+}
+
+@font-face {
+  font-family: Inter;
+  src: local("HelveticaNeue-Medium"), local("Inter-Regular_Medium"),
+    url(/fonts/Inter-Medium.ttf);
+  font-weight: 500;
+  font-display: optional;
+}
 
 /* spacing */
 :root {
@@ -22,7 +36,7 @@
 
 :root {
   --ratio: 1.5625;
-  --font-plain: "Helvetica Neue", "Inter", Helvetica, sans-serif;
+  --font-plain: "Inter", "Helvetica Neue", Helvetica, sans-serif;
   /* --measure: 65ch; */
   --line-height: var(--ratio);
   --line-height-small: calc(0.75 * var(--ratio));
