@@ -40,7 +40,6 @@
     {# <meta name="theme-color" content="hsl(0deg 0% 98%)" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="hsl(0, 0%, 10%)" media="(prefers-color-scheme: dark)"> #}
     <script>document.documentElement.classList.add('with-js');</script>
-    <script src="/scripts/theme-toggle.js"></script>
     <style>{{ css | cssmin | safe }}</style>
     <link rel="alternate" type="application/atom+xml" href="{{ site.url }}/feed.xml" title="{{ site.name }}"/>
 </head>
@@ -61,6 +60,7 @@
     </div>
     <div class="grain"></div>
     <script src="/scripts/main.js" type="module"></script>
+    <script async src="/scripts/theme-toggle.js"></script>
     {% if layout == 'layouts/post' %}
         <script>
             // footnotes 
