@@ -9,7 +9,6 @@ permalink: "/opengraph{{ post.url }}"
   @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
   {% include "components/theme.css" %}
   {% include "components/utilities.css" %}
-  {# {% include "components/not-sidebar.css" %} #}
   {% include "components/footer-inner.css" %}
   {% include "components/post-list.css" %}
   {% include "components/post-meta.css" %}
@@ -26,7 +25,7 @@ permalink: "/opengraph{{ post.url }}"
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <title>{{ post.data.title | addNbsp | safe }}</title>
+  <title>{{ post.data.title }}</title>
   <style>{{ css | cssmin | safe }}</style>
 </head>
 <body class="stack">
