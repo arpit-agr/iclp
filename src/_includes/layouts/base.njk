@@ -19,6 +19,7 @@
         {% include "components/custom-footnotes.css" %}
         {% include "components/twitter.css" %}
         {% include "components/footnotes.css" %}
+        {{ head }}
     {% endif %}
     {% include "components/links.css" %}
     {% include "components/form.css" %}
@@ -74,6 +75,7 @@
         </script>
         {# The defer attribute has no effect on module scripts — they defer by default. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-defer #}
         <script type="module" src="/scripts/details-utils.js"></script>
+        {{ foot | safe }}
     {% endif %}
 </body>
 </html>
