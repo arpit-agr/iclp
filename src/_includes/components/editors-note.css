@@ -18,7 +18,7 @@
   left: -0.5rem;
   top: 0.75em;
   padding: calc(var(--step-0) - 0.75em + 4px) 0;
-  background: var(--primary-background-color);
+  background: var(--primary-background-color) url(/img/bg/noise.webp);
 }
 
 .editors-note p {
