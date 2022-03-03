@@ -56,7 +56,7 @@
   --border-thin: var(--step--10);
   --border-thick: var(--step--6);
   --border-radius: var(--step--8);
-  --body-bg: var(--light-bg);
+  --body-bg: var(--primary-background-color) url(/img/bg/noise.webp);
 
   color-scheme: light;
   font-family: var(--font-plain);
@@ -88,34 +88,32 @@
   :root:not([data-theme]) {
     --accent-s: 55%;
     --accent-l: 57%;
-    --primary-text-color: hsl(var(--accent-h) 14% 70%);
-    --secondary-text-color: hsl(var(--accent-h) 14% 63%);
-    --primary-background-color: hsl(var(--accent-h) 80% 7%);
-    --secondary-background-color: hsl(var(--accent-h) 65% 15%);
-    --tag-background-color: hsl(var(--accent-h) 20% 19%);
-    --section-outline-color: hsl(var(--accent-h) 14% 63% / 50%);
+    --primary-text-color: hsl(300deg 1% 87%);
+    --secondary-text-color: hsl(260deg 2% 61%);
+    --primary-background-color: hsl(0deg 0% 8%);
+    --secondary-background-color: hsl(0deg 0% 16%);
+    --tag-background-color: hsl(0deg 0% 22%);
+    --section-outline-color: hsl(260deg 2% 61% / 50%);
     --mark-bg-color: hsl(var(--accent-h) 67% 24%);
     --mark-text-color: var(--primary-text-color);
-    --body-bg: var(--dark-bg);
-    --tag-icon-filter: invert(62%) sepia(9%) saturate(512%) hue-rotate(182deg)
-      brightness(98%) contrast(91%);
+    --tag-icon-filter: invert(68%) sepia(8%) saturate(111%) hue-rotate(214deg)
+      brightness(90%) contrast(90%);
   }
 }
 
 [data-theme="dark"] {
   --accent-s: 55%;
   --accent-l: 57%;
-  --primary-text-color: hsl(var(--accent-h) 14% 70%);
-  --secondary-text-color: hsl(var(--accent-h) 14% 63%);
-  --primary-background-color: hsl(var(--accent-h) 80% 7%);
-  --secondary-background-color: hsl(var(--accent-h) 65% 15%);
-  --tag-background-color: hsl(var(--accent-h) 20% 19%);
-  --section-outline-color: hsl(var(--accent-h) 14% 63% / 50%);
+  --primary-text-color: hsl(300deg 1% 87%);
+  --secondary-text-color: hsl(260deg 2% 61%);
+  --primary-background-color: hsl(0deg 0% 8%);
+  --secondary-background-color: hsl(0deg 0% 16%);
+  --tag-background-color: hsl(0deg 0% 22%);
+  --section-outline-color: hsl(260deg 2% 61% / 50%);
   --mark-bg-color: hsl(var(--accent-h) 67% 24%);
   --mark-text-color: var(--primary-text-color);
-  --body-bg: var(--dark-bg);
-  --tag-icon-filter: invert(62%) sepia(9%) saturate(512%) hue-rotate(182deg)
-    brightness(98%) contrast(91%);
+  --tag-icon-filter: invert(68%) sepia(8%) saturate(111%) hue-rotate(214deg)
+    brightness(90%) contrast(90%);
 }
 
 *,
@@ -170,7 +168,8 @@
 
 body {
   position: relative;
-  background: var(--primary-background-color) url(/img/bg/noise.webp);
+  background: var(--body-bg);
+  background-blend-mode: difference;
   text-rendering: optimizeSpeed;
   transition: background-color 500ms ease-in-out, color 200ms ease;
 }

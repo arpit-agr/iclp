@@ -15,5 +15,6 @@
 }
 
 .first-published[open] p {
-  background: var(--primary-background-color);
+  background: var(--body-bg);
+  background-blend-mode: difference;
 }
