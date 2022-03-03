@@ -19,7 +19,6 @@
         {% include "components/custom-footnotes.css" %}
         {% include "components/twitter.css" %}
         {% include "components/footnotes.css" %}
-        {{ head }}
     {% endif %}
     {% include "components/links.css" %}
     {% include "components/form.css" %}
@@ -40,6 +39,9 @@
     <script>document.documentElement.classList.add('with-js');</script>
     <style>{{ css | cssmin | safe }}</style>
     <link rel="alternate" type="application/atom+xml" href="{{ site.url }}/feed.xml" title="{{ site.name }}"/>
+    {% block head %}
+        {{ head | safe }}
+    {% endblock %}
 </head>
 <body>
     <a href="#main" id="skipContent">Skip to content</a>
@@ -75,7 +77,9 @@
         </script>
         {# The defer attribute has no effect on module scripts — they defer by default. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-defer #}
         <script type="module" src="/scripts/details-utils.js"></script>
-        {{ foot | safe }}
     {% endif %}
+    {% block foot %}
+        {{ foot | safe }}
+    {% endblock %}
 </body>
 </html>
