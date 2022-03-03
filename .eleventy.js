@@ -94,7 +94,7 @@ module.exports = function (eleventyConfig) {
 		return `
 			<a href="#fnref${id}" class="footnote-backref">
 				<span class="visually-hidden">Jump up to reference ${refid}</span>
-				<span class="ref-backlink" aria-hidden="true">\u21a9</span>
+				<span class="ref-backlink" aria-hidden="true">&#8617;&#xFE0E;</span>
 			</a>`;
 	}
 	markdownLib.renderer.rules.footnote_block_open = () => (
