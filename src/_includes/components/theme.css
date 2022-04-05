@@ -56,7 +56,8 @@
   --border-thin: var(--step--10);
   --border-thick: var(--step--6);
   --border-radius: var(--step--8);
-  --body-bg: var(--primary-background-color) url(/img/bg/noise.webp);
+  /* --body-bg: var(--primary-background-color) url(/img/bg/noise.webp); */
+  --body-bg: var(--primary-background-color);
 
   color-scheme: light;
   font-family: var(--font-plain);
