@@ -42,8 +42,13 @@
   padding-top: var(--step-2);
   padding-bottom: var(--step-2);
   border-top: var(--border-thin) solid var(--section-outline-color);
-  content-visibility: auto;
-  contain-intrinsic-size: 0 850px;
+}
+
+@supports (content-visibility: auto) and (contain-intrinsic-size: 0 500px) {
+  .additional-posts {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 850px;
+  }
 }
 
 .additional-posts > * + * {
